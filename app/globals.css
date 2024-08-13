@@ -2,26 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "Mazzard";
+  src: url("/fonts/mazzardsoftm-regular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Mazzard";
+  src: url("/fonts/mazzardsoftm-medium.otf");
+  font-weight: 500;
+  font-style: normal;
+}
+
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --background: 0 0% 100%; /* Fg Nova White */
+    --foreground: 231 7% 20%; /* Fg Nova Neutral 700 */
+    --card: 0 0% 100%; /* Fg Nova White */
+    --card-foreground: 231 7% 20%; /* Fg Nova Neutral 700 */
     --popover: 0 0% 100%;
     --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+    --primary: 167 90% 36%; /* Fg Nova Success 500 */
+    --primary-foreground: 0 0% 100%; /* Fg Nova White */
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
+    --muted: 240 17% 98%; /* Fg Nova Neutral 50 */
+    --muted-foreground: 248 3% 48%; /* Fg Nova Neutral 300 */
     --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --accent-foreground: 232 34% 42%; /* Fg Nova Primary 600 */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
+    --border: 240 12% 88%; /* Fg Nova Neutral 100 */
+    --input: 240 12% 88%; /* Fg Nova Neutral 100 */
     --ring: 0 0% 3.9%;
     --radius: 0.5rem;
     --chart-1: 12 76% 61%;
@@ -32,24 +46,24 @@
   }
 
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --background: 231 7% 20%; /* Fg Nova Neutral 700 */
+    --foreground: 0 0% 100%; /* Fg Nova White */
+    --card: 233 7% 26%; /* Fg Nova Neutral 600 */
+    --card-foreground: 0 0% 100%; /* Fg Nova White */
     --popover: 0 0% 3.9%;
     --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
+    --primary: 167 90% 36%; /* Fg Nova Success 500 */
+    --primary-foreground: 0 0% 100%; /* Fg Nova White */
     --secondary: 0 0% 14.9%;
     --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
+    --muted: 233 7% 26%; /* Fg Nova Neutral 600 */
+    --muted-foreground: 247 5% 65%; /* Fg Nova Neutral 200 */
     --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent-foreground: 215 91% 83%; /* Fg Nova Secondary 300 */
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
+    --border: 233 6% 29%; /* Fg Nova Neutral 500 */
+    --input: 233 6% 29%; /* Fg Nova Neutral 500 */
     --ring: 0 0% 83.1%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
@@ -64,12 +78,13 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground text-lg;
+    font-family: "Mazzard", system-ui, sans-serif;
   }
   section:not(:last-child) {
     @apply border-b;
   }
   a {
-    @apply font-medium text-primary;
+    @apply font-medium text-accent-foreground hover:opacity-70;
   }
 }

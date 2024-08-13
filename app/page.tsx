@@ -1,11 +1,12 @@
 import { Card } from "@/components/card";
 import { Stats } from "@/components/stats";
 import { Button } from "@/components/ui/button";
+import { ClockIcon, ExternalLinkIcon } from "lucide-react";
 
 export default function Home() {
   return (
     <main>
-      <section className="h-[48px]">
+      <section className="h-[48px] bg-muted">
         <nav className="max-w-screen-lg mx-auto"></nav>
       </section>
 
@@ -20,10 +21,10 @@ export default function Home() {
               Delivering trustworthy data for biodiversity monitoring,
               policy-making, and conservation efforts
             </h2>
-            <Button>Join waitlist</Button>
+            <Button size="lg">Join waitlist</Button>
           </div>
           <div style={{ marginRight: "-240px" }}>
-            <div className="w-[640px] h-[480px] rounded-xl bg-muted border overflow-hidden">
+            <div className="w-[640px] h-[480px] rounded-xl bg-card border overflow-hidden">
               {/* TODO: Add image */}
             </div>
           </div>
@@ -76,7 +77,7 @@ export default function Home() {
       <section className="p-24 bg-muted">
         <div className="max-w-screen-lg mx-auto">
           <h1 className="text-3xl font-medium mb-4">How can ADP help you?</h1>
-          <p className="mb-12">
+          <p className="text-muted-foreground mb-12">
             I want to build on and contribute to a global effort to scale the
             understanding of insects and biodiversity:
           </p>
@@ -88,7 +89,9 @@ export default function Home() {
                 "The AI detects and identifies the species",
               ]}
             >
-              <Button variant="outline">Join waitlist</Button>
+              <Button variant="outline">
+                <ClockIcon className="h-4 w-4 mr-2" /> Join waitlist
+              </Button>
             </Card>
             <Card
               title="Know where and when a species was observed"
@@ -97,7 +100,9 @@ export default function Home() {
                 "Download timestamped, geolocated datasets for analysis",
               ]}
             >
-              <Button variant="outline">Checkout platform</Button>
+              <Button variant="outline">
+                Checkout platform <ExternalLinkIcon className="h-4 w-4 ml-2" />
+              </Button>
             </Card>
             <Card
               title="Apply my ML skills to support biodiversity"
@@ -106,7 +111,9 @@ export default function Home() {
                 "Benchmark evaluation metrics to compare results with / compare model performance",
               ]}
             >
-              <Button variant="outline">Visit repo</Button>
+              <Button variant="outline">
+                Visit repo <ExternalLinkIcon className="h-4 w-4 ml-2" />
+              </Button>
             </Card>
             <Card
               title="Contribute to open-source software related to biodiversity"
@@ -115,7 +122,9 @@ export default function Home() {
                 "Add new features to an existing codebase",
               ]}
             >
-              <Button variant="outline">Visit repo</Button>
+              <Button variant="outline">
+                Visit repo <ExternalLinkIcon className="h-4 w-4 ml-2" />
+              </Button>
             </Card>
           </div>
         </div>
