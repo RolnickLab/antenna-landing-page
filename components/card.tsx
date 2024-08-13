@@ -1,5 +1,6 @@
-import { CornerDownRightIcon, MousePointer2Icon, PlayIcon } from "lucide-react";
+import { PlayIcon } from "lucide-react";
 import { ReactNode } from "react";
+import { ImagePlaceholder } from "./image-placeholder";
 
 interface CardProps {
   children: ReactNode;
@@ -9,7 +10,9 @@ interface CardProps {
 
 export const Card = ({ children, listItems, title }: CardProps) => (
   <div className="flex flex-col bg-card rounded-xl border overflow-hidden">
-    <div className="h-[240px]">{/* TODO: Add image */}</div>
+    <div className="h-[240px]">
+      <ImagePlaceholder />
+    </div>
     <div className="grow flex flex-col items-start justify-between gap-8 p-8">
       <div>
         <h2 className="text-2xl font-medium leading-tight mb-4">{title}</h2>

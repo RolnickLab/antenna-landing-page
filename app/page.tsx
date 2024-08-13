@@ -1,4 +1,5 @@
 import { Card } from "@/components/card";
+import { ImagePlaceholder } from "@/components/image-placeholder";
 import { Stats } from "@/components/stats";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
@@ -28,7 +29,7 @@ export default function Home() {
           </div>
           <div style={{ marginRight: "-240px" }}>
             <div className="w-[640px] h-[480px] rounded-xl bg-card border overflow-hidden">
-              {/* TODO: Add image */}
+              <ImagePlaceholder />
             </div>
           </div>
         </div>
