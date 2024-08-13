@@ -78,7 +78,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="p-24 bg-muted">
+      <section className="p-24 bg-muted/50">
         <div className="max-w-screen-lg mx-auto">
           <h1 className="text-3xl font-medium mb-4">How can ADP help you?</h1>
           <p className="text-muted-foreground mb-12">
@@ -93,7 +93,7 @@ export default function Home() {
                 "The AI detects and identifies the species",
               ]}
             >
-              <Button variant="outline">
+              <Button variant="accent">
                 <ClockIcon className="h-4 w-4 mr-2" /> Join waitlist
               </Button>
             </Card>
@@ -104,7 +104,7 @@ export default function Home() {
                 "Download timestamped, geolocated datasets for analysis",
               ]}
             >
-              <Button variant="outline">
+              <Button variant="accent">
                 Checkout platform <ExternalLinkIcon className="h-4 w-4 ml-2" />
               </Button>
             </Card>
@@ -115,7 +115,7 @@ export default function Home() {
                 "Benchmark evaluation metrics to compare results with / compare model performance",
               ]}
             >
-              <Button variant="outline">
+              <Button variant="accent">
                 Visit repo <ExternalLinkIcon className="h-4 w-4 ml-2" />
               </Button>
             </Card>
@@ -126,7 +126,7 @@ export default function Home() {
                 "Add new features to an existing codebase",
               ]}
             >
-              <Button variant="outline">
+              <Button variant="accent">
                 Visit repo <ExternalLinkIcon className="h-4 w-4 ml-2" />
               </Button>
             </Card>

@@ -10,6 +10,7 @@ const buttonVariants = cva(
       variant: {
         default: "bg-primary text-primary-foreground",
         outline: "border border-input text-accent",
+        accent: "bg-accent text-accent-foreground",
       },
       size: {
         default: "h-11 px-6",
