@@ -1,13 +1,16 @@
 import { Card } from "@/components/card";
 import { Stats } from "@/components/stats";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { ClockIcon, ExternalLinkIcon } from "lucide-react";
 
 export default function Home() {
   return (
     <main>
-      <section className="h-[48px] bg-muted">
-        <nav className="max-w-screen-lg mx-auto"></nav>
+      <section className="py-2 bg-muted sticky top-0">
+        <nav className="flex items-center justify-end max-w-screen-lg h-full mx-auto">
+          <ThemeToggle />
+        </nav>
       </section>
 
       <section className="px-24 py-12 overflow-hidden">

@@ -30,8 +30,8 @@
     --secondary-foreground: 0 0% 9%;
     --muted: 240 17% 98%; /* Fg Nova Neutral 50 */
     --muted-foreground: 248 3% 48%; /* Fg Nova Neutral 300 */
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 232 34% 42%; /* Fg Nova Primary 600 */
+    --accent: 232 34% 42%; /* Fg Nova Primary 600 */
+    --accent-foreground: 0 0% 100%; /* Fg Nova White */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
     --border: 240 12% 88%; /* Fg Nova Neutral 100 */
@@ -58,8 +58,8 @@
     --secondary-foreground: 0 0% 98%;
     --muted: 233 7% 26%; /* Fg Nova Neutral 600 */
     --muted-foreground: 247 5% 65%; /* Fg Nova Neutral 200 */
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 215 91% 83%; /* Fg Nova Secondary 300 */
+    --accent: 215 90% 72%; /* Fg Nova Secondary 500 */
+    --accent-foreground: 0 0% 100%; /* Fg Nova White */
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 233 6% 29%; /* Fg Nova Neutral 500 */
@@ -85,6 +85,6 @@
     @apply border-b;
   }
   a {
-    @apply font-medium text-accent-foreground hover:opacity-70;
+    @apply font-medium text-accent hover:opacity-70;
   }
 }

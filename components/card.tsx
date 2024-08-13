@@ -16,7 +16,7 @@ export const Card = ({ children, listItems, title }: CardProps) => (
         <ul className="space-y-4 text-muted-foreground">
           {listItems.map((listItem, index) => (
             <li key={index} className="flex gap-2">
-              <span className="shrink-0 w-7 h-7 flex items-center justify-center text-accent-foreground">
+              <span className="shrink-0 w-7 h-7 flex items-center justify-center text-accent">
                 <PlayIcon className="w-4 h-4" />
               </span>
               <span>{listItem}</span>
