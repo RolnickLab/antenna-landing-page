@@ -1,6 +1,8 @@
 import { useMemo } from "react";
 import data from "./deployments.json";
 
+const DEV_DEPLOYMENTS = [157];
+
 export const useDeployments = () => {
   const deployments = useMemo(
     () =>
@@ -9,7 +11,8 @@ export const useDeployments = () => {
           deployment.project &&
           deployment.latitude &&
           deployment.longitude &&
-          deployment.captures_count > 10
+          deployment.captures_count > 10 &&
+          !DEV_DEPLOYMENTS.includes(deployment.id)
       ),
     []
   );
