@@ -1,10 +1,14 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { Menu } from "@/components/menu";
-import { ThemeToggle } from "@/components/theme-toggle";
 import type { Metadata } from "next";
+import dynamic from "next/dynamic";
 import "./globals.css";
 import Link from "next/link";
+
+const ThemeToggle = dynamic(() => import("@/components/theme-toggle"), {
+  ssr: false,
+});
 
 export const metadata: Metadata = {
   title: "AMI Data Platform",

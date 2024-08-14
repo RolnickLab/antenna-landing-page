@@ -9,7 +9,7 @@ interface DeploymentsMapProps {
   height: number;
 }
 
-export const DeploymentsMap = ({ height }: DeploymentsMapProps) => {
+const DeploymentsMap = ({ height }: DeploymentsMapProps) => {
   const { deployments } = useDeployments();
 
   const markers = useMemo(
@@ -34,3 +34,5 @@ export const DeploymentsMap = ({ height }: DeploymentsMapProps) => {
 
   return <Map height={height} markers={markers} />;
 };
+
+export default DeploymentsMap;

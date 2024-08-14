@@ -20,7 +20,7 @@ const setThemePreference = (theme: Theme) => {
   localStorage.setItem(STORAGE_KEY, theme);
 };
 
-const useTheme = () => {
+export const useTheme = () => {
   const [theme, _setTheme] = useState<Theme>(getThemePreference());
 
   return {
@@ -31,5 +31,3 @@ const useTheme = () => {
     },
   };
 };
-
-export { useTheme, type Theme };

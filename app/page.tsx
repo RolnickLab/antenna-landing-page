@@ -1,8 +1,7 @@
 import { Card } from "@/components/card";
 import { ImagePlaceholder } from "@/components/image-placeholder";
-import { DeploymentsMap } from "@/components/map/deployments-map";
 import { DeploymentsStats } from "@/components/stats/deployments-stats";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import {
   DATA_PLATFORM_REPO_URL,
   DATA_PLATFORM_URL,
@@ -10,7 +9,13 @@ import {
   WAITLIST_URL,
 } from "@/lib/constants";
 import { ClockIcon, ExternalLinkIcon } from "lucide-react";
+import dynamic from "next/dynamic";
 import Link from "next/link";
+
+const DeploymentsMap = dynamic(
+  () => import("@/components/map/deployments-map"),
+  { ssr: false }
+);
 
 export default function Home() {
   return (
