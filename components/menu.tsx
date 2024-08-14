@@ -6,7 +6,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 export const Menu = () => (
-  <ul className="flex items-center justify-center gap-12">
+  <ul className="flex items-center justify-center gap-12 max-lg:hidden">
     <li>
       <MenuItem label="Home" href="/" />
     </li>
@@ -45,7 +45,7 @@ const MenuItem = ({
       {isActive && (
         <div
           className="w-[12px] h-[12px] bg-primary rounded-full absolute bottom-0"
-          style={{ transform: "translateY(50%)" }}
+          style={{ transform: "translateY(14px)" }}
         />
       )}
     </Link>
