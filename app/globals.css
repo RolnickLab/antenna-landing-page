@@ -87,4 +87,7 @@
   a {
     @apply font-medium text-accent hover:opacity-70;
   }
+  body.dark #logo {
+    filter: invert(1);
+  }
 }
