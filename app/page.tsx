@@ -2,19 +2,19 @@ import { Card } from "@/components/card";
 import { ImagePlaceholder } from "@/components/image-placeholder";
 import { DeploymentsMap } from "@/components/map/deployments-map";
 import { DeploymentsStats } from "@/components/stats/deployments-stats";
-import { ThemeToggle } from "@/components/theme-toggle";
-import { Button } from "@/components/ui/button";
+import { Button, buttonVariants } from "@/components/ui/button";
+import {
+  DATA_PLATFORM_REPO_URL,
+  DATA_PLATFORM_URL,
+  ML_REPO_URL,
+  WAITLIST_URL,
+} from "@/lib/constants";
 import { ClockIcon, ExternalLinkIcon } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main>
-      <section className="py-2 bg-muted sticky top-0 z-10">
-        <nav className="flex items-center justify-end max-w-screen-lg h-full mx-auto">
-          <ThemeToggle />
-        </nav>
-      </section>
-
+    <>
       <section className="px-24 py-12 overflow-hidden">
         <div className="flex items-center gap-12 max-w-screen-lg mx-auto">
           <div>
@@ -26,7 +26,12 @@ export default function Home() {
               Delivering trustworthy data for biodiversity monitoring,
               policy-making, and conservation efforts
             </h2>
-            <Button size="lg">Join waitlist</Button>
+            <Link
+              className={buttonVariants({ size: "lg" })}
+              href={WAITLIST_URL}
+            >
+              Join waitlist
+            </Link>
           </div>
           <div style={{ marginRight: "-240px" }}>
             <div className="w-[640px] h-[480px] rounded-xl bg-card border overflow-hidden">
@@ -88,9 +93,12 @@ export default function Home() {
                 "The AI detects and identifies the species",
               ]}
             >
-              <Button variant="accent">
+              <Link
+                href={WAITLIST_URL}
+                className={buttonVariants({ variant: "accent" })}
+              >
                 <ClockIcon className="h-4 w-4 mr-2" /> Join waitlist
-              </Button>
+              </Link>
             </Card>
             <Card
               title="Know where and when a species was observed"
@@ -99,9 +107,26 @@ export default function Home() {
                 "Download timestamped, geolocated datasets for analysis",
               ]}
             >
-              <Button variant="accent">
+              <Link
+                href={DATA_PLATFORM_URL}
+                className={buttonVariants({ variant: "accent" })}
+              >
                 Checkout platform <ExternalLinkIcon className="h-4 w-4 ml-2" />
-              </Button>
+              </Link>
+            </Card>
+            <Card
+              title="Help validate the data with my insect expertise"
+              listItems={[
+                "Confirm or adjust AI-generated taxons",
+                "Suggest IDs for unidentified images",
+              ]}
+            >
+              <Link
+                href={WAITLIST_URL}
+                className={buttonVariants({ variant: "accent" })}
+              >
+                <ClockIcon className="h-4 w-4 mr-2" /> Join waitlist
+              </Link>
             </Card>
             <Card
               title="Apply my ML skills to support biodiversity"
@@ -110,9 +135,12 @@ export default function Home() {
                 "Benchmark evaluation metrics to compare results with / compare model performance",
               ]}
             >
-              <Button variant="accent">
+              <Link
+                href={ML_REPO_URL}
+                className={buttonVariants({ variant: "accent" })}
+              >
                 Visit repo <ExternalLinkIcon className="h-4 w-4 ml-2" />
-              </Button>
+              </Link>
             </Card>
             <Card
               title="Contribute to open-source software related to biodiversity"
@@ -121,9 +149,12 @@ export default function Home() {
                 "Add new features to an existing codebase",
               ]}
             >
-              <Button variant="accent">
+              <Link
+                href={DATA_PLATFORM_REPO_URL}
+                className={buttonVariants({ variant: "accent" })}
+              >
                 Visit repo <ExternalLinkIcon className="h-4 w-4 ml-2" />
-              </Button>
+              </Link>
             </Card>
           </div>
         </div>
@@ -144,10 +175,8 @@ export default function Home() {
                 Espace pour la vie - Insectarium
               </a>{" "}
               and technical contributions from scientists around the world (see{" "}
-              <a href="https://github.com/RolnickLab/ami-platform">
-                Github repository
-              </a>{" "}
-              for more detail).
+              <a href={DATA_PLATFORM_REPO_URL}>Github repository</a> for more
+              detail).
             </p>
           </div>
           <div>
@@ -160,6 +189,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-    </main>
+    </>
   );
 }

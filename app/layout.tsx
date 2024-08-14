@@ -1,3 +1,5 @@
+import { Menu } from "@/components/menu";
+import { ThemeToggle } from "@/components/theme-toggle";
 import type { Metadata } from "next";
 import "./globals.css";
 
@@ -13,7 +15,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <header className="py-2 bg-muted sticky top-0 z-10 overflow-hidden border-b">
+          <nav className="flex items-center justify-between max-w-screen-lg h-full mx-auto">
+            <Menu />
+            <ThemeToggle />
+          </nav>
+        </header>
+        <main>{children}</main>
+      </body>
     </html>
   );
 }

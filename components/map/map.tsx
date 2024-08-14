@@ -36,6 +36,7 @@ export const Map = ({ height, markers }: MapProps) => {
       center={bounds.getCenter()}
       maxBounds={MAX_BOUNDS}
       minZoom={MIN_ZOOM}
+      scrollWheelZoom={false}
       style={{
         height: `${height}px`,
       }}
