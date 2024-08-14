@@ -58,17 +58,17 @@ export default function Home() {
               A billion insects for every human at any one time and 10 million
               insect species on Earth. These estimates show how challenging it
               is to collect sufficient data, recognise observed species, and
-              monitor population changes.
+              monitor population changes. Insects are key to ecosystems and
+              agriculture, and severely impacted by climate change. Rich,
+              quality data is critical to describing and responding to insect
+              population patterns.
             </p>
             <p>
-              Insects are key to ecosystems and agriculture, and severely
-              impacted by climate change. Rich, quality data is critical to
-              describing and responding to insect population patterns. The
-              Platform uses artificial intelligence to automate, accelerate, and
-              scale up the identification of insects in in-the-wild images. The
-              resulting research-grade datasets comprise continuously updating
-              information about the location, time, frequency, quantity of
-              species as observed around the world.
+              The Platform uses artificial intelligence to automate, accelerate,
+              and scale up the identification of insects in in-the-wild images.
+              The resulting research-grade datasets comprise continuously
+              updating information about the location, time, frequency, quantity
+              of species as observed around the world.
             </p>
           </div>
         </div>
