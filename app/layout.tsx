@@ -24,15 +24,22 @@ export default function RootLayout({
     <html lang="en">
       <link rel="icon" type="image/png" href="/logo.png" />
       <body>
-        <header className="py-2 bg-muted sticky top-0 z-10 overflow-hidden border-b max-lg:px-2">
+        <header className="py-2 bg-muted/95 sticky top-0 z-10 overflow-hidden border-b max-lg:px-2">
           <nav className="flex items-center justify-between max-w-screen-lg h-full mx-auto relative">
-            <Link href="/">
-              <img id="logo" alt="AMI logo" src="/logo.png" className="w-10" />
-            </Link>
-            <div className="absolute flex align-center justify-center w-full h-full">
+            <div className="z-10">
+              <Link href="/">
+                <img
+                  id="logo"
+                  alt="AMI logo"
+                  src="/logo.png"
+                  className="w-10"
+                />
+              </Link>
+            </div>
+            <div className="absolute flex align-center justify-center w-full h-full z-0">
               <Menu />
             </div>
-            <div>
+            <div className="z-10">
               <ThemeToggle />
             </div>
           </nav>
