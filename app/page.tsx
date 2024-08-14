@@ -1,6 +1,7 @@
 import { Card } from "@/components/card";
 import { ImagePlaceholder } from "@/components/image-placeholder";
-import { Stats } from "@/components/stats";
+import { DeploymentsMap } from "@/components/map/deployments-map";
+import { DeploymentsStats } from "@/components/stats/deployments-stats";
 import { ThemeToggle } from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import { ClockIcon, ExternalLinkIcon } from "lucide-react";
@@ -8,7 +9,7 @@ import { ClockIcon, ExternalLinkIcon } from "lucide-react";
 export default function Home() {
   return (
     <main>
-      <section className="py-2 bg-muted sticky top-0">
+      <section className="py-2 bg-muted sticky top-0 z-10">
         <nav className="flex items-center justify-end max-w-screen-lg h-full mx-auto">
           <ThemeToggle />
         </nav>
@@ -65,16 +66,10 @@ export default function Home() {
 
       <section className="p-24">
         <div className="flex flex-col items-center gap-12 max-w-screen-lg mx-auto">
-          <div className="w-full h-[480px] rounded-xl bg-card border">
-            {/* TODO: Add map */}
+          <div className="w-full rounded-xl bg-card border overflow-hidden">
+            <DeploymentsMap height={480} />
           </div>
-          <Stats
-            items={[
-              { value: "100k", unit: "Deployments" },
-              { value: "500k", unit: "Sessions" },
-              { value: "350m", unit: "Occurrences" },
-            ]}
-          />
+          <DeploymentsStats />
         </div>
       </section>
 
