@@ -9,13 +9,11 @@ export const DeploymentsStats = () => {
       items={[
         {
           value: `${stats.deployments_count.toLocaleString()}`,
-          unit: "Deployments",
+          unit: "Stations",
         },
-        { value: `${stats.events_count.toLocaleString()}`, unit: "Sessions" },
-        { value: `${stats.captures_count.toLocaleString()}`, unit: "Captures" },
         {
-          value: `${stats.occurrences_count.toLocaleString()}`,
-          unit: "Occurrences",
+          value: `${stats.captures_count.toLocaleString()}`,
+          unit: "Source images",
         },
       ]}
     />
