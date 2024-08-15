@@ -10,11 +10,11 @@ interface DeploymentsMapProps {
 }
 
 const DeploymentsMap = ({ height }: DeploymentsMapProps) => {
-  const { deployments } = useDeployments();
+  const deployments = useDeployments();
 
   const markers = useMemo(
     () =>
-      deployments.map((deployment) => {
+      deployments.deployments_data.map((deployment) => {
         const position = new L.LatLng(
           deployment.latitude,
           deployment.longitude

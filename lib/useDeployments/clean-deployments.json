@@ -1,0 +1,920 @@
+{
+  "stats": {
+    "deployments_count": 70,
+    "events_count": 2984,
+    "captures_count": 5263280,
+    "occurrences_count": 25748
+  },
+  "deployments_data": [
+    {
+      "id": 62,
+      "name": "AMI 2BD0E9C1",
+      "project": {
+        "id": 20,
+        "name": "Barro Colorado Island Research Station"
+      },
+      "latitude": 9.163177,
+      "longitude": -79.8381913,
+      "captures_count": 30391,
+      "events_count": 7,
+      "occurrences_count": 426
+    },
+    {
+      "id": 61,
+      "name": "AMI BEF510C3",
+      "project": {
+        "id": 20,
+        "name": "Barro Colorado Island Research Station"
+      },
+      "latitude": 9.1619212,
+      "longitude": -79.8388263,
+      "captures_count": 24590,
+      "events_count": 6,
+      "occurrences_count": 570
+    },
+    {
+      "id": 60,
+      "name": "AMI E43B615A",
+      "project": {
+        "id": 20,
+        "name": "Barro Colorado Island Research Station"
+      },
+      "latitude": 9.163544,
+      "longitude": -79.8378812,
+      "captures_count": 48825,
+      "events_count": 7,
+      "occurrences_count": 395
+    },
+    {
+      "id": 8,
+      "name": "AMI System v1 Sample (Jan)",
+      "project": {
+        "id": 20,
+        "name": "Barro Colorado Island Research Station"
+      },
+      "latitude": 9.16726,
+      "longitude": -79.83447,
+      "captures_count": 703,
+      "events_count": 2,
+      "occurrences_count": 119
+    },
+    {
+      "id": 59,
+      "name": "AMI System v2 Sample (Nov)",
+      "project": {
+        "id": 20,
+        "name": "Barro Colorado Island Research Station"
+      },
+      "latitude": 9.16684,
+      "longitude": -79.83387,
+      "captures_count": 23,
+      "events_count": 7,
+      "occurrences_count": 307
+    },
+    {
+      "id": 114,
+      "name": "Costa Rica - Butterfly",
+      "project": {
+        "id": 45,
+        "name": "AMBER - Costa Rica"
+      },
+      "latitude": 9.937355,
+      "longitude": -84.050435,
+      "captures_count": 9425,
+      "events_count": 0,
+      "occurrences_count": 0
+    },
+    {
+      "id": 115,
+      "name": "Costa Rica - Forest Edge",
+      "project": {
+        "id": 45,
+        "name": "AMBER - Costa Rica"
+      },
+      "latitude": 10.43034,
+      "longitude": -84.007262,
+      "captures_count": 6838,
+      "events_count": 0,
+      "occurrences_count": 0
+    },
+    {
+      "id": 120,
+      "name": "Costa Rica - Garden",
+      "project": {
+        "id": 45,
+        "name": "AMBER - Costa Rica"
+      },
+      "latitude": 8.78514,
+      "longitude": -82.960373,
+      "captures_count": 3418,
+      "events_count": 0,
+      "occurrences_count": 0
+    },
+    {
+      "id": 117,
+      "name": "Costa Rica - Old Growth",
+      "project": {
+        "id": 45,
+        "name": "AMBER - Costa Rica"
+      },
+      "latitude": 10.432295,
+      "longitude": -84.010643,
+      "captures_count": 6844,
+      "events_count": 2,
+      "occurrences_count": 0
+    },
+    {
+      "id": 122,
+      "name": "Costa Rica - Pre-montane forest",
+      "project": {
+        "id": 45,
+        "name": "AMBER - Costa Rica"
+      },
+      "latitude": 8.783784,
+      "longitude": -82.960928,
+      "captures_count": 3418,
+      "events_count": 0,
+      "occurrences_count": 0
+    },
+    {
+      "id": 123,
+      "name": "Costa Rica - Restoration",
+      "project": {
+        "id": 45,
+        "name": "AMBER - Costa Rica"
+      },
+      "latitude": 8.409125,
+      "longitude": -83.349612,
+      "captures_count": 3419,
+      "events_count": 0,
+      "occurrences_count": 0
+    },
+    {
+      "id": 121,
+      "name": "Costa Rica - Station",
+      "project": {
+        "id": 45,
+        "name": "AMBER - Costa Rica"
+      },
+      "latitude": 8.404135,
+      "longitude": -83.336879,
+      "captures_count": 6719,
+      "events_count": 0,
+      "occurrences_count": 0
+    },
+    {
+      "id": 119,
+      "name": "Costa Rica - Wetland",
+      "project": {
+        "id": 45,
+        "name": "AMBER - Costa Rica"
+      },
+      "latitude": 10.34384,
+      "longitude": -85.33845,
+      "captures_count": 4327,
+      "events_count": 0,
+      "occurrences_count": 0
+    },
+    {
+      "id": 5,
+      "name": "Cyprus",
+      "project": {
+        "id": 1,
+        "name": "UK Centre for Ecology & Hydrology"
+      },
+      "latitude": 35.00355167636659,
+      "longitude": 33.27232213290162,
+      "captures_count": 577,
+      "events_count": 11,
+      "occurrences_count": 1
+    },
+    {
+      "id": 41,
+      "name": "Denmark - LV1",
+      "project": {
+        "id": 16,
+        "name": "Aarhus Universitet, Department of Ecoscience"
+      },
+      "latitude": 56.943836,
+      "longitude": 10.215437,
+      "captures_count": 3587,
+      "events_count": 146,
+      "occurrences_count": 754
+    },
+    {
+      "id": 43,
+      "name": "Denmark - LV2",
+      "project": {
+        "id": 16,
+        "name": "Aarhus Universitet, Department of Ecoscience"
+      },
+      "latitude": 56.939582,
+      "longitude": 10.211193,
+      "captures_count": 3504,
+      "events_count": 146,
+      "occurrences_count": 61
+    },
+    {
+      "id": 44,
+      "name": "Denmark - LV3",
+      "project": {
+        "id": 16,
+        "name": "Aarhus Universitet, Department of Ecoscience"
+      },
+      "latitude": 56.849274,
+      "longitude": 10.214871,
+      "captures_count": 3504,
+      "events_count": 146,
+      "occurrences_count": 27
+    },
+    {
+      "id": 45,
+      "name": "Denmark - LV4",
+      "project": {
+        "id": 16,
+        "name": "Aarhus Universitet, Department of Ecoscience"
+      },
+      "latitude": 56.824246,
+      "longitude": 10.268368,
+      "captures_count": 3312,
+      "events_count": 138,
+      "occurrences_count": 3
+    },
+    {
+      "id": 40,
+      "name": "Denmark - OH1",
+      "project": {
+        "id": 16,
+        "name": "Aarhus Universitet, Department of Ecoscience"
+      },
+      "latitude": 56.255051,
+      "longitude": 8.91585,
+      "captures_count": 4342,
+      "events_count": 181,
+      "occurrences_count": 8
+    },
+    {
+      "id": 46,
+      "name": "Denmark - OH2",
+      "project": {
+        "id": 16,
+        "name": "Aarhus Universitet, Department of Ecoscience"
+      },
+      "latitude": 56.250263,
+      "longitude": 8.909175,
+      "captures_count": 4320,
+      "events_count": 180,
+      "occurrences_count": 39
+    },
+    {
+      "id": 47,
+      "name": "Denmark - OH3",
+      "project": {
+        "id": 16,
+        "name": "Aarhus Universitet, Department of Ecoscience"
+      },
+      "latitude": 56.254377,
+      "longitude": 8.931631,
+      "captures_count": 1489,
+      "events_count": 63,
+      "occurrences_count": 11
+    },
+    {
+      "id": 50,
+      "name": "Denmark - OH4",
+      "project": {
+        "id": 16,
+        "name": "Aarhus Universitet, Department of Ecoscience"
+      },
+      "latitude": 56.242809,
+      "longitude": 8.950197,
+      "captures_count": 4248,
+      "events_count": 177,
+      "occurrences_count": 17
+    },
+    {
+      "id": 48,
+      "name": "Denmark - SS1",
+      "project": {
+        "id": 16,
+        "name": "Aarhus Universitet, Department of Ecoscience"
+      },
+      "latitude": 54.73925,
+      "longitude": 11.587632,
+      "captures_count": 2376,
+      "events_count": 99,
+      "occurrences_count": 58
+    },
+    {
+      "id": 34,
+      "name": "Denmark - SS1 (s3)",
+      "project": {
+        "id": 4,
+        "name": "Annotation Project"
+      },
+      "latitude": 56.156480896168,
+      "longitude": 10.198363350289059,
+      "captures_count": 2376,
+      "events_count": 99,
+      "occurrences_count": 0
+    },
+    {
+      "id": 42,
+      "name": "Denmark - SS2",
+      "project": {
+        "id": 16,
+        "name": "Aarhus Universitet, Department of Ecoscience"
+      },
+      "latitude": 54.731336,
+      "longitude": 11.577281,
+      "captures_count": 2352,
+      "events_count": 98,
+      "occurrences_count": 45
+    },
+    {
+      "id": 49,
+      "name": "Denmark - SS3",
+      "project": {
+        "id": 16,
+        "name": "Aarhus Universitet, Department of Ecoscience"
+      },
+      "latitude": 54.718938,
+      "longitude": 11.557997,
+      "captures_count": 2352,
+      "events_count": 98,
+      "occurrences_count": 20
+    },
+    {
+      "id": 7,
+      "name": "Diopsis Camera Sample",
+      "project": {
+        "id": 20,
+        "name": "Barro Colorado Island Research Station"
+      },
+      "latitude": 9.16612,
+      "longitude": -79.8352,
+      "captures_count": 559,
+      "events_count": 1,
+      "occurrences_count": 100
+    },
+    {
+      "id": 99,
+      "name": "Dorset Agri neg",
+      "project": {
+        "id": 44,
+        "name": "AgZero+"
+      },
+      "latitude": 50.79453953,
+      "longitude": -2.267691518,
+      "captures_count": 105292,
+      "events_count": 0,
+      "occurrences_count": 0
+    },
+    {
+      "id": 98,
+      "name": "Dorset Agri pos",
+      "project": {
+        "id": 44,
+        "name": "AgZero+"
+      },
+      "latitude": 50.79649263,
+      "longitude": -2.298161412,
+      "captures_count": 83686,
+      "events_count": 0,
+      "occurrences_count": 0
+    },
+    {
+      "id": 97,
+      "name": "Dorset Cont neg",
+      "project": {
+        "id": 44,
+        "name": "AgZero+"
+      },
+      "latitude": 50.80528056,
+      "longitude": -2.249924566,
+      "captures_count": 50318,
+      "events_count": 0,
+      "occurrences_count": 0
+    },
+    {
+      "id": 96,
+      "name": "Dorset Cont pos",
+      "project": {
+        "id": 44,
+        "name": "AgZero+"
+      },
+      "latitude": 50.8104191,
+      "longitude": -2.243524,
+      "captures_count": 26683,
+      "events_count": 0,
+      "occurrences_count": 0
+    },
+    {
+      "id": 14,
+      "name": "Insectarium",
+      "project": {
+        "id": 23,
+        "name": "Insectarium de Montréal"
+      },
+      "latitude": 45.56148,
+      "longitude": -73.5595,
+      "captures_count": 835162,
+      "events_count": 215,
+      "occurrences_count": 3
+    },
+    {
+      "id": 133,
+      "name": "Joseph",
+      "project": {
+        "id": 53,
+        "name": "Moth ID"
+      },
+      "latitude": 48.58859,
+      "longitude": -70.58217,
+      "captures_count": 17,
+      "events_count": 1,
+      "occurrences_count": 0
+    },
+    {
+      "id": 135,
+      "name": "Julio1",
+      "project": {
+        "id": 56,
+        "name": "Julio RIvera"
+      },
+      "latitude": 45.55695,
+      "longitude": -73.55652,
+      "captures_count": 11,
+      "events_count": 0,
+      "occurrences_count": 0
+    },
+    {
+      "id": 53,
+      "name": "Luna",
+      "project": {
+        "id": 18,
+        "name": "Vermont Atlas of Life"
+      },
+      "latitude": 43.57876,
+      "longitude": -72.54442,
+      "captures_count": 289192,
+      "events_count": 107,
+      "occurrences_count": 8669
+    },
+    {
+      "id": 52,
+      "name": "Mothra",
+      "project": {
+        "id": 18,
+        "name": "Vermont Atlas of Life"
+      },
+      "latitude": 43.62451,
+      "longitude": -72.5046,
+      "captures_count": 209500,
+      "events_count": 82,
+      "occurrences_count": 6898
+    },
+    {
+      "id": 11,
+      "name": "Newfoundland - Unit 1-Pasadena",
+      "project": {
+        "id": 24,
+        "name": "Atlantic Forestry Centre"
+      },
+      "latitude": 49.00070221783913,
+      "longitude": -57.591556784064984,
+      "captures_count": 306909,
+      "events_count": 64,
+      "occurrences_count": 204
+    },
+    {
+      "id": 12,
+      "name": "Newfoundland - Unit 2",
+      "project": {
+        "id": 24,
+        "name": "Atlantic Forestry Centre"
+      },
+      "latitude": 48.94831985715468,
+      "longitude": -57.933764807509164,
+      "captures_count": 307686,
+      "events_count": 36,
+      "occurrences_count": 251
+    },
+    {
+      "id": 103,
+      "name": "North Agri neg",
+      "project": {
+        "id": 44,
+        "name": "AgZero+"
+      },
+      "latitude": 52.333946,
+      "longitude": -0.471212,
+      "captures_count": 100357,
+      "events_count": 0,
+      "occurrences_count": 0
+    },
+    {
+      "id": 101,
+      "name": "North Cont neg",
+      "project": {
+        "id": 44,
+        "name": "AgZero+"
+      },
+      "latitude": 52.34202227,
+      "longitude": -0.489601489,
+      "captures_count": 127684,
+      "events_count": 0,
+      "occurrences_count": 0
+    },
+    {
+      "id": 100,
+      "name": "North Cont pos",
+      "project": {
+        "id": 44,
+        "name": "AgZero+"
+      },
+      "latitude": 52.34516844,
+      "longitude": -0.500244494,
+      "captures_count": 195950,
+      "events_count": 0,
+      "occurrences_count": 0
+    },
+    {
+      "id": 95,
+      "name": "Ox Agri neg",
+      "project": {
+        "id": 44,
+        "name": "AgZero+"
+      },
+      "latitude": 51.583779,
+      "longitude": -1.334005,
+      "captures_count": 86082,
+      "events_count": 0,
+      "occurrences_count": 0
+    },
+    {
+      "id": 94,
+      "name": "Ox Agri pos",
+      "project": {
+        "id": 44,
+        "name": "AgZero+"
+      },
+      "latitude": 51.589179,
+      "longitude": -1.323236,
+      "captures_count": 89417,
+      "events_count": 42,
+      "occurrences_count": 0
+    },
+    {
+      "id": 93,
+      "name": "Ox Cont neg",
+      "project": {
+        "id": 44,
+        "name": "AgZero+"
+      },
+      "latitude": 51.5767289,
+      "longitude": -1.3458738,
+      "captures_count": 80863,
+      "events_count": 41,
+      "occurrences_count": 0
+    },
+    {
+      "id": 92,
+      "name": "Ox Cont pos",
+      "project": {
+        "id": 44,
+        "name": "AgZero+"
+      },
+      "latitude": 51.5728748,
+      "longitude": -1.3470788,
+      "captures_count": 53113,
+      "events_count": 41,
+      "occurrences_count": 0
+    },
+    {
+      "id": 74,
+      "name": "PFS_Moth_Wall",
+      "project": {
+        "id": 24,
+        "name": "Atlantic Forestry Centre"
+      },
+      "latitude": 49.00099,
+      "longitude": -57.59317,
+      "captures_count": 1263,
+      "events_count": 43,
+      "occurrences_count": 169
+    },
+    {
+      "id": 108,
+      "name": "Panama - trap 1",
+      "project": {
+        "id": 46,
+        "name": "AMBER - Panama"
+      },
+      "latitude": 9.02887,
+      "longitude": -79.63921,
+      "captures_count": 25759,
+      "events_count": 8,
+      "occurrences_count": 1430
+    },
+    {
+      "id": 109,
+      "name": "Panama - trap 2",
+      "project": {
+        "id": 46,
+        "name": "AMBER - Panama"
+      },
+      "latitude": 9.1619212,
+      "longitude": -79.8388263,
+      "captures_count": 13582,
+      "events_count": 6,
+      "occurrences_count": 395
+    },
+    {
+      "id": 110,
+      "name": "Panama - trap 3",
+      "project": {
+        "id": 46,
+        "name": "AMBER - Panama"
+      },
+      "latitude": 9.163177,
+      "longitude": -79.8381913,
+      "captures_count": 46234,
+      "events_count": 10,
+      "occurrences_count": 1030
+    },
+    {
+      "id": 111,
+      "name": "Panama - trap 4",
+      "project": {
+        "id": 46,
+        "name": "AMBER - Panama"
+      },
+      "latitude": 9.1665498,
+      "longitude": -79.8370742,
+      "captures_count": 60824,
+      "events_count": 19,
+      "occurrences_count": 168
+    },
+    {
+      "id": 112,
+      "name": "Panama - trap 5",
+      "project": {
+        "id": 46,
+        "name": "AMBER - Panama"
+      },
+      "latitude": 9.156513,
+      "longitude": -79.8482278,
+      "captures_count": 67828,
+      "events_count": 11,
+      "occurrences_count": 528
+    },
+    {
+      "id": 113,
+      "name": "Panama - trap 6",
+      "project": {
+        "id": 46,
+        "name": "AMBER - Panama"
+      },
+      "latitude": 9.1581468,
+      "longitude": -79.8473376,
+      "captures_count": 63336,
+      "events_count": 2,
+      "occurrences_count": 484
+    },
+    {
+      "id": 105,
+      "name": "Pymoor neg",
+      "project": {
+        "id": 44,
+        "name": "AgZero+"
+      },
+      "latitude": 52.475035,
+      "longitude": 0.224349,
+      "captures_count": 100040,
+      "events_count": 47,
+      "occurrences_count": 0
+    },
+    {
+      "id": 104,
+      "name": "Pymoor pos",
+      "project": {
+        "id": 44,
+        "name": "AgZero+"
+      },
+      "latitude": 52.451581,
+      "longitude": 0.194265,
+      "captures_count": 192000,
+      "events_count": 34,
+      "occurrences_count": 0
+    },
+    {
+      "id": 9,
+      "name": "Quebec - Moth Week 2022",
+      "project": {
+        "id": 23,
+        "name": "Insectarium de Montréal"
+      },
+      "latitude": 45.3058,
+      "longitude": -73.45459,
+      "captures_count": 10555,
+      "events_count": 11,
+      "occurrences_count": 160
+    },
+    {
+      "id": 13,
+      "name": "Rigaud",
+      "project": {
+        "id": 23,
+        "name": "Insectarium de Montréal"
+      },
+      "latitude": 45.47361,
+      "longitude": -74.31564,
+      "captures_count": 312063,
+      "events_count": 176,
+      "occurrences_count": 33
+    },
+    {
+      "id": 106,
+      "name": "Salisbury",
+      "project": {
+        "id": 44,
+        "name": "AgZero+"
+      },
+      "latitude": 51.18193,
+      "longitude": -2.25014,
+      "captures_count": 87444,
+      "events_count": 39,
+      "occurrences_count": 6
+    },
+    {
+      "id": 137,
+      "name": "Trapview 2",
+      "project": {
+        "id": 60,
+        "name": "Insect trap - Test JS"
+      },
+      "latitude": 45.58382,
+      "longitude": -73.23946,
+      "captures_count": 21,
+      "events_count": 0,
+      "occurrences_count": 0
+    },
+    {
+      "id": 24,
+      "name": "UK - East Hendred (-)",
+      "project": {
+        "id": 1,
+        "name": "UK Centre for Ecology & Hydrology"
+      },
+      "latitude": 51.59681,
+      "longitude": -1.33561,
+      "captures_count": 82373,
+      "events_count": 18,
+      "occurrences_count": 41
+    },
+    {
+      "id": 21,
+      "name": "UK - East Hendred - Combined",
+      "project": {
+        "id": 1,
+        "name": "UK Centre for Ecology & Hydrology"
+      },
+      "latitude": 51.59681,
+      "longitude": -1.33561,
+      "captures_count": 6146,
+      "events_count": 1,
+      "occurrences_count": 0
+    },
+    {
+      "id": 26,
+      "name": "UK - Farringdon (+)",
+      "project": {
+        "id": 1,
+        "name": "UK Centre for Ecology & Hydrology"
+      },
+      "latitude": 50.71159,
+      "longitude": -3.39242,
+      "captures_count": 50320,
+      "events_count": 18,
+      "occurrences_count": 9
+    },
+    {
+      "id": 27,
+      "name": "UK - Farringdon (-)",
+      "project": {
+        "id": 1,
+        "name": "UK Centre for Ecology & Hydrology"
+      },
+      "latitude": 50.71159,
+      "longitude": -3.39242,
+      "captures_count": 73329,
+      "events_count": 19,
+      "occurrences_count": 12
+    },
+    {
+      "id": 20,
+      "name": "UK - Farringdon - Combined",
+      "project": {
+        "id": 1,
+        "name": "UK Centre for Ecology & Hydrology"
+      },
+      "latitude": 50.71159,
+      "longitude": -3.39242,
+      "captures_count": 16306,
+      "events_count": 1,
+      "occurrences_count": 0
+    },
+    {
+      "id": 17,
+      "name": "UK - Heartwood",
+      "project": {
+        "id": 1,
+        "name": "UK Centre for Ecology & Hydrology"
+      },
+      "latitude": 52.53102,
+      "longitude": -1.26491,
+      "captures_count": 40000,
+      "events_count": 17,
+      "occurrences_count": 1
+    },
+    {
+      "id": 16,
+      "name": "UK - Wallingford",
+      "project": {
+        "id": 1,
+        "name": "UK Centre for Ecology & Hydrology"
+      },
+      "latitude": 51.59829,
+      "longitude": -1.12525,
+      "captures_count": 105000,
+      "events_count": 28,
+      "occurrences_count": 5
+    },
+    {
+      "id": 19,
+      "name": "Vermont - Luna",
+      "project": {
+        "id": 4,
+        "name": "Annotation Project"
+      },
+      "latitude": 44.59907,
+      "longitude": -72.50026,
+      "captures_count": 252273,
+      "events_count": 88,
+      "occurrences_count": 0
+    },
+    {
+      "id": 1,
+      "name": "Vermont - Luna (ML)",
+      "project": {
+        "id": 2,
+        "name": "Vermont Demo with Tracking"
+      },
+      "latitude": 44.22257,
+      "longitude": -72.64847,
+      "captures_count": 298,
+      "events_count": 5,
+      "occurrences_count": 128
+    },
+    {
+      "id": 18,
+      "name": "Vermont - Mothra",
+      "project": {
+        "id": 4,
+        "name": "Annotation Project"
+      },
+      "latitude": 44.59907,
+      "longitude": -72.50026,
+      "captures_count": 518257,
+      "events_count": 128,
+      "occurrences_count": 0
+    },
+    {
+      "id": 126,
+      "name": "Wingscape 1",
+      "project": {
+        "id": 49,
+        "name": "Moth Monitoring by Marc Bélisle's Lab"
+      },
+      "latitude": 45.303718,
+      "longitude": -72.198557,
+      "captures_count": 527,
+      "events_count": 7,
+      "occurrences_count": 504
+    },
+    {
+      "id": 70,
+      "name": "Wingscape Mothwatch",
+      "project": {
+        "id": 18,
+        "name": "Vermont Atlas of Life"
+      },
+      "latitude": 43.62435,
+      "longitude": -72.50492,
+      "captures_count": 1742,
+      "events_count": 5,
+      "occurrences_count": 1659
+    }
+  ]
+}
