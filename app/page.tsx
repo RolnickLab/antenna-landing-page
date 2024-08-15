@@ -3,12 +3,19 @@ import { ImagePlaceholder } from "@/components/image-placeholder";
 import { DeploymentsStats } from "@/components/stats/deployments-stats";
 import { buttonVariants } from "@/components/ui/button";
 import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel";
+import {
   DATA_PLATFORM_REPO_URL,
   DATA_PLATFORM_URL,
   ML_REPO_URL,
   WAITLIST_URL,
 } from "@/lib/constants";
-import { ClockIcon, ExternalLinkIcon } from "lucide-react";
+import { ClockIcon, ExternalLinkIcon, PlayIcon } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 
@@ -85,82 +92,137 @@ export default function Home() {
 
       <section className="p-24 bg-muted/50">
         <div className="max-w-screen-lg mx-auto">
-          <h1 className="text-3xl font-medium mb-4">How can ADP help you?</h1>
-          <p className="text-muted-foreground mb-12">
-            I want to build on and contribute to a global effort to scale the
-            understanding of insects and biodiversity:
-          </p>
-          <div className="grid grid-cols-2 gap-12">
-            <Card
-              title="Know the species in many images"
-              listItems={[
-                "Programmatically upload batches of images",
-                "The AI detects and identifies the species",
-              ]}
-            >
-              <Link
-                href={WAITLIST_URL}
-                className={buttonVariants({ variant: "accent" })}
-              >
-                <ClockIcon className="h-4 w-4 mr-2" /> Join waitlist
-              </Link>
-            </Card>
-            <Card
-              title="Know where and when a species was observed"
-              listItems={[
-                "Explore or search observations for a given species, location, or time",
-                "Download timestamped, geolocated datasets for analysis",
-              ]}
-            >
-              <Link
-                href={DATA_PLATFORM_URL}
-                className={buttonVariants({ variant: "accent" })}
-              >
-                Checkout platform <ExternalLinkIcon className="h-4 w-4 ml-2" />
-              </Link>
-            </Card>
-            <Card
-              title="Help validate the data with my insect expertise"
-              listItems={[
-                "Confirm or adjust AI-generated taxons",
-                "Suggest IDs for unidentified images",
-              ]}
-            >
-              <Link
-                href={WAITLIST_URL}
-                className={buttonVariants({ variant: "accent" })}
-              >
-                <ClockIcon className="h-4 w-4 mr-2" /> Join waitlist
-              </Link>
-            </Card>
-            <Card
-              title="Apply my ML skills to support biodiversity"
-              listItems={[
-                "Use structured & verified data to train new object detectors, species classifiers or behavioral analysis models",
-                "Benchmark evaluation metrics to compare results with / compare model performance",
-              ]}
-            >
-              <Link
-                href={ML_REPO_URL}
-                className={buttonVariants({ variant: "accent" })}
-              >
-                Visit repo <ExternalLinkIcon className="h-4 w-4 ml-2" />
-              </Link>
-            </Card>
-            <Card
-              title="Contribute to open-source software related to biodiversity"
-              listItems={[
-                "Create new integrations for data interchange",
-                "Add new features to an existing codebase",
-              ]}
-            >
-              <Link
-                href={DATA_PLATFORM_REPO_URL}
-                className={buttonVariants({ variant: "accent" })}
-              >
-                Visit repo <ExternalLinkIcon className="h-4 w-4 ml-2" />
-              </Link>
-            </Card>
+          <div className="grid grid-cols-2 gap-24">
+            <div>
+              <h1 className="text-4xl font-medium mb-4">
+                How can ADP help you?
+              </h1>
+              <p className="text-muted-foreground mb-8">
+                I want to build on and contribute to a global effort to scale
+                the understanding of insects and biodiversity:
+              </p>
+              <ul className="space-y-2 text-muted-foreground font-medium">
+                <li className="flex gap-2 text-accent">
+                  <span className="shrink-0 w-7 h-7 flex items-center justify-center">
+                    <PlayIcon className="w-4 h-4 fill-current" />
+                  </span>
+                  <span>Know the species in many images</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="shrink-0 w-7 h-7 flex items-center justify-center">
+                    <PlayIcon className="w-4 h-4" />
+                  </span>
+                  <span>Know where and when a species was observed</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="shrink-0 w-7 h-7 flex items-center justify-center">
+                    <PlayIcon className="w-4 h-4" />
+                  </span>
+                  <span>Help validate the data with my insect expertise</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="shrink-0 w-7 h-7 flex items-center justify-center">
+                    <PlayIcon className="w-4 h-4" />
+                  </span>
+                  <span>Apply my ML skills to support biodiversity</span>
+                </li>
+                <li className="flex gap-2">
+                  <span className="shrink-0 w-7 h-7 flex items-center justify-center">
+                    <PlayIcon className="w-4 h-4" />
+                  </span>
+                  <span>
+                    Contribute to open-source software related to biodiversity
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <Carousel>
+              <CarouselContent>
+                <CarouselItem>
+                  <Card
+                    title="Know the species in many images"
+                    listItems={[
+                      "Programmatically upload batches of images",
+                      "The AI detects and identifies the species",
+                    ]}
+                  >
+                    <Link
+                      href={WAITLIST_URL}
+                      className={buttonVariants({ variant: "accent" })}
+                    >
+                      <ClockIcon className="h-4 w-4 mr-2" /> Join waitlist
+                    </Link>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem>
+                  <Card
+                    title="Know where and when a species was observed"
+                    listItems={[
+                      "Explore or search observations for a given species, location, or time",
+                      "Download timestamped, geolocated datasets for analysis",
+                    ]}
+                  >
+                    <Link
+                      href={DATA_PLATFORM_URL}
+                      className={buttonVariants({ variant: "accent" })}
+                    >
+                      Checkout platform{" "}
+                      <ExternalLinkIcon className="h-4 w-4 ml-2" />
+                    </Link>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem>
+                  <Card
+                    title="Help validate the data with my insect expertise"
+                    listItems={[
+                      "Confirm or adjust AI-generated taxons",
+                      "Suggest IDs for unidentified images",
+                    ]}
+                  >
+                    <Link
+                      href={WAITLIST_URL}
+                      className={buttonVariants({ variant: "accent" })}
+                    >
+                      <ClockIcon className="h-4 w-4 mr-2" /> Join waitlist
+                    </Link>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem>
+                  <Card
+                    title="Apply my ML skills to support biodiversity"
+                    listItems={[
+                      "Use structured & verified data to train new object detectors, species classifiers or behavioral analysis models",
+                      "Benchmark evaluation metrics to compare results with / compare model performance",
+                    ]}
+                  >
+                    <Link
+                      href={ML_REPO_URL}
+                      className={buttonVariants({ variant: "accent" })}
+                    >
+                      Visit repo <ExternalLinkIcon className="h-4 w-4 ml-2" />
+                    </Link>
+                  </Card>
+                </CarouselItem>
+                <CarouselItem>
+                  <Card
+                    title="Contribute to open-source software related to biodiversity"
+                    listItems={[
+                      "Create new integrations for data interchange",
+                      "Add new features to an existing codebase",
+                    ]}
+                  >
+                    <Link
+                      href={DATA_PLATFORM_REPO_URL}
+                      className={buttonVariants({ variant: "accent" })}
+                    >
+                      Visit repo <ExternalLinkIcon className="h-4 w-4 ml-2" />
+                    </Link>
+                  </Card>
+                </CarouselItem>
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </div>
       </section>

@@ -9,7 +9,7 @@ interface CardProps {
 }
 
 export const Card = ({ children, listItems, title }: CardProps) => (
-  <div className="flex flex-col bg-card rounded-xl border overflow-hidden">
+  <div className="flex flex-col h-full bg-card rounded-xl border overflow-hidden">
     <div className="h-[240px]">
       <ImagePlaceholder />
     </div>
