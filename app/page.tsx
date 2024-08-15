@@ -1,5 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
+
 import { Card } from "@/components/card";
-import { ImagePlaceholder } from "@/components/image-placeholder";
 import { DeploymentsStats } from "@/components/stats/deployments-stats";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -40,7 +41,11 @@ export default function Home() {
           </div>
           <div style={{ marginRight: "-240px" }}>
             <div className="w-[640px] h-[480px] rounded-xl bg-card border overflow-hidden">
-              <ImagePlaceholder />
+              <img
+                alt="Trap image with bounding boxes and labels"
+                src="/intro.jpg"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
         </div>
