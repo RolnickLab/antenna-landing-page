@@ -1,6 +1,6 @@
 "use client";
 
-import { DATA_PLATFORM_REPO_URL, WAITLIST_URL } from "@/lib/constants";
+import { DATA_PLATFORM_REPO_URL, FAQ_URL, WAITLIST_URL } from "@/lib/constants";
 import { ExternalLinkIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -12,6 +12,9 @@ export const Menu = () => (
     </li>
     <li>
       <MenuItem label="Join waitlist" href={WAITLIST_URL} />
+    </li>
+    <li>
+      <MenuItem label="FAQ" href={FAQ_URL} />
     </li>
     <li>
       <MenuItem
