@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const STORAGE_KEY = "theme-preference";
+const STORAGE_KEY = "ami-theme-preference";
 
 type Theme = "dark" | "light";
 
