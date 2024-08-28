@@ -1,4 +1,5 @@
 import { MAILCHIMP_SNIPPET } from "./constants";
+import "./page.css";
 
 export default function Waitlist() {
   return (

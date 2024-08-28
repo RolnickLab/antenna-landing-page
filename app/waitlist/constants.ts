@@ -483,23 +483,23 @@ export const MAILCHIMP_SNIPPET = `
             class="button"
             value="Subscribe"
           />
-          <p style="margin: 0px auto">
-            <a
-              href="http://eepurl.com/iXR6ow"
-              title="Mailchimp - email marketing made easy and fun"
-              ><img
-                id="mailchimp-logo-dark"
-                class="refferal_badge"
-                src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
-                alt="Intuit Mailchimp"
-              /><img
-                id="mailchimp-logo-light"
-                class="refferal_badge"
-                src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-light.svg"
-                alt="Intuit Mailchimp"
-              />
-            </a>
-          </p>
+          <a
+            href="http://eepurl.com/iXR6ow"
+            title="Mailchimp - email marketing made easy and fun"
+            ><img
+              id="mailchimp-logo-dark"
+              class="refferal_badge"
+              src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
+              alt="Intuit Mailchimp"
+              style="width: 220px; height: 40px"
+            /><img
+              id="mailchimp-logo-light"
+              class="refferal_badge"
+              src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-light.svg"
+              alt="Intuit Mailchimp"
+              style="width: 220px; height: 40px"
+            />
+          </a>
         </div>
       </div>
     </form>
