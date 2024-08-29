@@ -32,15 +32,19 @@ export const Map = ({ height, markers }: MapProps) => {
 
   return (
     <MapContainer
+      boxZoom={false}
       className="z-0"
       center={bounds.getCenter()}
+      doubleClickZoom={false}
+      keyboard={false}
       maxBounds={MAX_BOUNDS}
-      minZoom={MIN_ZOOM}
       scrollWheelZoom={false}
       style={{
         height: `${height}px`,
       }}
+      touchZoom={false}
       zoom={DEFAULT_ZOOM}
+      zoomControl={false}
     >
       <TileLayer attribution={ATTRIBUTION} url={TILE_LAYER_URL} />
       {markers.map((marker, index) => (
