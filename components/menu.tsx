@@ -38,6 +38,20 @@ const MenuItem = ({
   const pathname = usePathname();
   const isActive = pathname === href;
 
+  if (external) {
+    return (
+      <a
+        href={href}
+        className="flex items-center justify-center gap-2 text-foreground"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span>{label}</span>
+        <ExternalLinkIcon className="w-4 h-4" />
+      </a>
+    );
+  }
+
   return (
     <Link
       href={href}

@@ -159,12 +159,14 @@ export default function Home() {
                 "Download timestamped, geolocated datasets for analysis",
               ]}
             >
-              <Link
+              <a
                 href={DATA_PLATFORM_URL}
                 className={buttonVariants({ variant: "accent" })}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Checkout platform <ExternalLinkIcon className="h-4 w-4 ml-2" />
-              </Link>
+              </a>
             </Card>
             <Card
               title="Help validate the data with my moth expertise"
@@ -187,12 +189,14 @@ export default function Home() {
                 "Benchmark evaluation metrics to compare model performance",
               ]}
             >
-              <Link
+              <a
                 href={ML_REPO_URL}
                 className={buttonVariants({ variant: "accent" })}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Visit repo <ExternalLinkIcon className="h-4 w-4 ml-2" />
-              </Link>
+              </a>
             </Card>
             <Card
               title="Grow the open-source software"
@@ -201,12 +205,14 @@ export default function Home() {
                 "Add new features to an existing codebase",
               ]}
             >
-              <Link
+              <a
                 href={DATA_PLATFORM_REPO_URL}
                 className={buttonVariants({ variant: "accent" })}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 Visit repo <ExternalLinkIcon className="h-4 w-4 ml-2" />
-              </Link>
+              </a>
             </Card>
           </div>
         </div>
