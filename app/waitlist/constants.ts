@@ -536,8 +536,9 @@ export const MAILCHIMP_SNIPPET = `
                 id="mce-group[5]-5-0"
                 value=""
               /><label for="mce-group[5]-5-0"
-                >I agree to receive email communications from Antenna
-                (optional)</label
+                >I agree to receive email communications from Antenna. This is
+                optional but we will not be able to send you an invitation
+                without this permission.</label
               >
             </li>
           </ul>
