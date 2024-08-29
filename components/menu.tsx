@@ -11,7 +11,7 @@ export const Menu = () => (
       <MenuItem label="Home" href="/" />
     </li>
     <li>
-      <MenuItem label="Join waitlist" href={WAITLIST_URL} />
+      <MenuItem label="Join the waitlist" href={WAITLIST_URL} />
     </li>
     <li>
       <MenuItem label="FAQ" href={FAQ_URL} />

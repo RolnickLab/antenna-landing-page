@@ -40,7 +40,7 @@ export default function Home() {
               className={buttonVariants({ size: "lg" })}
               href={WAITLIST_URL}
             >
-              Join waitlist
+              Join the waitlist
             </Link>
           </div>
           <div style={{ marginRight: "-240px" }}>
@@ -149,7 +149,7 @@ export default function Home() {
                 href={WAITLIST_URL}
                 className={buttonVariants({ variant: "accent" })}
               >
-                <ClockIcon className="h-4 w-4 mr-2" /> Join waitlist
+                <ClockIcon className="h-4 w-4 mr-2" /> Join the waitlist
               </Link>
             </Card>
             <Card
@@ -165,7 +165,8 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Checkout platform <ExternalLinkIcon className="h-4 w-4 ml-2" />
+                Checkout the platform{" "}
+                <ExternalLinkIcon className="h-4 w-4 ml-2" />
               </a>
             </Card>
             <Card
@@ -179,7 +180,7 @@ export default function Home() {
                 href={WAITLIST_URL}
                 className={buttonVariants({ variant: "accent" })}
               >
-                <ClockIcon className="h-4 w-4 mr-2" /> Join waitlist
+                <ClockIcon className="h-4 w-4 mr-2" /> Join the waitlist
               </Link>
             </Card>
             <Card
@@ -195,7 +196,8 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Visit repo <ExternalLinkIcon className="h-4 w-4 ml-2" />
+                Visit the repo repo{" "}
+                <ExternalLinkIcon className="h-4 w-4 ml-2" />
               </a>
             </Card>
             <Card
@@ -211,7 +213,8 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Visit repo <ExternalLinkIcon className="h-4 w-4 ml-2" />
+                Visit the repo repo{" "}
+                <ExternalLinkIcon className="h-4 w-4 ml-2" />
               </a>
             </Card>
           </div>
