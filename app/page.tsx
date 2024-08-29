@@ -25,13 +25,16 @@ export default function Home() {
         <div className="flex items-center gap-12 max-w-screen-lg mx-auto">
           <div>
             <h1 className="text-4xl font-medium mb-4">
-              AMI Data Platform: AI-enabled detection and classification of
-              insects at scale
+              Antenna - The Insect Data Platform
             </h1>
-            <h2 className="text-2xl mb-12">
-              Delivering trustworthy data for biodiversity monitoring,
-              policy-making, and conservation efforts
+            <h2 className="text-2xl mb-4">
+              AI-Enabled Detection And Classification Of Insects At Scale
             </h2>
+            <p className="mb-12 text-muted-foreground">
+              An interdisciplinary platform to upload, classify, and analyse
+              in-the-wild images of invertebrates for research and conservation
+              efforts.
+            </p>
             <Link
               className={buttonVariants({ size: "lg" })}
               href={WAITLIST_URL}
@@ -53,27 +56,34 @@ export default function Home() {
 
       <section className="p-24 bg-muted">
         <div className="max-w-screen-md mx-auto">
-          <h1 className="text-3xl font-medium mb-4">How it helps</h1>
+          <h1 className="text-3xl font-medium mb-4">Introducing Antenna</h1>
           <div className="space-y-4 text-muted-foreground">
             <p>
-              The AMI Data Platform fills the data gap to understand and protect
-              insects.
+              Antenna fills the data gap to help understand insects and protect
+              biodiversity by enabling the scale-up of data collection with
+              greater spatial, temporal, and taxonomic coverage than has ever
+              been possible. It is an online platform where entomologists,
+              ecologists, and machine learning (ML) and computer scientists
+              collaborate to build trustworthy datasets by implementing and
+              improving upon ML research designed specifically for real-world
+              applications. Antenna cost-effectively and rapidly classifies a
+              wide range of species in a large number of images, building a rich
+              dataset that grows and updates over time.
             </p>
+            <ul>
+              <li>Open source machine learning models - no black box</li>
+              <li>
+                Classifications informed and quality controlled by experts
+              </li>
+              <li>Compatible with all high-resolution cameras</li>
+              <li>User-friendly interface</li>
+              <li>Standardised data formats and metadata</li>
+              <li>Programmable data uploads, processings, and downloads</li>
+              <li>No software installation required</li>
+            </ul>
             <p>
-              A billion insects for every human at any one time and 10 million
-              insect species on Earth. These estimates show how challenging it
-              is to collect sufficient data, recognise observed species, and
-              monitor population changes. Insects are key to ecosystems and
-              agriculture, and severely impacted by climate change. Rich,
-              quality data is critical to describing and responding to insect
-              population patterns.
-            </p>
-            <p>
-              The Platform uses artificial intelligence to automate, accelerate,
-              and scale up the identification of insects in in-the-wild images.
-              The resulting research-grade datasets comprise continuously
-              updating information about the location, time, frequency, quantity
-              of species as observed around the world.
+              Antenna currently focuses on moths but expansions to other insects
+              are planned.
             </p>
           </div>
         </div>
@@ -88,19 +98,48 @@ export default function Home() {
         </div>
       </section>
 
+      <section className="p-24 bg-muted">
+        <div className="max-w-screen-md mx-auto">
+          <h1 className="text-3xl font-medium mb-4">How Antenna helps</h1>
+          <div className="space-y-4 text-muted-foreground">
+            <p>
+              A billion insects for every human at any one time and 10 million
+              insect species on Earth.
+            </p>
+            <p>
+              These estimates show how challenging it is to collect sufficient
+              data, recognise observed species, and monitor population changes.
+              Insects are key to ecosystems and agriculture, and severely
+              impacted by climate change. Rich, quality data is critical to
+              describing and responding to insect population patterns.
+            </p>
+            <p>
+              Antenna uses artificial intelligence to automate, accelerate,
+              standardise, and scale up the identification of invertebrates in
+              the wild. It rapidly performs fine-grained species classification
+              and new species discovery using the GBIF and Darwin Core
+              Standards. The resulting research-grade datasets comprise
+              continuously updating information about the location, time,
+              frequency, quantity of species as observed around the world. Our
+              technology is the most convenient and cost-effective way to enable
+              monitoring at scale.
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section className="p-24 bg-muted/50">
         <div className="max-w-screen-lg mx-auto">
-          <h1 className="text-3xl font-medium mb-4">How can ADP help you?</h1>
-          <p className="text-muted-foreground mb-12">
-            I want to build on and contribute to a global effort to scale the
-            understanding of insects and biodiversity:
-          </p>
+          <h1 className="text-3xl font-medium mb-12">
+            What do you want to do?
+          </h1>
           <div className="grid grid-cols-2 gap-12">
             <Card
-              title="Know the species in many images"
+              title="Label the species in my images"
               listItems={[
-                "Programmatically upload batches of images",
-                "The AI detects and identifies the species",
+                "Programmatically upload camera images",
+                "Use my or a Platform model to generate classification labels",
+                "Compare model performance on my dataset",
               ]}
             >
               <Link
@@ -111,9 +150,9 @@ export default function Home() {
               </Link>
             </Card>
             <Card
-              title="Know where and when a species was observed"
+              title="Track where and when a species was observed"
               listItems={[
-                "Explore or search observations for a given species, location, or time",
+                "Explore images for a given species, location, or time window",
                 "Download timestamped, geolocated datasets for analysis",
               ]}
             >
@@ -125,7 +164,7 @@ export default function Home() {
               </Link>
             </Card>
             <Card
-              title="Help validate the data with my insect expertise"
+              title="Help validate the data with my moth expertise"
               listItems={[
                 "Confirm or adjust AI-generated taxons",
                 "Suggest IDs for unidentified images",
@@ -139,10 +178,10 @@ export default function Home() {
               </Link>
             </Card>
             <Card
-              title="Apply my ML skills to support biodiversity"
+              title="Contribute my ML skills"
               listItems={[
-                "Use structured & verified data to train new object detectors, species classifiers or behavioral analysis models",
-                "Benchmark evaluation metrics to compare results with / compare model performance",
+                "Train or share new object detectors, species classifiers or behavioral analysis models",
+                "Benchmark evaluation metrics to compare model performance",
               ]}
             >
               <Link
@@ -153,7 +192,7 @@ export default function Home() {
               </Link>
             </Card>
             <Card
-              title="Contribute to open-source software related to biodiversity"
+              title="Grow the open-source software"
               listItems={[
                 "Create new integrations for data interchange",
                 "Add new features to an existing codebase",
@@ -175,9 +214,8 @@ export default function Home() {
           <div>
             <h1 className="text-3xl font-medium mb-4">Who we are</h1>
             <p className="text-muted-foreground">
-              The AMI Data Platform is led by a group of researchers and
-              engineers from the{" "}
-              <a href="https://mila.quebec/en/automated-monitoring-of-insects-ami">
+              Antenna is led by a group of researchers and engineers from the{" "}
+              <a href="https://mila.quebec/en/automated-monitoring-of-insects-ami/">
                 Mila - Quebec Artificial Intelligence Institute
               </a>{" "}
               with support from{" "}
@@ -185,8 +223,18 @@ export default function Home() {
                 Espace pour la vie - Insectarium
               </a>{" "}
               and technical contributions from scientists around the world (see{" "}
-              <a href={DATA_PLATFORM_REPO_URL}>Github repository</a> for more
-              detail).
+              <a href="https://github.com/RolnickLab/ami-platform">
+                Github repository
+              </a>{" "}
+              for more detail.) We gratefully thank Andre Poremski and Kent
+              McFarland for their contributions in shaping the platform. We are
+              proud co-founders of the{" "}
+              <a href="insectmonitoring.org">
+                Automated Monitoring of Insects (AMI) Consortium
+              </a>
+              , whose mission is to empower local communities to protect and
+              conserve biodiversity by generating labelled insect data at wide
+              spatial, temporal and taxonomic scales.
             </p>
           </div>
           <div>
@@ -196,6 +244,37 @@ export default function Home() {
                 <a href="https://arxiv.org/abs/2406.12452">The AMI dataset</a>
               </li>
             </ul>
+          </div>
+          <div>
+            <div>
+              <p>
+                This work is licensed under{" "}
+                <a
+                  href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1"
+                  target="_blank"
+                  rel="license noopener noreferrer"
+                >
+                  Creative Commons Attribution-NonCommercial 4.0 International
+                </a>
+              </p>
+              <div className="flex items-center justify-center gap-2 p-2">
+                <img
+                  className="w-6 h-6"
+                  src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
+                  alt=""
+                />
+                <img
+                  className="w-6 h-6"
+                  src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
+                  alt=""
+                />
+                <img
+                  className="w-6 h-6"
+                  src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"
+                  alt=""
+                />
+              </div>
+            </div>
           </div>
         </div>
       </section>

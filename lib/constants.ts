@@ -9,4 +9,4 @@ export const DATA_PLATFORM_REPO_URL =
 
 export const ML_REPO_URL = "https://github.com/RolnickLab/ami-ml/";
 
-export const E_BUTTERFLY_URL = "https://www.e-butterfly.org/";
+export const FIELDGUIE_URL = "https://fieldguide.ai/";

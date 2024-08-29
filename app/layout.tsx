@@ -11,8 +11,8 @@ const ThemeToggle = dynamic(() => import("@/components/theme-toggle"), {
 });
 
 export const metadata: Metadata = {
-  title: "AMI Data Platform",
-  description: "AI-enabled detection and classification of insects at scale",
+  title: "Antenna - The Insect Data Platform",
+  description: "AI-Enabled Detection And Classification Of Insects At Scale",
 };
 
 export default function RootLayout({

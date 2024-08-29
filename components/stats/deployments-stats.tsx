@@ -13,7 +13,7 @@ export const DeploymentsStats = () => {
         },
         {
           value: `${stats.captures_count.toLocaleString()}`,
-          unit: "Source images",
+          unit: "Camera images",
         },
       ]}
     />

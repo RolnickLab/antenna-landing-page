@@ -1,4 +1,4 @@
-import { E_BUTTERFLY_URL } from "@/lib/constants";
+import { FIELDGUIE_URL } from "@/lib/constants";
 import { ReactNode } from "react";
 
 export default function FAQ() {
@@ -19,8 +19,7 @@ export default function FAQ() {
           We LOVE citizen scientists! You absolutely can use the public dataset.
           However we are not quite ready to receive images from phone cameras.
           Until we are, you can check out our partner’s app{" "}
-          <a href={E_BUTTERFLY_URL}>eButterfly</a>
-          and start snapping away!
+          <a href={FIELDGUIE_URL}>Fieldguide</a> and start snapping away!
         </Question>
       </div>
     </section>
