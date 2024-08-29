@@ -1,6 +1,7 @@
 /* eslint-disable @next/next/no-img-element */
 
 import { Card } from "@/components/card";
+import { List } from "@/components/list";
 import { DeploymentsStats } from "@/components/stats/deployments-stats";
 import { buttonVariants } from "@/components/ui/button";
 import {
@@ -70,17 +71,19 @@ export default function Home() {
               wide range of species in a large number of images, building a rich
               dataset that grows and updates over time.
             </p>
-            <ul>
-              <li>Open source machine learning models - no black box</li>
-              <li>
-                Classifications informed and quality controlled by experts
-              </li>
-              <li>Compatible with all high-resolution cameras</li>
-              <li>User-friendly interface</li>
-              <li>Standardised data formats and metadata</li>
-              <li>Programmable data uploads, processings, and downloads</li>
-              <li>No software installation required</li>
-            </ul>
+            <div className="py-4">
+              <List
+                items={[
+                  "Open source machine learning models - no black box",
+                  "Classifications informed and quality controlled by experts",
+                  "Compatible with all high-resolution cameras",
+                  "User-friendly interface",
+                  "Standardised data formats and metadata",
+                  "Programmable data uploads, processings, and downloads",
+                  "No software installation required",
+                ]}
+              />
+            </div>
             <p>
               Antenna currently focuses on moths but expansions to other insects
               are planned.
