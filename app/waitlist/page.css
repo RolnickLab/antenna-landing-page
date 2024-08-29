@@ -1,0 +1,100 @@
+/* Form layout  */
+#mc_embed_signup #mc-embedded-subscribe-form {
+  @apply m-0;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form .mc-field-group {
+  @apply w-full pb-8;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form .mc-field-group label {
+  @apply mb-0;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form .input-group {
+  @apply space-y-4;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form .input-group ul {
+  @apply space-y-4 p-0;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form .input-group li {
+  @apply grid gap-4 p-0;
+  grid-template-columns: auto 1fr;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form .input-group li .field-sub-group {
+  @apply hidden;
+  grid-column: 2;
+}
+
+/* Form components  */
+#mc_embed_signup #mc-embedded-subscribe-form input[type="text"],
+#mc_embed_signup #mc-embedded-subscribe-form input[type="email"],
+#mc_embed_signup #mc-embedded-subscribe-form select {
+  @apply w-full h-10 m-0 px-3 py-0 border border-input border-solid rounded-sm bg-transparent text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  text-indent: 0;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form input[type="checkbox"] {
+  @apply w-6 h-6 my-0.5 shrink-0;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form input[type="checkbox"] + label {
+  @apply text-muted-foreground;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form .button {
+  @apply h-11 m-0 px-6 bg-primary text-primary-foreground inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:opacity-70;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
+  @apply m-0 p-0 bg-transparent !important;
+}
+
+/* Custom select arrow  */
+#mc_embed_signup #mc-embedded-subscribe-form select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background-image: url("/images/chevron-down-dark.svg");
+  background-position: right 1rem center;
+  background-size: 1rem;
+  background-repeat: no-repeat;
+}
+
+/* Footer */
+#mc_embed_signup #mc-embedded-subscribe-form .foot {
+  @apply w-full;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form .foot:last-child {
+  @apply flex items-center justify-between mt-8;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form .refferal_badge {
+  @apply bg-foreground rounded-sm;
+}
+
+/* Responses */
+#mc_embed_signup #mc-embedded-subscribe-form #mce-responses {
+  @apply block m-0 p-0;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form #mce-success-response {
+  @apply w-full m-0 p-0 pb-8 text-primary;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form #mce-error-response {
+  @apply w-full m-0 p-0 pb-8;
+}
+
+/* Dark mode adjustments */
+.dark #mc_embed_signup #mc-embedded-subscribe-form select {
+  background-image: url("/images/chevron-down-light.svg");
+}
+
+.dark #mc_embed_signup #mc-embedded-subscribe-form .refferal_badge {
+  @apply bg-transparent;
+}
