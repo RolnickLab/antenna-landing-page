@@ -1,3 +1,8 @@
+export const TRIGGER_1_ID = "mce-group[4]-4-0"; // Checkbox "Contribute images taken with camera traps"
+export const ELEMENT_1_ID = "mce-sub-group[4]-4-0"; // Field "Camera model"
+export const TRIGGER_2_ID = "mce-group[4]-4-3"; // Checkbox "Evaluate Antenna for my organisation’s needs"
+export const ELEMENT_2_ID = "mce-sub-group[4]-4-3"; // Fields "Domain" and "Organisation type"
+
 export const MAILCHIMP_SNIPPET = `
 <div id="mc_embed_shell">
   <link
@@ -7,7 +12,7 @@ export const MAILCHIMP_SNIPPET = `
   />
   <div id="mc_embed_signup">
     <form
-      action="https://insectai.us17.list-manage.com/subscribe/post?u=9fbcbee8195713a0da5a28ddf&amp;id=efa3aed510&amp;f_id=0076c2e1f0"
+      action="https://insectai.us17.list-manage.com/subscribe/post?u=9fbcbee8195713a0da5a28ddf&amp;id=efa3aed510&amp;f_id=0075c2e1f0"
       method="post"
       id="mc-embedded-subscribe-form"
       name="mc-embedded-subscribe-form"
@@ -350,7 +355,7 @@ export const MAILCHIMP_SNIPPET = `
           </select>
         </div>
         <div class="mc-field-group input-group">
-          <strong>I’d like to join the Antenna community to </strong>
+          <span>I’d like to join the Antenna community to </span>
           <ul>
             <li>
               <input
@@ -359,9 +364,21 @@ export const MAILCHIMP_SNIPPET = `
                 id="mce-group[4]-4-0"
                 value=""
               /><label for="mce-group[4]-4-0"
-                >Contribute images taken with camera traps (specify camera model
-                in comments)</label
+                >Contribute images taken with camera traps</label
               >
+              <div
+                id="mce-sub-group[4]-4-0"
+                class="mc-field-group field-sub-group"
+              >
+                <label for="mce-CAMERA">What camera model are you using? </label
+                ><input
+                  type="text"
+                  name="CAMERA"
+                  class="text"
+                  id="mce-CAMERA"
+                  value=""
+                />
+              </div>
             </li>
             <li>
               <input
@@ -390,9 +407,82 @@ export const MAILCHIMP_SNIPPET = `
                 id="mce-group[4]-4-3"
                 value=""
               /><label for="mce-group[4]-4-3"
-                >Evaluate Antenna for my organisation’s needs (specify domain
-                and organisation type in comments)</label
+                >Evaluate Antenna for my organisation’s needs</label
               >
+              <div id="mce-sub-group[4]-4-3" class="field-sub-group">
+                <div class="mc-field-group input-group">
+                  <span>Domain </span>
+                  <ul>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="group[6][256]"
+                        id="mce-group[6]-6-0"
+                        value=""
+                      /><label for="mce-group[6]-6-0">Entomology</label>
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="group[6][512]"
+                        id="mce-group[6]-6-1"
+                        value=""
+                      /><label for="mce-group[6]-6-1">Ecology</label>
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="group[6][1024]"
+                        id="mce-group[6]-6-2"
+                        value=""
+                      /><label for="mce-group[6]-6-2">Agriculture</label>
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="group[6][2048]"
+                        id="mce-group[6]-6-3"
+                        value=""
+                      /><label for="mce-group[6]-6-3">Forestry</label>
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="group[6][4096]"
+                        id="mce-group[6]-6-4"
+                        value=""
+                      /><label for="mce-group[6]-6-4">Health</label>
+                    </li>
+                    <li>
+                      <input
+                        type="checkbox"
+                        name="group[6][8192]"
+                        id="mce-group[6]-6-5"
+                        value=""
+                      /><label for="mce-group[6]-6-5"
+                        >Other (specify in comments)</label
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="mc-field-group">
+                  <label for="mce-ORGT">Organisation type </label
+                  ><select name="ORGT" class="" id="mce-ORGT">
+                    <option value=""></option>
+                    <option value="Academia">Academia</option>
+                    <option value="Governmental or intergovernmental">
+                      Governmental or intergovernmental
+                    </option>
+                    <option value="For-profit">For-profit</option>
+                    <option value="Nonprofit/not-for-profit">
+                      Nonprofit/not-for-profit
+                    </option>
+                    <option value="Other (specify in comments)">
+                      Other (specify in comments)
+                    </option>
+                  </select>
+                </div>
+              </div>
             </li>
             <li>
               <input
@@ -437,7 +527,7 @@ export const MAILCHIMP_SNIPPET = `
           />
         </div>
         <div class="mc-field-group input-group">
-          <strong>Email communications </strong>
+          <span>Email communications </span>
           <ul>
             <li>
               <input
@@ -474,7 +564,6 @@ export const MAILCHIMP_SNIPPET = `
             value=""
           />
         </div>
-
         <div class="clear foot">
           <input
             type="submit"
@@ -487,13 +576,6 @@ export const MAILCHIMP_SNIPPET = `
             href="http://eepurl.com/iXR6ow"
             title="Mailchimp - email marketing made easy and fun"
             ><img
-              id="mailchimp-logo-dark"
-              class="refferal_badge"
-              src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
-              alt="Intuit Mailchimp"
-              style="width: 220px; height: 40px"
-            /><img
-              id="mailchimp-logo-light"
               class="refferal_badge"
               src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-light.svg"
               alt="Intuit Mailchimp"
@@ -520,6 +602,10 @@ export const MAILCHIMP_SNIPPET = `
       ftypes[0] = "email";
       fnames[4] = "COUNTRY";
       ftypes[4] = "dropdown";
+      fnames[5] = "CAMERA";
+      ftypes[5] = "text";
+      fnames[7] = "ORGT";
+      ftypes[7] = "dropdown";
       fnames[3] = "COMMENTS";
       ftypes[3] = "text";
     })(jQuery);

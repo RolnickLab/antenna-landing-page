@@ -20,19 +20,29 @@
 }
 
 #mc_embed_signup #mc-embedded-subscribe-form .input-group li {
-  @apply flex gap-4 p-0 text-muted-foreground;
+  @apply grid gap-4 p-0;
+  grid-template-columns: auto 1fr;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form .input-group li .field-sub-group {
+  @apply hidden;
+  grid-column: 2;
 }
 
 /* Form components  */
 #mc_embed_signup #mc-embedded-subscribe-form input[type="text"],
 #mc_embed_signup #mc-embedded-subscribe-form input[type="email"],
 #mc_embed_signup #mc-embedded-subscribe-form select {
+  @apply w-full h-10 m-0 px-3 py-0 border border-input border-solid rounded-sm bg-transparent text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
   text-indent: 0;
-  @apply w-full h-10 m-0 px-3 py-0 border border-input rounded-sm bg-transparent text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
 }
 
 #mc_embed_signup #mc-embedded-subscribe-form input[type="checkbox"] {
   @apply w-6 h-6 my-0.5 shrink-0;
+}
+
+#mc_embed_signup #mc-embedded-subscribe-form input[type="checkbox"] + label {
+  @apply text-muted-foreground;
 }
 
 #mc_embed_signup #mc-embedded-subscribe-form .button {
@@ -48,7 +58,10 @@
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
-  background: url("/images/chevron-down-dark.svg") right 0.5rem center no-repeat;
+  background-image: url("/images/chevron-down-dark.svg");
+  background-position: right 1rem center;
+  background-size: 1rem;
+  background-repeat: no-repeat;
 }
 
 /* Footer */
@@ -60,12 +73,8 @@
   @apply flex items-center justify-between mt-8;
 }
 
-#mailchimp-logo-light {
-  display: none;
-}
-
-.dark #mailchimp-logo-dark {
-  display: block;
+#mc_embed_signup #mc-embedded-subscribe-form .refferal_badge {
+  @apply bg-foreground rounded-sm;
 }
 
 /* Responses */
@@ -86,10 +95,6 @@
   background-image: url("/images/chevron-down-light.svg");
 }
 
-.dark #mailchimp-logo-light {
-  display: block;
-}
-
-.dark #mailchimp-logo-dark {
-  display: none;
+.dark #mc_embed_signup #mc-embedded-subscribe-form .refferal_badge {
+  @apply bg-transparent;
 }

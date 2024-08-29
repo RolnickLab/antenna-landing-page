@@ -1,4 +1,5 @@
 import { MAILCHIMP_SNIPPET } from "./constants";
+import { FormHelper } from "./form-helper";
 import "./page.css";
 
 export default function Waitlist() {
@@ -16,9 +17,12 @@ export default function Waitlist() {
           </p>
         </div>
         <div
-          dangerouslySetInnerHTML={{ __html: MAILCHIMP_SNIPPET }}
+          dangerouslySetInnerHTML={{
+            __html: MAILCHIMP_SNIPPET,
+          }}
           className="p-8 border rounded-xl"
         />
+        <FormHelper />
       </div>
     </section>
   );
