@@ -165,7 +165,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Checkout the platform{" "}
+                Check out the platform{" "}
                 <ExternalLinkIcon className="h-4 w-4 ml-2" />
               </a>
             </Card>
@@ -196,8 +196,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Visit the repo repo{" "}
-                <ExternalLinkIcon className="h-4 w-4 ml-2" />
+                Visit the repo <ExternalLinkIcon className="h-4 w-4 ml-2" />
               </a>
             </Card>
             <Card
@@ -213,8 +212,7 @@ export default function Home() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Visit the repo repo{" "}
-                <ExternalLinkIcon className="h-4 w-4 ml-2" />
+                Visit the repo <ExternalLinkIcon className="h-4 w-4 ml-2" />
               </a>
             </Card>
           </div>
