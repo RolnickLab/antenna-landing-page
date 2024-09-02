@@ -18,7 +18,7 @@ export default function RootLayout({
     <html lang="en">
       <link rel="icon" type="image/png" href="/images/logo.png" />
       <body>
-        <header className="h-14 bg-muted/95 sticky top-0 z-10 overflow-hidden border-b max-lg:px-4">
+        <header className="h-14 px-4 sticky top-0 z-10 bg-muted/95 border-b overflow-hidden">
           <nav className="flex items-center justify-between max-w-screen-lg h-full mx-auto relative">
             <div className="absolute left-0 max-lg:static">
               <Link href="/">

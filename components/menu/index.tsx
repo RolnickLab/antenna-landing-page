@@ -6,7 +6,7 @@ import {
   DrawerContent,
   DrawerTrigger,
 } from "@/components/ui/drawer";
-import { useIsDesktop } from "@/lib/useIsDesktop";
+import { MAX_LG_QUERY, useMediaQuery } from "@/lib/useMediaQuery";
 import { MenuIcon, XIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -15,7 +15,7 @@ import { MENU_ITEMS } from "./constants";
 import { MenuItem } from "./menu-item";
 
 export const Menu = () => {
-  const isDesktop = useIsDesktop();
+  const isDesktop = useMediaQuery(MAX_LG_QUERY);
 
   if (isDesktop === undefined) {
     return null;

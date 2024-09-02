@@ -19,14 +19,14 @@ export default function Home() {
     <>
       <section className="px-24 py-12 overflow-hidden max-lg:p-0 max-lg:text-center">
         <div className="flex items-center gap-12 max-w-screen-lg mx-auto max-lg:flex-col-reverse max-lg:gap-0">
-          <div className="max-lg:px-8 max-lg:py-12">
+          <div className="max-lg:px-8 max-lg:py-12 max-lg:max-w-screen-md">
             <h1 className="text-4xl font-medium mb-4">{content.title}</h1>
             <h2 className="text-2xl mb-4">{content.subTitle}</h2>
             <p className="mb-12 text-muted-foreground">{content.description}</p>
             <Link
               className={cn(
                 buttonVariants({ variant: "accent", size: "lg" }),
-                "max-lg:w-full"
+                "max-md:w-full"
               )}
               href={WAITLIST_URL}
             >
@@ -34,7 +34,7 @@ export default function Home() {
             </Link>
           </div>
           <div className={`w-full mr-[-240px] max-lg:mr-0`}>
-            <div className="w-[640px] h-[480px] rounded-xl bg-card border overflow-hidden max-lg:w-full max-lg:h-[240px] max-lg:rounded-none max-lg:border-none">
+            <div className="w-[640px] h-[480px] rounded-xl bg-card border overflow-hidden max-lg:w-full max-lg:h-[320px] max-lg:rounded-none max-lg:border-none max-md:h-[240px]">
               <picture>
                 <source
                   srcSet="/images/intro.webp"
@@ -88,7 +88,7 @@ export default function Home() {
       </section>
 
       <section className="p-24 bg-muted/50 max-lg:p-8">
-        <div className="max-w-screen-lg mx-auto">
+        <div className="max-w-screen-lg mx-auto max-lg:max-w-screen-md">
           <h1 className="text-3xl font-medium mb-12 max-lg:mb-8">
             {content.cards.title}
           </h1>

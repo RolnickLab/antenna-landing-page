@@ -1,6 +1,10 @@
 import { useEffect, useState } from "react";
 
-const useMediaQuery = (query: string) => {
+export const MAX_MD_QUERY = "(min-width: 768px)";
+
+export const MAX_LG_QUERY = "(min-width: 1024px)";
+
+export const useMediaQuery = (query: string) => {
   const [value, setValue] = useState<boolean>();
 
   useEffect(() => {
@@ -17,5 +21,3 @@ const useMediaQuery = (query: string) => {
 
   return value;
 };
-
-export const useIsDesktop = () => useMediaQuery("(min-width: 1024px)");

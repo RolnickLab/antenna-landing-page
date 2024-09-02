@@ -1,6 +1,6 @@
 "use client";
 
-import { useIsDesktop } from "@/lib/useIsDesktop";
+import { MAX_LG_QUERY, useMediaQuery } from "@/lib/useMediaQuery";
 import { ExternalLinkIcon } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -14,7 +14,7 @@ interface MenuItemProps {
 export const MenuItem = ({ external, href, label }: MenuItemProps) => {
   const pathname = usePathname();
   const isActive = pathname === href;
-  const isDesktop = useIsDesktop();
+  const isDesktop = useMediaQuery(MAX_LG_QUERY);
 
   if (external) {
     return (

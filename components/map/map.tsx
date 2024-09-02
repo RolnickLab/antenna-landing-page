@@ -1,5 +1,6 @@
 "use client";
 
+import { MAX_MD_QUERY, useMediaQuery } from "@/lib/useMediaQuery";
 import * as L from "leaflet";
 import { useMemo } from "react";
 import { MapContainer, Marker, Popup, TileLayer } from "react-leaflet";
@@ -9,7 +10,6 @@ import {
   MAX_BOUNDS,
   TILE_LAYER_URL,
 } from "./constants";
-import { useIsDesktop } from "@/lib/useIsDesktop";
 
 interface MapProps {
   height: {
@@ -26,7 +26,7 @@ interface MapProps {
 }
 
 export const Map = ({ height, markers }: MapProps) => {
-  const isDesktop = useIsDesktop();
+  const isMediumScreen = useMediaQuery(MAX_MD_QUERY);
 
   const bounds = useMemo(() => {
     const _bounds = new L.LatLngBounds([]);
@@ -35,13 +35,9 @@ export const Map = ({ height, markers }: MapProps) => {
     return _bounds;
   }, [markers]);
 
-  if (isDesktop === undefined) {
-    return null;
-  }
-
   return (
     <MapContainer
-      key={isDesktop ? "desktop-map" : "mobile-map"}
+      key={isMediumScreen ? "desktop-map" : "mobile-map"}
       boxZoom={false}
       className="z-0"
       center={bounds.getCenter()}
