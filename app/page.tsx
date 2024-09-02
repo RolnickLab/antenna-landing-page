@@ -1,5 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
-
 import { Card } from "@/components/card";
 import { List } from "@/components/list";
 import { DeploymentsStats } from "@/components/stats/deployments-stats";
