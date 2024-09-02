@@ -38,7 +38,10 @@ export default function Home() {
               efforts.
             </p>
             <Link
-              className={cn(buttonVariants({ size: "lg" }), "max-lg:w-full")}
+              className={cn(
+                buttonVariants({ variant: "accent", size: "lg" }),
+                "max-lg:w-full"
+              )}
               href={WAITLIST_URL}
             >
               Join the waitlist
