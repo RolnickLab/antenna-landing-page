@@ -21,6 +21,10 @@ npm run dev
 
 The app will now be available in a browser on [http://localhost:3000](http://localhost:3000). Hot reload will be enabled by default.
 
+## Edit content
+
+All text content is specified in the file /lib/content.json. To edit any content, simply update this file.
+
 ## Deployment
 
 With a static export, the app can be deployed and hosted on any web server that can serve HTML/CSS/JS static assets. When running the build command, Next.js generates the static export into the `out` folder.
