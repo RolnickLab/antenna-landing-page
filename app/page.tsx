@@ -10,6 +10,7 @@ import {
   ML_REPO_URL,
   WAITLIST_URL,
 } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 import { ClockIcon, ExternalLinkIcon } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
@@ -22,7 +23,7 @@ const DeploymentsMap = dynamic(
 export default function Home() {
   return (
     <>
-      <section className="px-24 py-12 overflow-hidden max-lg:p-0">
+      <section className="px-24 py-12 overflow-hidden max-lg:p-0 max-lg:text-center">
         <div className="flex items-center gap-12 max-w-screen-lg mx-auto max-lg:flex-col-reverse max-lg:gap-0">
           <div className="max-lg:px-8 max-lg:py-12">
             <h1 className="text-4xl font-medium mb-4">
@@ -37,7 +38,7 @@ export default function Home() {
               efforts.
             </p>
             <Link
-              className={buttonVariants({ size: "lg" })}
+              className={cn(buttonVariants({ size: "lg" }), "max-lg:w-full")}
               href={WAITLIST_URL}
             >
               Join the waitlist
@@ -269,7 +270,7 @@ export default function Home() {
                   Creative Commons Attribution-NonCommercial 4.0 International
                 </a>
               </p>
-              <div className="flex items-center justify-center gap-2 py-2 max-lg:justify-start">
+              <div className="flex items-center justify-center gap-2 py-4 max-lg:justify-start">
                 <img
                   className="w-6 h-6"
                   src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"

@@ -10,7 +10,7 @@ export const ATTRIBUTION =
 export const MAX_BOUNDS = new L.LatLngBounds([-90, -180], [90, 180]);
 
 export const DEFAULT_ZOOM = {
-  desltop: 3,
+  desktop: 3,
   mobile: 1,
 };
 
