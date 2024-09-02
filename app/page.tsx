@@ -51,7 +51,7 @@ export default function Home() {
             <div className="w-[640px] h-[480px] rounded-xl bg-card border overflow-hidden max-lg:w-full max-lg:h-[240px] max-lg:rounded-none max-lg:border-none">
               <img
                 alt="Trap image with bounding boxes and labels"
-                src="/intro.jpg"
+                src="/images/intro.webp"
                 className="w-full h-full object-cover"
               />
             </div>
@@ -98,7 +98,7 @@ export default function Home() {
 
       <section className="p-24 overflow-hidden max-lg:p-0">
         <div className="flex flex-col items-center gap-12 max-w-screen-lg mx-auto max-lg:gap-0">
-          <div className="w-full bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none">
+          <div className="w-full h-[480px] bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none max-lg:h-[320px]">
             <DeploymentsMap height={{ desktop: 480, mobile: 320 }} />
           </div>
           <div className="max-lg:p-12">
