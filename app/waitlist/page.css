@@ -46,7 +46,7 @@
 }
 
 #mc_embed_signup #mc-embedded-subscribe-form .button {
-  @apply h-11 m-0 px-6 bg-primary text-primary-foreground inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:opacity-70;
+  @apply h-11 m-0 px-6 bg-primary text-primary-foreground inline-flex items-center justify-center whitespace-nowrap rounded-full text-base font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 hover:opacity-70 max-lg:w-full;
 }
 
 #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
@@ -70,7 +70,7 @@
 }
 
 #mc_embed_signup #mc-embedded-subscribe-form .foot:last-child {
-  @apply flex items-center justify-between mt-8;
+  @apply flex items-center justify-between gap-8 mt-8 max-lg:mt-0 max-lg:flex-col max-lg:items-end;
 }
 
 #mc_embed_signup #mc-embedded-subscribe-form .refferal_badge {

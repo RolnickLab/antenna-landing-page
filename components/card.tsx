@@ -13,9 +13,11 @@ export const Card = ({ children, listItems, title }: CardProps) => (
     <div className="h-[240px]">
       <ImagePlaceholder />
     </div>
-    <div className="grow flex flex-col items-start justify-between gap-8 p-8">
+    <div className="grow flex flex-col items-start justify-between gap-8 p-8 max-lg:items-stretch max-lg:p-4">
       <div>
-        <h2 className="text-2xl font-medium leading-tight mb-4">{title}</h2>
+        <h2 className="text-2xl font-medium leading-tight mb-4 max-lg:text-xl">
+          {title}
+        </h2>
         <List items={listItems} />
       </div>
       {children}

@@ -7,12 +7,14 @@ import {
   ATTRIBUTION,
   DEFAULT_ZOOM,
   MAX_BOUNDS,
-  MIN_ZOOM,
   TILE_LAYER_URL,
 } from "./constants";
 
 interface MapProps {
-  height: number;
+  height: {
+    desktop: number;
+    mobile: number;
+  };
   markers: {
     position: L.LatLng;
     popupContent?: {
@@ -39,11 +41,9 @@ export const Map = ({ height, markers }: MapProps) => {
       keyboard={false}
       maxBounds={MAX_BOUNDS}
       scrollWheelZoom={false}
-      style={{
-        height: `${height}px`,
-      }}
+      style={{ height: `${height.mobile}px` }}
       touchZoom={false}
-      zoom={DEFAULT_ZOOM}
+      zoom={DEFAULT_ZOOM.mobile}
       zoomControl={false}
     >
       <TileLayer attribution={ATTRIBUTION} url={TILE_LAYER_URL} />
