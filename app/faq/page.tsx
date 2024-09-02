@@ -3,8 +3,8 @@ import { ReactNode } from "react";
 
 export default function FAQ() {
   return (
-    <section className="p-24">
-      <div className="max-w-screen-md mx-auto space-y-12">
+    <section className="p-24 max-lg:p-8">
+      <div className="max-w-screen-md mx-auto space-y-12 max-lg:space-y-8">
         <h1 className="text-3xl font-medium">Frequently Asked Questions</h1>
         <Question title="Do I have to contribute data to access the public dataset?">
           No! The public dataset is available to everyone so we can collectively
@@ -43,7 +43,7 @@ const Question = ({
   children: ReactNode;
 }) => (
   <div>
-    <h2 className="text-2xl font-medium mb-2">{title}</h2>
+    <h2 className="text-2xl font-medium mb-2 max-lg:text-xl">{title}</h2>
     <p className="text-muted-foreground">{children}</p>
   </div>
 );

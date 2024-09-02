@@ -10,6 +10,7 @@ import {
   ML_REPO_URL,
   WAITLIST_URL,
 } from "@/lib/constants";
+import { cn } from "@/lib/utils";
 import { ClockIcon, ExternalLinkIcon } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
@@ -22,9 +23,9 @@ const DeploymentsMap = dynamic(
 export default function Home() {
   return (
     <>
-      <section className="px-24 py-12 overflow-hidden">
-        <div className="flex items-center gap-12 max-w-screen-lg mx-auto">
-          <div>
+      <section className="px-24 py-12 overflow-hidden max-lg:p-0 max-lg:text-center">
+        <div className="flex items-center gap-12 max-w-screen-lg mx-auto max-lg:flex-col-reverse max-lg:gap-0">
+          <div className="max-lg:px-8 max-lg:py-12">
             <h1 className="text-4xl font-medium mb-4">
               Antenna - The Insect Data Platform
             </h1>
@@ -37,14 +38,14 @@ export default function Home() {
               efforts.
             </p>
             <Link
-              className={buttonVariants({ size: "lg" })}
+              className={cn(buttonVariants({ size: "lg" }), "max-lg:w-full")}
               href={WAITLIST_URL}
             >
               Join the waitlist
             </Link>
           </div>
-          <div style={{ marginRight: "-240px" }}>
-            <div className="w-[640px] h-[480px] rounded-xl bg-card border overflow-hidden">
+          <div className={`w-full mr-[-240px] max-lg:mr-0`}>
+            <div className="w-[640px] h-[480px] rounded-xl bg-card border overflow-hidden max-lg:w-full max-lg:h-[240px] max-lg:rounded-none max-lg:border-none">
               <img
                 alt="Trap image with bounding boxes and labels"
                 src="/intro.jpg"
@@ -55,7 +56,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="p-24 bg-muted">
+      <section className="p-24 bg-muted max-lg:p-8">
         <div className="max-w-screen-md mx-auto">
           <h1 className="text-3xl font-medium mb-4">Introducing Antenna</h1>
           <div className="space-y-4 text-muted-foreground">
@@ -92,16 +93,18 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="p-24">
-        <div className="flex flex-col items-center gap-12 max-w-screen-lg mx-auto">
-          <div className="w-full rounded-xl bg-card border overflow-hidden">
-            <DeploymentsMap height={480} />
+      <section className="p-24 overflow-hidden max-lg:p-0">
+        <div className="flex flex-col items-center gap-12 max-w-screen-lg mx-auto max-lg:gap-0">
+          <div className="w-full bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none">
+            <DeploymentsMap height={{ desktop: 480, mobile: 320 }} />
           </div>
-          <DeploymentsStats />
+          <div className="max-lg:p-12">
+            <DeploymentsStats />
+          </div>
         </div>
       </section>
 
-      <section className="p-24 bg-muted">
+      <section className="p-24 bg-muted max-lg:p-8">
         <div className="max-w-screen-md mx-auto">
           <h1 className="text-3xl font-medium mb-4">How Antenna helps</h1>
           <div className="space-y-4 text-muted-foreground">
@@ -131,12 +134,12 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="p-24 bg-muted/50">
+      <section className="p-24 bg-muted/50 max-lg:p-8">
         <div className="max-w-screen-lg mx-auto">
-          <h1 className="text-3xl font-medium mb-12">
+          <h1 className="text-3xl font-medium mb-12 max-lg:mb-8">
             What do you want to do?
           </h1>
-          <div className="grid grid-cols-2 gap-12">
+          <div className="grid grid-cols-2 gap-12 max-lg:grid-cols-1 max-lg:gap-8">
             <Card
               title="Label the species in my images"
               listItems={[
@@ -219,8 +222,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="p-24">
-        <div className="max-w-screen-md space-y-24 mx-auto text-center">
+      <section className="p-24 max-lg:p-8">
+        <div className="max-w-screen-md space-y-24 mx-auto text-center max-lg:space-y-8 max-lg:text-left">
           <div>
             <h1 className="text-3xl font-medium mb-4">Who we are</h1>
             <p className="text-muted-foreground">
@@ -267,7 +270,7 @@ export default function Home() {
                   Creative Commons Attribution-NonCommercial 4.0 International
                 </a>
               </p>
-              <div className="flex items-center justify-center gap-2 p-2">
+              <div className="flex items-center justify-center gap-2 py-4 max-lg:justify-start">
                 <img
                   className="w-6 h-6"
                   src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"

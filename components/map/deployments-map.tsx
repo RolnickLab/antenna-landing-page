@@ -6,7 +6,10 @@ import { useMemo } from "react";
 import { Map } from "./map";
 
 interface DeploymentsMapProps {
-  height: number;
+  height: {
+    desktop: number;
+    mobile: number;
+  };
 }
 
 const DeploymentsMap = ({ height }: DeploymentsMapProps) => {

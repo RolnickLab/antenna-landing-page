@@ -7,12 +7,15 @@ import {
   ATTRIBUTION,
   DEFAULT_ZOOM,
   MAX_BOUNDS,
-  MIN_ZOOM,
   TILE_LAYER_URL,
 } from "./constants";
+import { useIsDesktop } from "@/lib/useIsDesktop";
 
 interface MapProps {
-  height: number;
+  height: {
+    desktop: number;
+    mobile: number;
+  };
   markers: {
     position: L.LatLng;
     popupContent?: {
@@ -23,6 +26,8 @@ interface MapProps {
 }
 
 export const Map = ({ height, markers }: MapProps) => {
+  const isDesktop = useIsDesktop();
+
   const bounds = useMemo(() => {
     const _bounds = new L.LatLngBounds([]);
     markers.forEach((marker) => _bounds.extend(marker.position));
@@ -30,8 +35,13 @@ export const Map = ({ height, markers }: MapProps) => {
     return _bounds;
   }, [markers]);
 
+  if (isDesktop === undefined) {
+    return null;
+  }
+
   return (
     <MapContainer
+      key={isDesktop ? "desktop-map" : "mobile-map"}
       boxZoom={false}
       className="z-0"
       center={bounds.getCenter()}
@@ -39,11 +49,9 @@ export const Map = ({ height, markers }: MapProps) => {
       keyboard={false}
       maxBounds={MAX_BOUNDS}
       scrollWheelZoom={false}
-      style={{
-        height: `${height}px`,
-      }}
+      style={{ height: `${isDesktop ? height.desktop : height.mobile}px` }}
       touchZoom={false}
-      zoom={DEFAULT_ZOOM}
+      zoom={isDesktop ? DEFAULT_ZOOM.desktop : DEFAULT_ZOOM.mobile}
       zoomControl={false}
     >
       <TileLayer attribution={ATTRIBUTION} url={TILE_LAYER_URL} />
