@@ -1,11 +1,12 @@
 import { Menu } from "@/components/menu";
+import content from "@/lib/content.json";
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Antenna - The Insect Data Platform",
-  description: "AI-Enabled Detection And Classification Of Insects At Scale",
+  title: content.title,
+  description: content.subTitle,
 };
 
 export default function RootLayout({
