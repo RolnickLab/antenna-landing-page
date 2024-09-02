@@ -2,13 +2,8 @@
 
 import { Menu } from "@/components/menu";
 import type { Metadata } from "next";
-import dynamic from "next/dynamic";
-import "./globals.css";
 import Link from "next/link";
-
-const ThemeToggle = dynamic(() => import("@/components/theme-toggle"), {
-  ssr: false,
-});
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Antenna - The Insect Data Platform",
@@ -24,9 +19,9 @@ export default function RootLayout({
     <html lang="en">
       <link rel="icon" type="image/png" href="/logo.png" />
       <body>
-        <header className="py-2 bg-muted/95 sticky top-0 z-10 overflow-hidden border-b max-lg:px-4">
+        <header className="h-14 bg-muted/95 sticky top-0 z-10 overflow-hidden border-b max-lg:px-4">
           <nav className="flex items-center justify-between max-w-screen-lg h-full mx-auto relative">
-            <div className="z-10">
+            <div className="absolute left-0 max-lg:static">
               <Link href="/">
                 <img
                   id="logo"
@@ -36,12 +31,7 @@ export default function RootLayout({
                 />
               </Link>
             </div>
-            <div className="absolute flex align-center justify-center w-full h-full z-0">
-              <Menu />
-            </div>
-            <div className="z-10">
-              <ThemeToggle />
-            </div>
+            <Menu />
           </nav>
         </header>
         <main>
