@@ -49,11 +49,18 @@ export default function Home() {
           </div>
           <div className={`w-full mr-[-240px] max-lg:mr-0`}>
             <div className="w-[640px] h-[480px] rounded-xl bg-card border overflow-hidden max-lg:w-full max-lg:h-[240px] max-lg:rounded-none max-lg:border-none">
-              <img
-                alt="Trap image with bounding boxes and labels"
-                src="/images/intro.webp"
-                className="w-full h-full object-cover"
-              />
+              <picture>
+                <source
+                  srcSet="/images/intro.webp"
+                  media="(min-width: 1024px)"
+                />
+                <source srcSet="/images/intro-small.webp" />
+                <img
+                  alt="Trap image with bounding boxes and labels"
+                  src="/images/intro.webp"
+                  className="w-full h-full object-cover"
+                />
+              </picture>
             </div>
           </div>
         </div>
