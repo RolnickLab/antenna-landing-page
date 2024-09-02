@@ -7,6 +7,7 @@
   src: url("/fonts/mazzardsoftm-regular.otf");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -14,6 +15,7 @@
   src: url("/fonts/mazzardsoftm-medium.otf");
   font-weight: 500;
   font-style: normal;
+  font-display: swap;
 }
 
 @layer base {
@@ -29,7 +31,7 @@
     --secondary: 0 0% 96.1%;
     --secondary-foreground: 0 0% 9%;
     --muted: 240 17% 98%; /* Fg Nova Neutral 50 */
-    --muted-foreground: 248 3% 48%; /* Fg Nova Neutral 300 */
+    --muted-foreground: 233 5% 32%; /* Fg Nova Neutral 400 */
     --accent: 232 34% 42%; /* Fg Nova Primary 600 */
     --accent-foreground: 0 0% 100%; /* Fg Nova White */
     --destructive: 0 84.2% 60.2%;

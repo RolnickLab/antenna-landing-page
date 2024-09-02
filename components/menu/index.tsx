@@ -1,4 +1,3 @@
-/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import {
@@ -58,7 +57,10 @@ export const MobileMenu = () => {
 
   return (
     <Drawer direction="right" open={open} onOpenChange={setOpen}>
-      <DrawerTrigger className="w-10 h-10 flex items-center justify-center">
+      <DrawerTrigger
+        aria-label="Menu"
+        className="w-10 h-10 flex items-center justify-center"
+      >
         <MenuIcon className="h-4 w-4" />
       </DrawerTrigger>
       <DrawerContent className="h-full">

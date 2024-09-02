@@ -1,15 +1,9 @@
-/* eslint-disable @next/next/no-img-element */
-
 import { Card } from "@/components/card";
 import { List } from "@/components/list";
 import { DeploymentsStats } from "@/components/stats/deployments-stats";
 import { buttonVariants } from "@/components/ui/button";
-import {
-  DATA_PLATFORM_REPO_URL,
-  DATA_PLATFORM_URL,
-  ML_REPO_URL,
-  WAITLIST_URL,
-} from "@/lib/constants";
+import content from "@/lib//content.json";
+import { WAITLIST_URL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { ClockIcon, ExternalLinkIcon } from "lucide-react";
 import dynamic from "next/dynamic";
@@ -26,19 +20,14 @@ export default function Home() {
       <section className="px-24 py-12 overflow-hidden max-lg:p-0 max-lg:text-center">
         <div className="flex items-center gap-12 max-w-screen-lg mx-auto max-lg:flex-col-reverse max-lg:gap-0">
           <div className="max-lg:px-8 max-lg:py-12">
-            <h1 className="text-4xl font-medium mb-4">
-              Antenna - The Insect Data Platform
-            </h1>
-            <h2 className="text-2xl mb-4">
-              AI-Enabled Detection And Classification Of Insects At Scale
-            </h2>
-            <p className="mb-12 text-muted-foreground">
-              An interdisciplinary platform to upload, classify, and analyse
-              in-the-wild images of invertebrates for research and conservation
-              efforts.
-            </p>
+            <h1 className="text-4xl font-medium mb-4">{content.title}</h1>
+            <h2 className="text-2xl mb-4">{content.subTitle}</h2>
+            <p className="mb-12 text-muted-foreground">{content.description}</p>
             <Link
-              className={cn(buttonVariants({ size: "lg" }), "max-lg:w-full")}
+              className={cn(
+                buttonVariants({ variant: "accent", size: "lg" }),
+                "max-lg:w-full"
+              )}
               href={WAITLIST_URL}
             >
               Join the waitlist
@@ -46,11 +35,18 @@ export default function Home() {
           </div>
           <div className={`w-full mr-[-240px] max-lg:mr-0`}>
             <div className="w-[640px] h-[480px] rounded-xl bg-card border overflow-hidden max-lg:w-full max-lg:h-[240px] max-lg:rounded-none max-lg:border-none">
-              <img
-                alt="Trap image with bounding boxes and labels"
-                src="/intro.jpg"
-                className="w-full h-full object-cover"
-              />
+              <picture>
+                <source
+                  srcSet="/images/intro.webp"
+                  media="(min-width: 1024px)"
+                />
+                <source srcSet="/images/intro-small.webp" />
+                <img
+                  alt="Trap image with bounding boxes and labels"
+                  src="/images/intro.webp"
+                  className="w-full h-full object-cover"
+                />
+              </picture>
             </div>
           </div>
         </div>
@@ -58,44 +54,20 @@ export default function Home() {
 
       <section className="p-24 bg-muted max-lg:p-8">
         <div className="max-w-screen-md mx-auto">
-          <h1 className="text-3xl font-medium mb-4">Introducing Antenna</h1>
+          <h1 className="text-3xl font-medium mb-4">{content.intro.title}</h1>
           <div className="space-y-4 text-muted-foreground">
-            <p>
-              Antenna fills the data gap to help understand insects and protect
-              biodiversity by enabling the scale-up of data collection with
-              greater spatial, temporal, and taxonomic coverage than has ever
-              been possible. It is an online platform where entomologists,
-              ecologists, and machine learning (ML) and computer scientists
-              collaborate to build trustworthy datasets by implementing and
-              improving upon ML research designed specifically for real-world
-              applications. Antenna cost-effectively and rapidly classifies a
-              wide range of species in a large number of images, building a rich
-              dataset that grows and updates over time.
-            </p>
+            <p>{content.intro.text1}</p>
             <div className="py-4">
-              <List
-                items={[
-                  "Open source machine learning models - no black box",
-                  "Classifications informed and quality controlled by experts",
-                  "Compatible with all high-resolution cameras",
-                  "User-friendly interface",
-                  "Standardised data formats and metadata",
-                  "Programmable data uploads, processings, and downloads",
-                  "No software installation required",
-                ]}
-              />
+              <List items={content.intro.listItems} />
             </div>
-            <p>
-              Antenna currently focuses on moths but expansions to other insects
-              are planned.
-            </p>
+            <p>{content.intro.text2}</p>
           </div>
         </div>
       </section>
 
       <section className="p-24 overflow-hidden max-lg:p-0">
         <div className="flex flex-col items-center gap-12 max-w-screen-lg mx-auto max-lg:gap-0">
-          <div className="w-full bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none">
+          <div className="w-full h-[480px] bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none max-lg:h-[320px]">
             <DeploymentsMap height={{ desktop: 480, mobile: 320 }} />
           </div>
           <div className="max-lg:p-12">
@@ -106,30 +78,11 @@ export default function Home() {
 
       <section className="p-24 bg-muted max-lg:p-8">
         <div className="max-w-screen-md mx-auto">
-          <h1 className="text-3xl font-medium mb-4">How Antenna helps</h1>
+          <h1 className="text-3xl font-medium mb-4">{content.about.title}</h1>
           <div className="space-y-4 text-muted-foreground">
-            <p>
-              A billion insects for every human at any one time and 10 million
-              insect species on Earth.
-            </p>
-            <p>
-              These estimates show how challenging it is to collect sufficient
-              data, recognise observed species, and monitor population changes.
-              Insects are key to ecosystems and agriculture, and severely
-              impacted by climate change. Rich, quality data is critical to
-              describing and responding to insect population patterns.
-            </p>
-            <p>
-              Antenna uses artificial intelligence to automate, accelerate,
-              standardise, and scale up the identification of invertebrates in
-              the wild. It rapidly performs fine-grained species classification
-              and new species discovery using the GBIF and Darwin Core
-              Standards. The resulting research-grade datasets comprise
-              continuously updating information about the location, time,
-              frequency, quantity of species as observed around the world. Our
-              technology is the most convenient and cost-effective way to enable
-              monitoring at scale.
-            </p>
+            {content.about.text.map((text, index) => (
+              <p key={index}>{text}</p>
+            ))}
           </div>
         </div>
       </section>
@@ -137,87 +90,33 @@ export default function Home() {
       <section className="p-24 bg-muted/50 max-lg:p-8">
         <div className="max-w-screen-lg mx-auto">
           <h1 className="text-3xl font-medium mb-12 max-lg:mb-8">
-            What do you want to do?
+            {content.cards.title}
           </h1>
           <div className="grid grid-cols-2 gap-12 max-lg:grid-cols-1 max-lg:gap-8">
-            <Card
-              title="Label the species in my images"
-              listItems={[
-                "Programmatically upload camera images",
-                "Use my or a Platform model to generate classification labels",
-                "Compare model performance on my dataset",
-              ]}
-            >
-              <Link
-                href={WAITLIST_URL}
-                className={buttonVariants({ variant: "accent" })}
-              >
-                <ClockIcon className="h-4 w-4 mr-2" /> Join the waitlist
-              </Link>
-            </Card>
-            <Card
-              title="Track where and when a species was observed"
-              listItems={[
-                "Explore images for a given species, location, or time window",
-                "Download timestamped, geolocated datasets for analysis",
-              ]}
-            >
-              <a
-                href={DATA_PLATFORM_URL}
-                className={buttonVariants({ variant: "accent" })}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Check out the platform{" "}
-                <ExternalLinkIcon className="h-4 w-4 ml-2" />
-              </a>
-            </Card>
-            <Card
-              title="Help validate the data with my moth expertise"
-              listItems={[
-                "Confirm or adjust AI-generated taxons",
-                "Suggest IDs for unidentified images",
-              ]}
-            >
-              <Link
-                href={WAITLIST_URL}
-                className={buttonVariants({ variant: "accent" })}
-              >
-                <ClockIcon className="h-4 w-4 mr-2" /> Join the waitlist
-              </Link>
-            </Card>
-            <Card
-              title="Contribute my ML skills"
-              listItems={[
-                "Train or share new object detectors, species classifiers or behavioral analysis models",
-                "Benchmark evaluation metrics to compare model performance",
-              ]}
-            >
-              <a
-                href={ML_REPO_URL}
-                className={buttonVariants({ variant: "accent" })}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Visit the repo <ExternalLinkIcon className="h-4 w-4 ml-2" />
-              </a>
-            </Card>
-            <Card
-              title="Grow the open-source software"
-              listItems={[
-                "Create new integrations for data interchange",
-                "Add new features to an existing codebase",
-              ]}
-            >
-              <a
-                href={DATA_PLATFORM_REPO_URL}
-                className={buttonVariants({ variant: "accent" })}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Visit the repo <ExternalLinkIcon className="h-4 w-4 ml-2" />
-              </a>
-            </Card>
+            {content.cards.items.map((item, index) => {
+              const className = buttonVariants({ variant: "accent" });
+
+              return (
+                <Card key={index} title={item.title} listItems={item.listItems}>
+                  {item.button.external ? (
+                    <a
+                      href={item.button.href}
+                      className={className}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {item.button.label}
+                      <ExternalLinkIcon className="h-4 w-4 ml-2" />
+                    </a>
+                  ) : (
+                    <Link href={item.button.href} className={className}>
+                      <ClockIcon className="h-4 w-4 mr-2" />
+                      {item.button.label}
+                    </Link>
+                  )}
+                </Card>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -225,37 +124,24 @@ export default function Home() {
       <section className="p-24 max-lg:p-8">
         <div className="max-w-screen-md space-y-24 mx-auto text-center max-lg:space-y-8 max-lg:text-left">
           <div>
-            <h1 className="text-3xl font-medium mb-4">Who we are</h1>
-            <p className="text-muted-foreground">
-              Antenna is led by a group of researchers and engineers from the{" "}
-              <a href="https://mila.quebec/en/automated-monitoring-of-insects-ami/">
-                Mila - Quebec Artificial Intelligence Institute
-              </a>{" "}
-              with support from{" "}
-              <a href="https://espacepourlavie.ca/en/insectarium">
-                Espace pour la vie - Insectarium
-              </a>{" "}
-              and technical contributions from scientists around the world (see{" "}
-              <a href="https://github.com/RolnickLab/ami-platform">
-                Github repository
-              </a>{" "}
-              for more detail.) We gratefully thank Andre Poremski and Kent
-              McFarland for their contributions in shaping the platform. We are
-              proud co-founders of the{" "}
-              <a href="insectmonitoring.org">
-                Automated Monitoring of Insects (AMI) Consortium
-              </a>
-              , whose mission is to empower local communities to protect and
-              conserve biodiversity by generating labelled insect data at wide
-              spatial, temporal and taxonomic scales.
-            </p>
+            <h1 className="text-3xl font-medium mb-4">
+              {content.aboutUs.title}
+            </h1>
+            <p
+              className="text-muted-foreground"
+              dangerouslySetInnerHTML={{ __html: content.aboutUs.text }}
+            />
           </div>
           <div>
-            <h1 className="text-3xl font-medium mb-4">Learn more about</h1>
+            <h1 className="text-3xl font-medium mb-4">
+              {content.learnMore.title}
+            </h1>
             <ul className="space-y-4">
-              <li>
-                <a href="https://arxiv.org/abs/2406.12452">The AMI dataset</a>
-              </li>
+              {content.learnMore.listItems.map((listItem, index) => (
+                <li key={index}>
+                  <a href={listItem.href}>{listItem.title}</a>
+                </li>
+              ))}
             </ul>
           </div>
           <div>

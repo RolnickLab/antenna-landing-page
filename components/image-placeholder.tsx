@@ -1,9 +1,8 @@
-/* eslint-disable @next/next/no-img-element */
-
 export const ImagePlaceholder = () => (
   <img
+    loading="lazy"
     alt="Placeholder"
-    src="/placeholder.jpeg"
+    src="/images/placeholder.webp"
     className="w-full h-full object-cover"
   />
 );
