@@ -151,46 +151,18 @@ export default function Home() {
           </div>
           <div>
             <h1 className="text-3xl font-medium mb-4">
-              {content.learnMore.title}
+              {content.citation.title}
             </h1>
+            <p className="text-muted-foreground mb-4">
+              {content.citation.description}
+            </p>
             <ul className="space-y-4">
-              {content.learnMore.listItems.map((listItem, index) => (
+              {content.citation.listItems.map((listItem, index) => (
                 <li key={index}>
                   <a href={listItem.href}>{listItem.title}</a>
                 </li>
               ))}
             </ul>
-          </div>
-          <div>
-            <div>
-              <p>
-                This work is licensed under{" "}
-                <a
-                  href="https://creativecommons.org/licenses/by-nc/4.0/?ref=chooser-v1"
-                  target="_blank"
-                  rel="license noopener noreferrer"
-                >
-                  Creative Commons Attribution-NonCommercial 4.0 International
-                </a>
-              </p>
-              <div className="flex items-center justify-center gap-2 py-4 max-lg:justify-start">
-                <img
-                  className="w-6 h-6"
-                  src="https://mirrors.creativecommons.org/presskit/icons/cc.svg?ref=chooser-v1"
-                  alt=""
-                />
-                <img
-                  className="w-6 h-6"
-                  src="https://mirrors.creativecommons.org/presskit/icons/by.svg?ref=chooser-v1"
-                  alt=""
-                />
-                <img
-                  className="w-6 h-6"
-                  src="https://mirrors.creativecommons.org/presskit/icons/nc.svg?ref=chooser-v1"
-                  alt=""
-                />
-              </div>
-            </div>
           </div>
         </div>
       </section>
