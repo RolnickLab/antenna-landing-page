@@ -3,7 +3,7 @@ import { List } from "@/components/list";
 import { DeploymentsStats } from "@/components/stats/deployments-stats";
 import { buttonVariants } from "@/components/ui/button";
 import content from "@/lib//content.json";
-import { WAITLIST_URL } from "@/lib/constants";
+import { DATA_PLATFORM_URL, WAITLIST_URL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { ClockIcon, ExternalLinkIcon } from "lucide-react";
 import dynamic from "next/dynamic";
@@ -66,12 +66,18 @@ export default function Home() {
       </section>
 
       <section className="p-24 overflow-hidden max-lg:p-0">
-        <div className="flex flex-col items-center gap-12 max-w-screen-lg mx-auto max-lg:gap-0">
-          <div className="w-full h-[480px] bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none max-lg:h-[320px]">
-            <DeploymentsMap height={{ desktop: 480, mobile: 320 }} />
+        <div className="flex flex-col items-end gap-8 max-w-screen-lg mx-auto">
+          <div className="w-full bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none">
+            <video src="/adp-overview-video.mov" controls />
           </div>
-          <div className="max-lg:p-12">
-            <DeploymentsStats />
+          <div className="max-lg:hidden">
+            <Link
+              href={DATA_PLATFORM_URL}
+              className={buttonVariants({ variant: "outline" })}
+            >
+              Check out the platform
+              <ExternalLinkIcon className="h-4 w-4 ml-2" />
+            </Link>
           </div>
         </div>
       </section>
@@ -83,6 +89,17 @@ export default function Home() {
             {content.about.text.map((text, index) => (
               <p key={index}>{text}</p>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="p-24 overflow-hidden max-lg:p-0">
+        <div className="flex flex-col items-center gap-12 max-w-screen-lg mx-auto">
+          <div className="w-full h-[480px] bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none max-lg:h-[320px]">
+            <DeploymentsMap height={{ desktop: 480, mobile: 320 }} />
+          </div>
+          <div className="max-lg:pb-12">
+            <DeploymentsStats />
           </div>
         </div>
       </section>
