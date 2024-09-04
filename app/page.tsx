@@ -71,13 +71,15 @@ export default function Home() {
             <video src="/adp-overview-video.mov" controls />
           </div>
           <div className="max-lg:hidden">
-            <Link
+            <a
               href={DATA_PLATFORM_URL}
               className={buttonVariants({ variant: "outline" })}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               Check out the platform
               <ExternalLinkIcon className="h-4 w-4 ml-2" />
-            </Link>
+            </a>
           </div>
         </div>
       </section>
