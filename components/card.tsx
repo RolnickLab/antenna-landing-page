@@ -9,16 +9,18 @@ interface CardProps {
 }
 
 export const Card = ({ children, listItems, title }: CardProps) => (
-  <div className="flex flex-col bg-card rounded-xl border overflow-hidden">
-    <div className="h-[240px]">
-      <ImagePlaceholder />
+  <div className="flex flex-col bg-card rounded-xl border overflow-hidden group">
+    <div className="aspect-[4/3] overflow-hidden">
+      <div className="w-full h-full group-hover:scale-125 ease-in-out duration-200">
+        <ImagePlaceholder />
+      </div>
     </div>
-    <div className="grow flex flex-col items-start justify-between gap-8 p-8 max-lg:p-4 max-md:items-stretch">
+    <div className="grow flex flex-col items-stretch justify-between gap-8 p-8 max-lg:p-4">
       <div>
-        <h2 className="text-2xl font-medium leading-tight mb-4 max-lg:text-xl">
-          {title}
-        </h2>
-        <List items={listItems} />
+        <h2 className="text-xl font-medium leading-tight mb-4">{title}</h2>
+        <div className="text-base">
+          <List items={listItems} />
+        </div>
       </div>
       {children}
     </div>

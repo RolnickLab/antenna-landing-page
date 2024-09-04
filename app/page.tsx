@@ -109,7 +109,7 @@ export default function Home() {
           <h1 className="text-3xl font-medium mb-12 max-lg:mb-8">
             {content.cards.title}
           </h1>
-          <div className="grid grid-cols-2 gap-12 max-lg:grid-cols-1 max-lg:gap-8">
+          <div className="grid grid-cols-3 gap-12 max-lg:grid-cols-1 max-lg:gap-8">
             {content.cards.items.map((item, index) => {
               const className = buttonVariants({ variant: "accent" });
 
