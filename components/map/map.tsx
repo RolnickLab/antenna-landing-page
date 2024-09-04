@@ -26,7 +26,7 @@ interface MapProps {
 }
 
 export const Map = ({ height, markers }: MapProps) => {
-  const isMediumScreen = useMediaQuery(MAX_MD_QUERY);
+  const isDesktop = useMediaQuery(MAX_MD_QUERY);
 
   const bounds = useMemo(() => {
     const _bounds = new L.LatLngBounds([]);
@@ -37,7 +37,7 @@ export const Map = ({ height, markers }: MapProps) => {
 
   return (
     <MapContainer
-      key={isMediumScreen ? "desktop-map" : "mobile-map"}
+      key={isDesktop ? "desktop-map" : "mobile-map"}
       boxZoom={false}
       className="z-0"
       center={bounds.getCenter()}
