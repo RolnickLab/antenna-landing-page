@@ -155,16 +155,10 @@ export default function Home() {
             <h1 className="text-3xl font-medium mb-4">
               {content.citation.title}
             </h1>
-            <p className="text-muted-foreground mb-4">
-              {content.citation.description}
-            </p>
-            <ul className="space-y-4">
-              {content.citation.listItems.map((listItem, index) => (
-                <li key={index}>
-                  <a href={listItem.href}>{listItem.title}</a>
-                </li>
-              ))}
-            </ul>
+            <p
+              className="text-muted-foreground mb-4"
+              dangerouslySetInnerHTML={{ __html: content.citation.text }}
+            />
           </div>
         </div>
       </section>
