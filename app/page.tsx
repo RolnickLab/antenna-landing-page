@@ -53,7 +53,23 @@ export default function Home() {
       </section>
 
       <section className="p-24 bg-muted max-lg:p-8">
-        <div className="max-w-screen-md mx-auto">
+        <div className="max-w-screen-lg mx-auto">
+          <div className="w-[640px] flex flex-col items-end gap-8 ml-12 mb-12 float-right">
+            <div className="w-full bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none">
+              <video src="/adp-overview-video.mov" controls />
+            </div>
+            <div className="max-lg:hidden">
+              <a
+                href={DATA_PLATFORM_URL}
+                className={buttonVariants({ variant: "outline" })}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Check out the platform
+                <ExternalLinkIcon className="h-4 w-4 ml-2" />
+              </a>
+            </div>
+          </div>
           <h1 className="text-3xl font-medium mb-4">{content.intro.title}</h1>
           <div className="space-y-4 text-muted-foreground">
             <p>{content.intro.text1}</p>
@@ -65,27 +81,8 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="p-24 overflow-hidden max-lg:p-0">
-        <div className="flex flex-col items-end gap-8 max-w-screen-lg mx-auto">
-          <div className="w-full bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none">
-            <video src="/adp-overview-video.mov" controls />
-          </div>
-          <div className="max-lg:hidden">
-            <a
-              href={DATA_PLATFORM_URL}
-              className={buttonVariants({ variant: "outline" })}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Check out the platform
-              <ExternalLinkIcon className="h-4 w-4 ml-2" />
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <section className="p-24 bg-muted max-lg:p-8">
-        <div className="max-w-screen-md mx-auto">
+      <section className="p-24 max-lg:p-8">
+        <div className="max-w-screen-md mx-auto mb-24">
           <h1 className="text-3xl font-medium mb-4">{content.about.title}</h1>
           <div className="space-y-4 text-muted-foreground">
             {content.about.text.map((text, index) => (
@@ -93,9 +90,6 @@ export default function Home() {
             ))}
           </div>
         </div>
-      </section>
-
-      <section className="p-24 overflow-hidden max-lg:p-0">
         <div className="flex flex-col items-center gap-12 max-w-screen-lg mx-auto">
           <div className="w-full h-[480px] bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none max-lg:h-[320px]">
             <DeploymentsMap height={{ desktop: 480, mobile: 320 }} />
