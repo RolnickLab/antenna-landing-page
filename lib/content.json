@@ -46,8 +46,8 @@
           "Download timestamped, geolocated datasets for analysis"
         ],
         "button": {
-          "label": "Check out the platform",
-          "href": "https://app.preview.insectai.org/",
+          "label": "Check out the demo",
+          "href": "https://demo.antenna.insectai.org/",
           "external": true
         }
       },

@@ -5,7 +5,7 @@ export const MENU_ITEMS = [
   { label: "Join the waitlist", href: WAITLIST_URL },
   { label: "FAQ", href: FAQ_URL },
   {
-    label: "Antenna Insect Data Platform",
+    label: "Antenna Platform Demo",
     href: DATA_PLATFORM_URL,
     external: true,
   },

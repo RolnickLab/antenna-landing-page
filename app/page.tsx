@@ -77,7 +77,7 @@ export default function Home() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Check out the platform
+              Check out the demo
               <ExternalLinkIcon className="h-4 w-4 ml-2" />
             </a>
           </div>
