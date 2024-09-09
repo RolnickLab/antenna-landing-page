@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <link rel="icon" type="image/png" href="/images/logo.png" />
+      <link rel="icon" type="image/png" href="/images/favicon.png" />
       <body>
         <header className="h-14 px-4 sticky top-0 z-10 bg-muted/95 border-b overflow-hidden">
           <nav className="flex items-center justify-between max-w-screen-lg h-full mx-auto relative">
