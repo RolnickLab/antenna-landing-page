@@ -23,7 +23,7 @@ export const Card = ({ children, image, listItems, title }: CardProps) => (
         />
       </div>
     </div>
-    <div className="grow flex flex-col items-stretch justify-between gap-8 p-8 max-lg:p-4">
+    <div className="grow flex flex-col items-stretch justify-between gap-8 p-8 border-t max-lg:p-4">
       <div>
         <h2 className="text-xl font-medium leading-tight mb-4">{title}</h2>
         <div className="text-base">
