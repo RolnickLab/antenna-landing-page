@@ -116,7 +116,12 @@ export default function Home() {
               const className = buttonVariants({ variant: "accent" });
 
               return (
-                <Card key={index} title={item.title} listItems={item.listItems}>
+                <Card
+                  key={index}
+                  image={item.image}
+                  title={item.title}
+                  listItems={item.listItems}
+                >
                   {item.button.external ? (
                     <a
                       href={item.button.href}

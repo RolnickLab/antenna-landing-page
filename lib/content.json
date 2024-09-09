@@ -29,6 +29,10 @@
     "items": [
       {
         "title": "Label the species in my images",
+        "image": {
+          "alt": "",
+          "src": "/images/feature-tiles/label-species-in-my-image-wide.png"
+        },
         "listItems": [
           "Programmatically upload camera images",
           "Use my or a Platform model to generate classification labels",
@@ -41,6 +45,10 @@
       },
       {
         "title": "Track where and when a species was observed",
+        "image": {
+          "alt": "",
+          "src": "/images/feature-tiles/track-where-and-when-wide.png"
+        },
         "listItems": [
           "Explore images for a given species, location, or time window",
           "Download timestamped, geolocated datasets for analysis"
@@ -53,6 +61,10 @@
       },
       {
         "title": "Help validate the data with my moth expertise",
+        "image": {
+          "alt": "",
+          "src": "/images/feature-tiles/help-validate-square.png"
+        },
         "listItems": [
           "Confirm or adjust AI-generated taxons",
           "Suggest IDs for unidentified images"
@@ -64,6 +76,10 @@
       },
       {
         "title": "Contribute my ML skills",
+        "image": {
+          "alt": "",
+          "src": "/images/feature-tiles/contribute-ml-skills-wide.png"
+        },
         "listItems": [
           "Train or share new object detectors, species classifiers or behavioral analysis models",
           "Benchmark evaluation metrics to compare model performance"
@@ -76,6 +92,10 @@
       },
       {
         "title": "Grow the open-source software",
+        "image": {
+          "alt": "",
+          "src": "/images/feature-tiles/grow-open-source-square-2.png"
+        },
         "listItems": [
           "Create new integrations for data interchange",
           "Add new features to an existing codebase"
