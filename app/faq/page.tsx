@@ -1,4 +1,9 @@
 import content from "@/lib/content.json";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: `${content.faq.title} | ${content.appName}`,
+};
 
 export default function FAQ() {
   return (

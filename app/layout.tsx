@@ -1,13 +1,13 @@
+import { Analytics } from "@/components/analytics";
+import { Logo } from "@/components/logo";
 import { Menu } from "@/components/menu";
 import content from "@/lib/content.json";
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
-import LogoLight from "../public/images/antenna-light.svg";
-import { Logo } from "@/components/logo";
 
 export const metadata: Metadata = {
-  title: content.title,
+  title: content.appName,
   description: content.subTitle,
 };
 
@@ -33,6 +33,7 @@ export default function RootLayout({
         <main>
           <div>{children}</div>
         </main>
+        <Analytics />
       </body>
     </html>
   );

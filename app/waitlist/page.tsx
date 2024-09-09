@@ -1,6 +1,12 @@
+import content from "@/lib/content.json";
+import { Metadata } from "next";
 import { MAILCHIMP_SNIPPET } from "./constants";
 import { FormHelper } from "./form-helper";
 import "./page.css";
+
+export const metadata: Metadata = {
+  title: `${content.waitlist.title} | ${content.appName}`,
+};
 
 export default function Waitlist() {
   return (
