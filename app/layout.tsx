@@ -3,6 +3,8 @@ import content from "@/lib/content.json";
 import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
+import LogoLight from "../public/images/antenna-light.svg";
+import { Logo } from "@/components/logo";
 
 export const metadata: Metadata = {
   title: content.title,
@@ -22,12 +24,7 @@ export default function RootLayout({
           <nav className="flex items-center justify-between max-w-screen-lg h-full mx-auto relative">
             <div className="absolute left-0 max-lg:static">
               <Link href="/">
-                <img
-                  id="logo"
-                  alt="AMI logo"
-                  src="/images/logo.png"
-                  className="w-10 h-10"
-                />
+                <Logo id="logo" className="w-10 h-10 color-primary" />
               </Link>
             </div>
             <Menu />
