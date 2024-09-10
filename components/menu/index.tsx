@@ -11,6 +11,7 @@ import { MenuIcon, XIcon } from "lucide-react";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 import ThemeToggle from "../theme-toggle";
+import { buttonVariants } from "../ui/button";
 import { MENU_ITEMS } from "./constants";
 import { MenuItem } from "./menu-item";
 
@@ -59,9 +60,9 @@ export const MobileMenu = () => {
     <Drawer direction="right" open={open} onOpenChange={setOpen}>
       <DrawerTrigger
         aria-label="Menu"
-        className="w-10 h-10 flex items-center justify-center"
+        className={buttonVariants({ variant: "outline", size: "icon" })}
       >
-        <MenuIcon className="h-4 w-4" />
+        <MenuIcon className="w-4 h-4" />
       </DrawerTrigger>
       <DrawerContent className="h-full">
         <DrawerClose className="absolute top-2 right-2 w-10 h-10 flex items-center justify-center">

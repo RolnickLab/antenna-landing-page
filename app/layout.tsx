@@ -20,7 +20,7 @@ export default function RootLayout({
     <html lang="en">
       <link rel="icon" type="image/png" href="/images/favicon.png" />
       <body>
-        <header className="h-14 px-4 sticky top-0 z-10 bg-muted/95 border-b overflow-hidden">
+        <header className="h-14 px-4 sticky top-0 z-10 bg-muted/95 border-b overflow-hidden max-lg:h-auto max-lg:p-2">
           <nav className="flex items-center justify-between max-w-screen-lg h-full mx-auto relative">
             <div className="absolute left-0 max-lg:static">
               <Link href="/">
