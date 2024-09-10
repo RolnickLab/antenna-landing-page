@@ -30,7 +30,7 @@ export default function Home() {
               )}
               href={WAITLIST_URL}
             >
-              Join the waitlist
+              Sign up
             </Link>
           </div>
           <div className={`w-full mr-[-240px] max-lg:mr-0`}>
