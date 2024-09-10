@@ -67,8 +67,17 @@ export default function Home() {
 
       <section className="p-24 overflow-hidden max-lg:p-0">
         <div className="flex flex-col items-end gap-8 max-w-screen-lg mx-auto">
-          <div className="w-full bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none">
-            <video src="/adp-overview-video.mov" controls />
+          <div
+            className="w-full bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none"
+            style={{ aspectRatio: "1920/1200" }}
+          >
+            <video
+              className="w-full h-full"
+              controls
+              poster="/videos/adp-overview-video-cover.png"
+              preload="false"
+              src="/videos/adp-overview-video.mov"
+            />
           </div>
           <div className="max-lg:hidden">
             <a
