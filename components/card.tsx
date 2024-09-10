@@ -12,9 +12,9 @@ interface CardProps {
 }
 
 export const Card = ({ children, image, listItems, title }: CardProps) => (
-  <div className="flex flex-col bg-card rounded-xl border overflow-hidden group">
+  <div className="flex flex-col bg-card rounded-xl border overflow-hidden">
     <div className="aspect-[4/3] overflow-hidden">
-      <div className="w-full h-full group-hover:scale-110 transition ease-out">
+      <div className="w-full h-full hover:scale-110 transition ease-out max-lg:hover:scale-100">
         <img
           loading="lazy"
           alt={image.alt ?? ""}
