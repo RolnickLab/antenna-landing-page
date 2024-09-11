@@ -1,11 +1,13 @@
 "use client";
 
+import { useCookieConsent } from "@/lib/cookie-consent/useCookieConsent";
 import { useEffect } from "react";
 
 const GTM_ID = "G-C0K21EZL76";
 
 export const Analytics = () => {
-  const shouldLoad = true; // TODO: Check cookie consent
+  const { accepted, settings } = useCookieConsent();
+  const shouldLoad = accepted && settings.performance;
 
   useEffect(() => {
     if (!shouldLoad) {

@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useCookieConsent } from "./cookie-consent/useCookieConsent";
 
 const STORAGE_KEY = "ami-theme-preference";
 
@@ -21,13 +22,16 @@ const setThemePreference = (theme: Theme) => {
 };
 
 export const useTheme = () => {
+  const { accepted, settings } = useCookieConsent();
   const [theme, _setTheme] = useState<Theme>(getThemePreference());
 
   return {
     theme,
     setTheme: (theme: Theme) => {
       _setTheme(theme);
-      setThemePreference(theme);
+      if (accepted && settings.functionality) {
+        setThemePreference(theme);
+      }
     },
   };
 };
