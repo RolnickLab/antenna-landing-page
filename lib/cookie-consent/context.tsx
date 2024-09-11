@@ -1,6 +1,6 @@
 "use client";
 
-import { ReactNode, createContext, useState } from "react";
+import { ReactNode, createContext, useEffect, useState } from "react";
 import { COOKIE_CONSENT_STORAGE_KEY, DEFAULT_SETTINGS } from "./constants";
 import {
   CookieConsent,
@@ -18,20 +18,20 @@ export const CookieConsentContextProvider = ({
 }: {
   children: ReactNode;
 }) => {
-  const [consent, setConsent] = useState<CookieConsent>(() => {
-    const defaultPreferences = {
-      settings: DEFAULT_SETTINGS,
-    };
-    const storedPreferences = localStorage.getItem(COOKIE_CONSENT_STORAGE_KEY);
-    if (!storedPreferences) {
-      return defaultPreferences;
-    }
-    try {
-      return JSON.parse(storedPreferences) as CookieConsent;
-    } catch {
-      return defaultPreferences;
-    }
+  const [consent, setConsent] = useState<CookieConsent>({
+    settings: DEFAULT_SETTINGS,
   });
+
+  useEffect(() => {
+    const storedPreferences = localStorage.getItem(COOKIE_CONSENT_STORAGE_KEY);
+    try {
+      if (storedPreferences) {
+        setConsent(JSON.parse(storedPreferences) as CookieConsent);
+      }
+    } catch {
+      localStorage.removeItem(COOKIE_CONSENT_STORAGE_KEY);
+    }
+  }, []);
 
   return (
     <CookieConsentContext.Provider
