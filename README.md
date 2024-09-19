@@ -1,4 +1,4 @@
-# ADP landing page
+# Antenna landing page
 
 This is the landing page for Antenna Insect Data Platform. The app was setup using [Next.js](https://nextjs.org/) and [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). We output as a static site using [Next Static Exports](https://nextjs.org/docs/pages/building-your-application/deploying/static-exports).
 
