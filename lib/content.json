@@ -7,12 +7,11 @@
     "title": "Introducing Antenna",
     "text1": "Antenna fills the data gap to help understand insects and protect biodiversity by enabling the scale-up of data collection with greater spatial, temporal, and taxonomic coverage than has ever been possible. It is an online platform where entomologists, ecologists, and machine learning (ML) and computer scientists collaborate to build trustworthy datasets by implementing and improving upon ML research designed specifically for real-world applications. Antenna cost-effectively and rapidly classifies a wide range of species in a large number of images, building a rich dataset that grows and updates over time.",
     "listItems": [
-      "Open source machine learning models - no black box",
-      "Classifications informed and quality controlled by experts",
+      "Out-of-the-box machine learning models, or bring your own",
       "Compatible with all high-resolution cameras",
       "User-friendly interface",
       "Standardised data formats and metadata",
-      "Programmable data uploads, processings, and downloads",
+      "Programmable access to source data and results",
       "No software installation required"
     ],
     "text2": "Antenna currently focuses on moths but expansions to other insects are planned."
