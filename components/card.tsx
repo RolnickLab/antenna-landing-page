@@ -2,7 +2,7 @@ import { ReactNode } from "react";
 import { List } from "./list";
 
 interface CardProps {
-  children: ReactNode;
+  children?: ReactNode;
   image: {
     alt?: string;
     src: string;

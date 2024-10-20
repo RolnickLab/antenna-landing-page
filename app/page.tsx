@@ -3,7 +3,7 @@ import { List } from "@/components/list";
 import { DeploymentsStats } from "@/components/stats/deployments-stats";
 import { buttonVariants } from "@/components/ui/button";
 import content from "@/lib//content.json";
-import { DATA_PLATFORM_URL, WAITLIST_URL } from "@/lib/constants";
+import { DATA_PLATFORM_URL, HIDE_DEMO, WAITLIST_URL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { ClockIcon, ExternalLinkIcon } from "lucide-react";
 import dynamic from "next/dynamic";
@@ -79,17 +79,19 @@ export default function Home() {
               src="/videos/adp-overview-video.mov"
             />
           </div>
-          <div className="max-lg:hidden">
-            <a
-              href={DATA_PLATFORM_URL}
-              className={buttonVariants({ variant: "outline" })}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Check out the demo
-              <ExternalLinkIcon className="h-4 w-4 ml-2" />
-            </a>
-          </div>
+          {!HIDE_DEMO && (
+            <div className="max-lg:hidden">
+              <a
+                href={DATA_PLATFORM_URL}
+                className={buttonVariants({ variant: "outline" })}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Check out the demo
+                <ExternalLinkIcon className="h-4 w-4 ml-2" />
+              </a>
+            </div>
+          )}
         </div>
       </section>
 
@@ -123,6 +125,17 @@ export default function Home() {
           <div className="grid grid-cols-3 gap-12 max-lg:grid-cols-1 max-lg:gap-8">
             {content.cards.items.map((item, index) => {
               const className = buttonVariants({ variant: "accent" });
+
+              if (HIDE_DEMO && item.button.href === DATA_PLATFORM_URL) {
+                return (
+                  <Card
+                    key={index}
+                    image={item.image}
+                    title={item.title}
+                    listItems={item.listItems}
+                  />
+                );
+              }
 
               return (
                 <Card
