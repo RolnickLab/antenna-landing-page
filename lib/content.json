@@ -110,7 +110,21 @@
   },
   "aboutUs": {
     "title": "Who we are",
-    "text": "Antenna is led by a group of researchers and engineers from the <a href=\"https://mila.quebec/en/automated-monitoring-of-insects-ami/\">Mila - Quebec Artificial Intelligence Institute</a> with support from <a href=\"https://espacepourlavie.ca/en/insectarium/\">Espace pour la vie - Insectarium</a> and technical contributions from scientists around the world (see <a href=\"https://github.com/RolnickLab/ami-platform/\">Github repository</a> for more detail.) We gratefully thank Andre Poremski and Kent McFarland for their contributions in shaping the platform. We are proud co-founders of the Automated Monitoring of Insects (AMI) Consortium, whose mission is to empower local communities to protect and conserve biodiversity by generating labelled insect data at wide spatial, temporal and taxonomic scales."
+    "text": "Antenna is led by a group of researchers and engineers from the <a href=\"https://mila.quebec/en/automated-monitoring-of-insects-ami/\">Mila - Quebec Artificial Intelligence Institute</a> with support from <a href=\"https://espacepourlavie.ca/en/insectarium/\">Espace pour la vie - Insectarium</a> and technical contributions from scientists around the world (see <a href=\"https://github.com/RolnickLab/ami-platform/\">Github repository</a> for more detail). We gratefully thank Andre Poremski and Kent McFarland for their contributions in shaping the platform. We are proud co-founders of the Automated Monitoring of Insects (AMI) Consortium, whose mission is to empower local communities to protect and conserve biodiversity by generating labelled insect data at wide spatial, temporal and taxonomic scales."
+  },
+  "media": {
+    "title": "Media",
+    "articles": [
+      {
+        "title": "Un algorithme au secours des insectes | Découverte",
+        "description": "Les populations d'insectes s'effondrent à un rythme sans précédent, et il manque de scientifiques pour documenter ce déclin.",
+        "image": "https://images.radio-canada.ca/q_auto,w_1200/v1/ici-tele/emissions/16x9/decouverte-5627-insectarium-ia.jpg",
+        "link": {
+          "label": "Radio Canada",
+          "href": "https://ici.radio-canada.ca/tele/decouverte/site/segments/reportage/1900347/insectarium-intelligence-artificielle-menace-insectes"
+        }
+      }
+    ]
   },
   "citation": {
     "title": "Citation information",

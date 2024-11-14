@@ -1,3 +1,4 @@
+import { Article } from "@/components/article";
 import { Card } from "@/components/card";
 import { List } from "@/components/list";
 import { DeploymentsStats } from "@/components/stats/deployments-stats";
@@ -177,6 +178,14 @@ export default function Home() {
               className="text-muted-foreground"
               dangerouslySetInnerHTML={{ __html: content.aboutUs.text }}
             />
+          </div>
+          <div>
+            <h1 className="text-3xl font-medium mb-4">{content.media.title}</h1>
+            <div className="">
+              {content.media.articles.map((article, index) => (
+                <Article key={index} {...article} />
+              ))}
+            </div>
           </div>
           <div>
             <h1 className="text-3xl font-medium mb-4">
