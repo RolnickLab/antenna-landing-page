@@ -1,5 +1,6 @@
 import { Analytics } from "@/components/analytics";
 import { CookieDialog } from "@/components/cookie-dialog";
+import { Footer } from "@/components/footer";
 import { Logo } from "@/components/logo";
 import { Menu } from "@/components/menu";
 import content from "@/lib/content.json";
@@ -38,6 +39,7 @@ export default function RootLayout({
             <main>
               <div>{children}</div>
             </main>
+            <Footer />
             <Analytics />
             <CookieDialog />
           </ThemeContextProvider>
