@@ -1,8 +1,8 @@
-import { useDeployments } from "@/lib/useDeployments";
+import { useStats } from "@/lib/stats/useStats";
 import { Stats } from "./stats";
 
 export const DeploymentsStats = () => {
-  const { stats } = useDeployments();
+  const { stats } = useStats();
 
   return (
     <Stats
