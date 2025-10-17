@@ -42,9 +42,8 @@ npx serve@latest out
 
 ## Update stats
 
-To update stats (station map and counts), simply run this script. This will fetch data from the API and save it to `stats.json`, for the web app to read without loading times.
+To update stats (station map and counts), simply run this script. This will fetch data from the API and save it to `stats.json`. This makes it possible for the web app to access stats without loading times.
 
 ```bash
-# Generate static export
 npm run update-stats
 ```
