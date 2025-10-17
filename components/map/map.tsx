@@ -8,6 +8,7 @@ import {
   ATTRIBUTION,
   DEFAULT_ZOOM,
   MAX_BOUNDS,
+  MAX_ZOOM,
   TILE_LAYER_URL,
 } from "./constants";
 
@@ -39,16 +40,16 @@ export const Map = ({ height, markers }: MapProps) => {
     <MapContainer
       key={isDesktop ? "desktop-map" : "mobile-map"}
       boxZoom={false}
-      className="z-0"
       center={bounds.getCenter()}
-      doubleClickZoom={false}
+      className="z-0"
       keyboard={false}
       maxBounds={MAX_BOUNDS}
+      maxZoom={MAX_ZOOM}
       scrollWheelZoom={false}
       style={{ height: `${isDesktop ? height.desktop : height.mobile}px` }}
       touchZoom={false}
       zoom={isDesktop ? DEFAULT_ZOOM.desktop : DEFAULT_ZOOM.mobile}
-      zoomControl={false}
+      zoomControl={true}
     >
       <TileLayer attribution={ATTRIBUTION} url={TILE_LAYER_URL} />
       {markers.map((marker, index) => (

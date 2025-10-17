@@ -10,9 +10,11 @@ export const ATTRIBUTION =
 export const MAX_BOUNDS = new L.LatLngBounds([-90, -180], [90, 180]);
 
 export const DEFAULT_ZOOM = {
-  desktop: 3,
+  desktop: 2,
   mobile: 1,
 };
+
+export const MAX_ZOOM = 5;
 
 export const TILE_LAYER_URL =
   "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";

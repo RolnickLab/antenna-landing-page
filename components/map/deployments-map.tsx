@@ -1,6 +1,6 @@
 "use client";
 
-import { useDeployments } from "@/lib/useDeployments";
+import { useStats } from "@/lib/stats/useStats";
 import * as L from "leaflet";
 import { useMemo } from "react";
 import { Map } from "./map";
@@ -13,11 +13,11 @@ interface DeploymentsMapProps {
 }
 
 const DeploymentsMap = ({ height }: DeploymentsMapProps) => {
-  const deployments = useDeployments();
+  const { deployments } = useStats();
 
   const markers = useMemo(
     () =>
-      deployments.deployments_data.map((deployment) => {
+      deployments.map((deployment) => {
         const position = new L.LatLng(
           deployment.latitude,
           deployment.longitude

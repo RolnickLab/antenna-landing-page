@@ -39,3 +39,12 @@ npm run build
 # [Only for testing] Serve prod app on localhost
 npx serve@latest out
 ```
+
+## Update stats
+
+To update stats (station map and counts), simply run this script. This will fetch data from the API and save it to `stats.json`, for the web app to read without loading times.
+
+```bash
+# Generate static export
+npm run update-stats
+```
