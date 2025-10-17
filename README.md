@@ -9,7 +9,7 @@ This is the landing page for Antenna Insect Data Platform. The app was setup usi
 
 The `.nvmrc` file in project root describes the recommended Node version for this project.
 
-## Getting started
+## Run the app locally
 
 ```bash
 # Install dependencies
@@ -21,11 +21,7 @@ npm run dev
 
 The app will now be available in a browser on [http://localhost:3000](http://localhost:3000). Hot reload will be enabled by default.
 
-## Edit content
-
-All text content is specified in the file /lib/content.json. To edit any content, simply update this file.
-
-## Deployment
+## Deploy the app
 
 With a static export, the app can be deployed and hosted on any web server that can serve HTML/CSS/JS static assets. When running the build command, Next.js generates the static export into the `out` folder.
 
@@ -39,6 +35,10 @@ npm run build
 # [Only for testing] Serve prod app on localhost
 npx serve@latest out
 ```
+
+## Edit content
+
+All text content is specified in [content.json](https://github.com/RolnickLab/antenna-landing-page/blob/e5aa108cd8e2511389b2ac24f828895ea94dc36b/lib/content.json). To edit any content, simply update this file.
 
 ## Update stats
 
