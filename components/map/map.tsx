@@ -9,6 +9,7 @@ import {
   DEFAULT_ZOOM,
   MAX_BOUNDS,
   MAX_ZOOM,
+  MIN_ZOOM,
   TILE_LAYER_URL,
 } from "./constants";
 
@@ -45,6 +46,7 @@ export const Map = ({ height, markers }: MapProps) => {
       keyboard={false}
       maxBounds={MAX_BOUNDS}
       maxZoom={MAX_ZOOM}
+      minZoom={MIN_ZOOM}
       scrollWheelZoom={false}
       style={{ height: `${isDesktop ? height.desktop : height.mobile}px` }}
       touchZoom={false}
