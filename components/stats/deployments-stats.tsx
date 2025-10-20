@@ -8,11 +8,11 @@ export const DeploymentsStats = () => {
     <Stats
       items={[
         {
-          value: `${stats.deployments_count.toLocaleString()}`,
+          value: `${Math.round(stats.deployments_count / 100) * 100}`,
           unit: "Stations",
         },
         {
-          value: `${stats.captures_count.toLocaleString()}`,
+          value: `${Math.round(stats.captures_count / 1000000)}M`,
           unit: "Camera images",
         },
       ]}
