@@ -1,5 +1,5 @@
 import { ExternalLinkIcon } from "lucide-react";
-import { Button, buttonVariants } from "./ui/button";
+import { buttonVariants } from "./ui/button";
 
 interface ArticleProps {
   description: string;
