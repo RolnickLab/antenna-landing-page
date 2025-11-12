@@ -96,10 +96,8 @@
     "title": "Citation information",
     "text": "When using Antenna or the AMI dataset, please remember to give appropriate credit by including this statement: <i>\"Data processed using the Antenna Data Platform service available at insectai.org\"</i> and/or citing this publication: <a href=\"https://arxiv.org/abs/2406.12452\">DOI 10.5281/zenodo.11358688</a>."
   },
-  "waitlist": {
-    "title": "Waitlist",
-    "subTitle": "Interested in joining the Antenna community?",
-    "text": "There is currently a waitlist to access Antenna. We are working hard to open up the platform to more people! Please tell us more so we can better serve you."
+  "contact": {
+    "title": "Get in touch"
   },
   "faq": {
     "title": "Frequently Asked Questions",

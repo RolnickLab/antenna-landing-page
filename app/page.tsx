@@ -3,7 +3,7 @@ import { List } from "@/components/list";
 import { DeploymentsStats } from "@/components/stats/deployments-stats";
 import { buttonVariants } from "@/components/ui/button";
 import content from "@/lib//content.json";
-import { DATA_PLATFORM_URL, WAITLIST_URL } from "@/lib/constants";
+import { CONTACT_URL, DATA_PLATFORM_URL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { ExternalLinkIcon } from "lucide-react";
 import dynamic from "next/dynamic";
@@ -28,7 +28,7 @@ export default function Home() {
                 buttonVariants({ variant: "accent", size: "lg" }),
                 "max-md:w-full"
               )}
-              href={WAITLIST_URL}
+              href={CONTACT_URL}
             >
               Get in touch
             </Link>
@@ -171,7 +171,7 @@ export default function Home() {
               </p>
               <Link
                 className={buttonVariants({ variant: "accent" })}
-                href={WAITLIST_URL}
+                href={CONTACT_URL}
               >
                 Get in touch
               </Link>

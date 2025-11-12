@@ -1,4 +1,4 @@
-export const WAITLIST_URL = "/waitlist";
+export const CONTACT_URL = "/contact";
 
 export const FAQ_URL = "/faq";
 
