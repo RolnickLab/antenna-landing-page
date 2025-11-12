@@ -14,18 +14,13 @@ export default function Contact() {
       <div className="max-w-screen-md mx-auto">
         <h1 className="text-3xl font-medium mb-4">{content.contact.title}</h1>
         <div className="space-y-4 mb-12 max-lg:mb-8">
-          <p className="text-muted-foreground">
-            Do you have data to test or future research to discuss? We want to
-            talk to you! Contact us directly on{" "}
-            <a href="mailto:antenna@mila.quebec">antenna@mila.quebec</a> or fill
-            in the form below.
-          </p>
-          <p className="text-muted-foreground">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.
-          </p>
+          {content.contact.text.map((__html, index) => (
+            <p
+              key={index}
+              className="text-muted-foreground"
+              dangerouslySetInnerHTML={{ __html }}
+            />
+          ))}
         </div>
         <div
           dangerouslySetInnerHTML={{

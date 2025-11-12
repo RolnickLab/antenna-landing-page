@@ -128,13 +128,10 @@ export default function Home() {
           <div className="grid grid-cols-3 gap-x-12 gap-24 mb-24">
             <div>
               <h1 className="text-3xl font-medium mb-4">
-                Want to know what Antenna looks like?
+                {content.cta.demo.title}
               </h1>
               <p className="text-muted-foreground mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                enim ad minim veniam, quis nostrud exercitation ullamco laboris
-                nisi ut aliquip ex ea commodo consequat.
+                {content.cta.demo.text}
               </p>
               <a
                 href={DATA_PLATFORM_URL}
@@ -162,12 +159,10 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-24">
             <div>
               <h1 className="text-3xl font-medium mb-4">
-                Want to try out Antenna?
+                {content.cta.contact.title}
               </h1>
               <p className="text-muted-foreground mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                nisi ut aliquip ex ea commodo consequat.
+                {content.cta.contact.text}
               </p>
               <Link
                 className={buttonVariants({ variant: "accent" })}
@@ -178,12 +173,10 @@ export default function Home() {
             </div>
             <div>
               <h1 className="text-3xl font-medium mb-4">
-                Want to try out the piplines?
+                {content.cta.pipelines.title}
               </h1>
               <p className="text-muted-foreground mb-8">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-                nisi ut aliquip ex ea commodo consequat.
+                {content.cta.pipelines.text}
               </p>
               <a
                 className={buttonVariants({ variant: "outline" })}
