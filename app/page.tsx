@@ -3,8 +3,9 @@ import { List } from "@/components/list";
 import { DeploymentsStats } from "@/components/stats/deployments-stats";
 import { buttonVariants } from "@/components/ui/button";
 import content from "@/lib//content.json";
-import { WAITLIST_URL } from "@/lib/constants";
+import { DATA_PLATFORM_URL, WAITLIST_URL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { ExternalLinkIcon } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 
@@ -118,6 +119,81 @@ export default function Home() {
                 <List items={item.listItems} />
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="p-24 bg-muted/50 max-lg:p-8">
+        <div className="max-w-screen-lg mx-auto max-lg:max-w-screen-md">
+          <div className="grid grid-cols-3 gap-x-12 gap-24 mb-24">
+            <div>
+              <h1 className="text-3xl font-medium mb-4">
+                Want to know what Antenna looks like?
+              </h1>
+              <p className="text-muted-foreground mb-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <a
+                href={DATA_PLATFORM_URL}
+                className={buttonVariants({ variant: "outline" })}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Demo
+                <ExternalLinkIcon className="h-4 w-4 ml-2" />
+              </a>
+            </div>
+            <div
+              className="rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none"
+              style={{ aspectRatio: "1920/1200", gridColumn: "span 2" }}
+            >
+              <video
+                className="w-full h-full"
+                controls
+                poster="/videos/adp-overview-video-cover.png"
+                preload="false"
+                src="/videos/adp-overview-video.mov"
+              />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-24">
+            <div>
+              <h1 className="text-3xl font-medium mb-4">
+                Want to try out Antenna?
+              </h1>
+              <p className="text-muted-foreground mb-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <Link
+                className={buttonVariants({ variant: "accent" })}
+                href={WAITLIST_URL}
+              >
+                Get in touch
+              </Link>
+            </div>
+            <div>
+              <h1 className="text-3xl font-medium mb-4">
+                Want to try out the piplines?
+              </h1>
+              <p className="text-muted-foreground mb-8">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <a
+                className={buttonVariants({ variant: "outline" })}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Gradio demo
+                <ExternalLinkIcon className="h-4 w-4 ml-2" />
+              </a>
+            </div>
           </div>
         </div>
       </section>
