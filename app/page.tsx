@@ -1,12 +1,10 @@
 import { Article } from "@/components/article";
-import { Card } from "@/components/card";
 import { List } from "@/components/list";
 import { DeploymentsStats } from "@/components/stats/deployments-stats";
 import { buttonVariants } from "@/components/ui/button";
 import content from "@/lib//content.json";
-import { DATA_PLATFORM_URL, HIDE_DEMO, WAITLIST_URL } from "@/lib/constants";
+import { WAITLIST_URL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
-import { ClockIcon, ExternalLinkIcon } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 
@@ -31,7 +29,7 @@ export default function Home() {
               )}
               href={WAITLIST_URL}
             >
-              Sign up
+              Get in touch
             </Link>
           </div>
           <div className="w-full max-lg:mr-0">
@@ -67,32 +65,13 @@ export default function Home() {
       </section>
 
       <section className="p-24 overflow-hidden max-lg:p-0">
-        <div className="flex flex-col items-end gap-8 max-w-screen-lg mx-auto">
-          <div
-            className="w-full bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none"
-            style={{ aspectRatio: "1920/1200" }}
-          >
-            <video
-              className="w-full h-full"
-              controls
-              poster="/videos/adp-overview-video-cover.png"
-              preload="false"
-              src="/videos/adp-overview-video.mov"
-            />
+        <div className="flex flex-col items-center gap-12 max-w-screen-lg mx-auto">
+          <div className="w-full h-[480px] bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none max-lg:h-[320px]">
+            <DeploymentsMap height={{ desktop: 480, mobile: 320 }} />
           </div>
-          {!HIDE_DEMO && (
-            <div className="max-lg:hidden">
-              <a
-                href={DATA_PLATFORM_URL}
-                className={buttonVariants({ variant: "outline" })}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Check out the demo
-                <ExternalLinkIcon className="h-4 w-4 ml-2" />
-              </a>
-            </div>
-          )}
+          <div className="max-lg:pb-12">
+            <DeploymentsStats />
+          </div>
         </div>
       </section>
 
@@ -107,63 +86,38 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="p-24 overflow-hidden max-lg:p-0">
-        <div className="flex flex-col items-center gap-12 max-w-screen-lg mx-auto">
-          <div className="w-full h-[480px] bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none max-lg:h-[320px]">
-            <DeploymentsMap height={{ desktop: 480, mobile: 320 }} />
-          </div>
-          <div className="max-lg:pb-12">
-            <DeploymentsStats />
-          </div>
-        </div>
-      </section>
-
-      <section className="p-24 bg-muted/50 max-lg:p-8">
+      <section className="p-24 max-lg:p-8">
         <div className="max-w-screen-lg mx-auto max-lg:max-w-screen-md">
-          <h1 className="text-3xl font-medium mb-12 max-lg:mb-8">
-            {content.cards.title}
-          </h1>
-          <div className="grid grid-cols-3 gap-12 max-lg:grid-cols-1 max-lg:gap-8">
-            {content.cards.items.map((item, index) => {
-              const className = buttonVariants({ variant: "accent" });
-
-              if (HIDE_DEMO && item.button.href === DATA_PLATFORM_URL) {
-                return (
-                  <Card
-                    key={index}
-                    image={item.image}
-                    title={item.title}
-                    listItems={item.listItems}
+          <div className="grid gap-24 mb-24">
+            {content.features.highlighted.map((item, index) => (
+              <div
+                key={index}
+                className={cn("flex gap-12", {
+                  "flex-row-reverse": index % 2 !== 0,
+                })}
+              >
+                <div className="flex-1 aspect-[4/3] border rounded-xl overflow-hidden">
+                  <img
+                    loading="lazy"
+                    alt={item.image?.alt ?? ""}
+                    src={item.image?.src}
+                    className="w-full h-full object-cover"
                   />
-                );
-              }
-
-              return (
-                <Card
-                  key={index}
-                  image={item.image}
-                  title={item.title}
-                  listItems={item.listItems}
-                >
-                  {item.button.external ? (
-                    <a
-                      href={item.button.href}
-                      className={className}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {item.button.label}
-                      <ExternalLinkIcon className="h-4 w-4 ml-2" />
-                    </a>
-                  ) : (
-                    <Link href={item.button.href} className={className}>
-                      <ClockIcon className="h-4 w-4 mr-2" />
-                      {item.button.label}
-                    </Link>
-                  )}
-                </Card>
-              );
-            })}
+                </div>
+                <div className="flex-1 py-12">
+                  <h2 className="text-2xl font-medium mb-4">{item.title}</h2>
+                  <List items={item.listItems} />
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="grid grid-cols-3 gap-24">
+            {content.features.extra.map((item, index) => (
+              <div key={index}>
+                <h2 className="text-xl font-medium mb-4">{item.title}</h2>
+                <List items={item.listItems} />
+              </div>
+            ))}
           </div>
         </div>
       </section>

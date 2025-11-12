@@ -1,6 +1,6 @@
 {
   "appName": "Antenna Platform",
-  "title": "Antenna - The Insect Data Platform",
+  "title": "Antenna",
   "subTitle": "AI-Enabled Detection And Classification Of Insects At Scale",
   "description": "An interdisciplinary platform to upload, classify, and analyse in-the-wild images of invertebrates for research and conservation efforts.",
   "intro": {
@@ -24,11 +24,10 @@
       "Antenna uses artificial intelligence to automate, accelerate, standardise, and scale up the identification of invertebrates in the wild. It performs fine-grained classification in large batches for species richness studies, new species discovery, monitoring of invasive species, and related applications. The resulting research-grade datasets comprise continuously updating information about the location, time, frequency, and quantity of species as observed around the world and are published to the Global Biodiversity Information Facility (GBIF) using the Darwin Core Standard (DwC). Our technology is the most convenient and cost-effective way to enable monitoring at scale."
     ]
   },
-  "cards": {
-    "title": "What do you want to do?",
-    "items": [
+  "features": {
+    "highlighted": [
       {
-        "title": "Label the species in my images",
+        "title": "Label the species in your images",
         "image": {
           "alt": "",
           "src": "/images/feature-tiles/label-species-in-my-image-wide.png"
@@ -37,11 +36,7 @@
           "Programmatically upload camera images",
           "Use my or a Platform model to generate classification labels",
           "Compare model performance on my dataset"
-        ],
-        "button": {
-          "label": "Sign up",
-          "href": "/waitlist"
-        }
+        ]
       },
       {
         "title": "Track where and when a species was observed",
@@ -52,59 +47,30 @@
         "listItems": [
           "Explore images for a given species, location, or time window",
           "Download timestamped, geolocated datasets for analysis"
-        ],
-        "button": {
-          "label": "Check out the demo",
-          "href": "https://demo.antenna.insectai.org/",
-          "external": true
-        }
-      },
+        ]
+      }
+    ],
+    "extra": [
       {
-        "title": "Help validate the data with my moth expertise",
-        "image": {
-          "alt": "",
-          "src": "/images/feature-tiles/help-validate-square.png"
-        },
+        "title": "Help validate the data with your moth expertise",
         "listItems": [
           "Confirm or adjust AI-generated taxons",
           "Suggest IDs for unidentified images"
-        ],
-        "button": {
-          "label": "Sign up",
-          "href": "/waitlist"
-        }
+        ]
       },
       {
-        "title": "Contribute my ML skills",
-        "image": {
-          "alt": "",
-          "src": "/images/feature-tiles/contribute-ml-skills-wide.png"
-        },
+        "title": "Contribute your ML skills",
         "listItems": [
           "Train or share new object detectors, species classifiers or behavioral analysis models",
           "Benchmark evaluation metrics to compare model performance"
-        ],
-        "button": {
-          "label": "Visit the repo",
-          "href": "https://github.com/RolnickLab/ami-ml/",
-          "external": true
-        }
+        ]
       },
       {
         "title": "Grow the open-source software",
-        "image": {
-          "alt": "",
-          "src": "/images/feature-tiles/grow-open-source-square-2.png"
-        },
         "listItems": [
           "Create new integrations for data interchange",
           "Add new features to an existing codebase"
-        ],
-        "button": {
-          "label": "Visit the repo",
-          "href": "https://github.com/RolnickLab/ami-platform/",
-          "external": true
-        }
+        ]
       }
     ]
   },
