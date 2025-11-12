@@ -106,7 +106,7 @@ export default function Home() {
                   />
                 </div>
                 <div className="flex-1 py-12">
-                  <h2 className="text-2xl font-medium mb-4">{item.title}</h2>
+                  <h2 className="text-3xl font-medium mb-4">{item.title}</h2>
                   <List items={item.listItems} />
                 </div>
               </div>
