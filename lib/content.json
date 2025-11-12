@@ -34,8 +34,8 @@
         },
         "listItems": [
           "Programmatically upload camera images",
-          "Use my or a Platform model to generate classification labels",
-          "Compare model performance on my dataset"
+          "Use your or a Platform model to generate classification labels",
+          "Compare model performance on your dataset"
         ]
       },
       {
@@ -76,7 +76,7 @@
   },
   "cta": {
     "demo": {
-      "title": "Want to try out Antenna?",
+      "title": "Want to see how Antenna looks like?",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
     },
     "contact": {
