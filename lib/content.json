@@ -27,6 +27,18 @@
   "features": {
     "highlighted": [
       {
+        "title": "Manage data from any camera",
+        "image": {
+          "alt": "",
+          "src": "/images/feature-tiles/entocam.jpg"
+        },
+        "listItems": [
+          "Organize your devices and research sites",
+          "Assign roles and actions to your team",
+          "Keep related metadata intact"
+        ]
+      },
+      {
         "title": "Label the species in your images",
         "image": {
           "alt": "",
