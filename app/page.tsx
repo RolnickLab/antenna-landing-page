@@ -56,7 +56,7 @@ export default function Home() {
         <div className="max-w-screen-md mx-auto">
           <h1 className="text-3xl font-medium mb-4">{content.intro.title}</h1>
           <div className="space-y-4 text-muted-foreground">
-            <p>{content.intro.text1}</p>
+            <p>{content.intro.text}</p>
             <div className="py-4">
               <List items={content.intro.listItems} />
             </div>
@@ -66,8 +66,13 @@ export default function Home() {
       </section>
 
       <section className="p-24 overflow-hidden max-lg:p-0">
-        <div className="flex flex-col items-center gap-12 max-w-screen-lg mx-auto">
-          <div className="w-full h-[480px] bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none max-lg:h-[320px]">
+        <div className="max-w-screen-lg mx-auto">
+          <div className="w-full h-[480px] relative bg-card rounded-xl border overflow-hidden mb-12 max-lg:rounded-none max-lg:border-none max-lg:h-[320px]">
+            <div className="absolute bottom-4 left-4 px-2 bg-accent rounded-sm text-accent-foreground z-10">
+              <span className="text-base text-3xl font-medium mb-12">
+                {content.deployments.mapLabel}
+              </span>
+            </div>
             <DeploymentsMap height={{ desktop: 480, mobile: 320 }} />
           </div>
           <div className="max-lg:pb-12">
