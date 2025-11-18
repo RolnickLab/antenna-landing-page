@@ -28,9 +28,9 @@ export default function Home() {
                 buttonVariants({ variant: "accent", size: "lg" }),
                 "max-md:w-full"
               )}
-              href={CONTACT_URL}
+              href="#learn-more"
             >
-              Get in touch
+              Learn more
             </Link>
           </div>
           <div className="w-full max-lg:mr-0">
@@ -87,7 +87,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="p-24 max-lg:p-8">
+      <section className="p-24 max-lg:p-8" id="learn-more">
         <div className="max-w-screen-lg mx-auto max-lg:max-w-screen-md">
           <div className="grid gap-24 mb-24">
             {content.features.highlighted.map((item, index) => (
