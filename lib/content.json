@@ -93,7 +93,7 @@
   "cta": {
     "demo": {
       "title": "Want to see how Antenna looks like?",
-      "text": "Check out this interactive, read-only demo project. The project is set up by the <a href=\"https://vtecostudies.org/\">Vermont Center for Ecostudies</a>, and images are processed using a pipeline specialized in moths from Vermont and Quebec."
+      "text": "Check out this interactive, read-only demo project. The project is set up by the <a href=\"https://vtecostudies.org/\">Vermont Center for Ecostudies</a>, and images are processed using a pipeline specialized in Vermont and Quebec moths."
     },
     "try": {
       "title": "Want to try out Antenna?",
@@ -134,7 +134,7 @@
     ]
   },
   "faq": {
-    "title": "Frequently Asked Questions",
+    "title": "Frequently asked questions",
     "questions": [
       {
         "title": "Do I have to contribute data to access the public dataset?",
