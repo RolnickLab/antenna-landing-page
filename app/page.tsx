@@ -95,6 +95,9 @@ export default function Home() {
       <section className="p-24 max-lg:p-8" id="learn-more">
         <div className="max-w-screen-lg mx-auto max-lg:max-w-screen-md">
           <div className="grid gap-24 mb-24">
+            <h1 className="text-center text-4xl font-medium">
+              {content.features.title}
+            </h1>
             {content.features.highlighted.map((item, index) => (
               <div
                 key={index}
