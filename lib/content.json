@@ -93,15 +93,15 @@
   "cta": {
     "demo": {
       "title": "Want to see how Antenna looks like?",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      "text": "Check out this interactive, read-only demo project. The project is set up by the <a href=\"https://vtecostudies.org/\">Vermont Center for Ecostudies</a>, and images are processed using a pipeline specialized in moths from Vermont and Quebec."
     },
-    "contact": {
+    "try": {
       "title": "Want to try out Antenna?",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+      "text": "Due to our limited team bandwidth, we currently operate on a waitlist to ensure a quality experience for every user. <b>Sign up below to join the waitlist</b> and be the first to know when we expand capacity and receive our project updates."
     },
-    "pipelines": {
-      "title": "Want to try out the piplines?",
-      "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+    "help": {
+      "title": "Want to help Antenna?",
+      "text": "To scale our AI, reduce wait times, and expand support for new insect orders, <b>we are actively seeking funding and development partners</b>. Your investment directly accelerates the future of global biodiversity monitoring."
     }
   },
   "aboutUs": {

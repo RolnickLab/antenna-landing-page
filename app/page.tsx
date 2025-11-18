@@ -138,9 +138,10 @@ export default function Home() {
               <h1 className="text-3xl font-medium mb-4">
                 {content.cta.demo.title}
               </h1>
-              <p className="text-muted-foreground mb-8">
-                {content.cta.demo.text}
-              </p>
+              <p
+                className="text-muted-foreground mb-8"
+                dangerouslySetInnerHTML={{ __html: content.cta.demo.text }}
+              />
               <a
                 href={DATA_PLATFORM_URL}
                 className={buttonVariants({ variant: "outline" })}
@@ -167,11 +168,12 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-24">
             <div>
               <h1 className="text-3xl font-medium mb-4">
-                {content.cta.contact.title}
+                {content.cta.try.title}
               </h1>
-              <p className="text-muted-foreground mb-8">
-                {content.cta.contact.text}
-              </p>
+              <p
+                className="text-muted-foreground mb-8"
+                dangerouslySetInnerHTML={{ __html: content.cta.try.text }}
+              />
               <Link
                 className={buttonVariants({ variant: "accent" })}
                 href={CONTACT_URL}
@@ -181,18 +183,17 @@ export default function Home() {
             </div>
             <div>
               <h1 className="text-3xl font-medium mb-4">
-                {content.cta.pipelines.title}
+                {content.cta.help.title}
               </h1>
-              <p className="text-muted-foreground mb-8">
-                {content.cta.pipelines.text}
-              </p>
+              <p
+                className="text-muted-foreground mb-8"
+                dangerouslySetInnerHTML={{ __html: content.cta.help.text }}
+              />
               <a
                 className={buttonVariants({ variant: "outline" })}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={CONTACT_URL}
               >
-                Gradio demo
-                <ExternalLinkIcon className="h-4 w-4 ml-2" />
+                Parner with us
               </a>
             </div>
           </div>
