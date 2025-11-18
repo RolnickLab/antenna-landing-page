@@ -219,15 +219,6 @@ export default function Home() {
               ))}
             </div>
           </div>
-          <div>
-            <h1 className="text-3xl font-medium mb-4">
-              {content.citation.title}
-            </h1>
-            <p
-              className="text-muted-foreground mb-4"
-              dangerouslySetInnerHTML={{ __html: content.citation.text }}
-            />
-          </div>
         </div>
       </section>
     </>
