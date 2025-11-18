@@ -69,9 +69,7 @@ export default function Home() {
         <div className="max-w-screen-lg mx-auto">
           <div className="w-full h-[480px] relative bg-card rounded-xl border overflow-hidden mb-12 max-lg:rounded-none max-lg:border-none max-lg:h-[320px]">
             <div className="absolute bottom-4 left-4 px-2 bg-accent rounded-sm text-accent-foreground z-10">
-              <span className="text-base text-3xl font-medium mb-12">
-                {content.deployments.mapLabel}
-              </span>
+              <span className="text-base">{content.deployments.mapLabel}</span>
             </div>
             <DeploymentsMap height={{ desktop: 480, mobile: 320 }} />
           </div>
@@ -193,7 +191,7 @@ export default function Home() {
                 className={buttonVariants({ variant: "outline" })}
                 href={CONTACT_URL}
               >
-                Parner with us
+                Partner with us
               </a>
             </div>
           </div>
