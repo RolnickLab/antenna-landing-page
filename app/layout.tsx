@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="icon" type="image/png" href="/images/favicon.png" />
-      <body>
+      <body className="min-h-screen flex flex-col">
         <CookieConsentContextProvider>
           <ThemeContextProvider>
             <header className="h-14 px-4 sticky top-0 z-10 bg-muted/95 border-b overflow-hidden max-lg:h-auto max-lg:p-2">
@@ -36,7 +36,7 @@ export default function RootLayout({
                 <Menu />
               </nav>
             </header>
-            <main>
+            <main className="grow">
               <div>{children}</div>
             </main>
             <Footer />
