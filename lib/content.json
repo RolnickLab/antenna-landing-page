@@ -129,9 +129,13 @@
   "contact": {
     "title": "Get in touch",
     "text": [
-      "Do you have data to test or future research to discuss? We want to talk to you! Contact us directly on <a href=\"mailto:antenna@mila.quebec\">antenna@mila.quebec</a> or fill in the form below.",
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-    ]
+      "Do you have data to test, future research to discuss, or just want to stay updated? Please fill out the form below so we can understand your needs, keep you informed, and add you to our user waitlist.",
+      "For media inquiries, please contact us directly at <a href=\"\">antenna@mila.quebec</a>."
+    ],
+    "outro": {
+      "title": "Want to know more?",
+      "text": "View our detailed <a href=\"/faq\">FAQ</a> or take a look at our <a href=\"https://demo.antenna.insectai.org/\" target=\"_blank\" rel=\"noopener noreferrer\">demo</a>."
+    }
   },
   "faq": {
     "title": "Frequently asked questions",

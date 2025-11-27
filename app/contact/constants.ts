@@ -355,51 +355,8 @@ export const MAILCHIMP_SNIPPET = `
           </select>
         </div>
         <div class="mc-field-group input-group">
-          <span>I’d like to join the Antenna community to </span>
+          <span>I'm interested in Antenna because I want to</span>
           <ul>
-            <li>
-              <input
-                type="checkbox"
-                name="group[4][1]"
-                id="mce-group[4]-4-0"
-                value=""
-              /><label for="mce-group[4]-4-0"
-                >Contribute images taken with camera traps</label
-              >
-              <div
-                id="mce-sub-group[4]-4-0"
-                class="mc-field-group field-sub-group"
-              >
-                <label for="mce-CAMERA">What camera model are you using? </label
-                ><input
-                  type="text"
-                  name="CAMERA"
-                  class="text"
-                  id="mce-CAMERA"
-                  value=""
-                />
-              </div>
-            </li>
-            <li>
-              <input
-                type="checkbox"
-                name="group[4][2]"
-                id="mce-group[4]-4-1"
-                value=""
-              /><label for="mce-group[4]-4-1"
-                >Browse or download datasets for research</label
-              >
-            </li>
-            <li>
-              <input
-                type="checkbox"
-                name="group[4][4]"
-                id="mce-group[4]-4-2"
-                value=""
-              /><label for="mce-group[4]-4-2"
-                >Validate the species in images</label
-              >
-            </li>
             <li>
               <input
                 type="checkbox"
@@ -407,7 +364,7 @@ export const MAILCHIMP_SNIPPET = `
                 id="mce-group[4]-4-3"
                 value=""
               /><label for="mce-group[4]-4-3"
-                >Evaluate Antenna for my organisation’s needs</label
+                >Use Antenna to support my project</label
               >
               <div id="mce-sub-group[4]-4-3" class="field-sub-group">
                 <div class="mc-field-group input-group">
@@ -487,21 +444,21 @@ export const MAILCHIMP_SNIPPET = `
             <li>
               <input
                 type="checkbox"
-                name="group[4][16]"
-                id="mce-group[4]-4-4"
+                name="group[4][32]"
+                id="mce-group[4]-4-5"
                 value=""
-              /><label for="mce-group[4]-4-4"
-                >Contribute and browse as an individual/Citizen Scientist</label
+              /><label for="mce-group[4]-4-5"
+                >Partner with or help develop the platform (e.g. funding, or resources)</label
               >
             </li>
             <li>
               <input
                 type="checkbox"
-                name="group[4][32]"
-                id="mce-group[4]-4-5"
+                name="group[4][2]"
+                id="mce-group[4]-4-1"
                 value=""
-              /><label for="mce-group[4]-4-5"
-                >Offer financial or material support to Antenna</label
+              /><label for="mce-group[4]-4-1"
+                >Learn more about the platform and moths (receive our newsletter to stay updated)</label
               >
             </li>
             <li>
@@ -536,9 +493,7 @@ export const MAILCHIMP_SNIPPET = `
                 id="mce-group[5]-5-0"
                 value=""
               /><label for="mce-group[5]-5-0"
-                >I agree to receive email communications from Antenna. This is
-                optional but we will not be able to send you an invitation
-                without this permission.</label
+                >I agree to receive email communications from Antenna</label
               >
             </li>
           </ul>
@@ -571,7 +526,7 @@ export const MAILCHIMP_SNIPPET = `
             name="subscribe"
             id="mc-embedded-subscribe"
             class="button"
-            value="Subscribe"
+            value="Send"
           />
           <a
             href="http://eepurl.com/iXR6ow"

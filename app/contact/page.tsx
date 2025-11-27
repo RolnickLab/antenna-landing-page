@@ -26,9 +26,18 @@ export default function Contact() {
           dangerouslySetInnerHTML={{
             __html: MAILCHIMP_SNIPPET,
           }}
-          className="p-8 border rounded-xl max-lg:p-0 max-lg:border-none"
+          className="mb-12 p-8 border rounded-xl max-lg:mb-8 max-lg:p-0 max-lg:border-none"
         />
         <FormHelper />
+        <div className="grid p-8 bg-muted rounded-xl border">
+          <h2 className="text-2xl font-medium mb-2 max-lg:text-xl">
+            {content.contact.outro.title}
+          </h2>
+          <p
+            className="text-muted-foreground"
+            dangerouslySetInnerHTML={{ __html: content.contact.outro.text }}
+          />
+        </div>
       </div>
     </section>
   );

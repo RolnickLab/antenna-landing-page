@@ -3,7 +3,7 @@ import { List } from "@/components/list";
 import { DeploymentsStats } from "@/components/stats/deployments-stats";
 import { buttonVariants } from "@/components/ui/button";
 import content from "@/lib//content.json";
-import { CONTACT_URL, DATA_PLATFORM_URL } from "@/lib/constants";
+import { CONTACT_URL, DEMO_URL } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { ExternalLinkIcon } from "lucide-react";
 import dynamic from "next/dynamic";
@@ -141,7 +141,7 @@ export default function Home() {
                 dangerouslySetInnerHTML={{ __html: content.cta.demo.text }}
               />
               <a
-                href={DATA_PLATFORM_URL}
+                href={DEMO_URL}
                 className={buttonVariants({ variant: "outline" })}
                 target="_blank"
                 rel="noopener noreferrer"
