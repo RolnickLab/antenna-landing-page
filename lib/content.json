@@ -156,6 +156,10 @@
         "title": "Can I use the Platform even though I am not a researcher?",
         "text": "We LOVE citizen scientists! You absolutely can use the public dataset. However we are not quite ready to receive images from phone cameras. Until we are, you can check out our partner’s app <a href=\"https://fieldguide.ai/\">Fieldguide</a> and start snapping away!"
       }
-    ]
+    ],
+    "contact": {
+      "title": "Can't find the answer you are looking for?",
+      "text": "Please contact us at <a href=\"\">antenna@mila.quebec</a>."
+    }
   }
 }
