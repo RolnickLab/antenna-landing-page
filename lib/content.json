@@ -130,7 +130,7 @@
     "title": "Get in touch",
     "text": [
       "Do you have data to test, future research to discuss, or just want to stay updated? Please fill out the form below so we can understand your needs, keep you informed, and add you to our user waitlist.",
-      "For media inquiries, please contact us directly at <a href=\"\">antenna@mila.quebec</a>."
+      "For media inquiries, please contact us directly at <a href=\"mailto:antenna@mila.quebec\">antenna@mila.quebec</a>."
     ],
     "outro": {
       "title": "Want to know more?",
@@ -159,7 +159,7 @@
     ],
     "contact": {
       "title": "Can't find the answer you are looking for?",
-      "text": "Please contact us at <a href=\"\">antenna@mila.quebec</a>."
+      "text": "Please contact us at <a href=\"mailto:antenna@mila.quebec\">antenna@mila.quebec</a>."
     }
   }
 }
