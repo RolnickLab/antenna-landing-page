@@ -34,7 +34,7 @@
         "title": "Manage data from any camera",
         "image": {
           "alt": "",
-          "src": "/images/feature-tiles/entocam.jpg"
+          "src": "/images/feature-tiles/manage.jpg"
         },
         "listItems": [
           "Organize your devices and research sites",
@@ -46,11 +46,11 @@
         "title": "Label the species in your images",
         "image": {
           "alt": "",
-          "src": "/images/feature-tiles/label-species-in-my-image-wide.png"
+          "src": "/images/feature-tiles/label.png"
         },
         "listItems": [
           "Programmatically upload camera images",
-          "Use your or a Platform model to generate classification labels",
+          "Use your or a platform model to generate classification labels",
           "Compare model performance on your dataset"
         ]
       },
@@ -58,7 +58,7 @@
         "title": "Track where and when a species was observed",
         "image": {
           "alt": "",
-          "src": "/images/feature-tiles/track-where-and-when-wide.png"
+          "src": "/images/feature-tiles/track.png"
         },
         "listItems": [
           "Explore images for a given species, location, or time window",
@@ -92,7 +92,7 @@
   },
   "cta": {
     "demo": {
-      "title": "Want to see how Antenna looks like?",
+      "title": "Want to see Antenna in action?",
       "text": "Check out this interactive, read-only demo project. The project is set up by the <a href=\"https://vtecostudies.org/\">Vermont Center for Ecostudies</a>, and images are processed using a pipeline specialized in Vermont and Quebec moths."
     },
     "try": {
@@ -141,19 +141,15 @@
     "title": "Frequently asked questions",
     "questions": [
       {
-        "title": "Do I have to contribute data to access the public dataset?",
-        "text": "No! The public dataset is available to everyone so we can collectively deepen our understanding of biodiversity and accelerate conservation efforts."
-      },
-      {
         "title": "What kind of invertebrates can you identify?",
         "text": "Antenna currently offers machine learning models to recognise nocturnal lepidoptera (moths). However the platform is flexible and can support most detection or classification algorithms. Note that the default processing pipeline is best suited for sequential (time series) images that contain multiple insects. The organisms must be visually identifiable from the “above” perspective. See our <a href=\"https://github.com/RolnickLab/ami-ml/\">Github repository</a> for more information."
       },
       {
         "title": "How can I get and set up a monitoring station?",
-        "text": "The Platform is device-agnostic. You can buy and set up any type of camera, then log on to the Platform to upload and process your images."
+        "text": "Antenna is device-agnostic. You can buy and set up any type of camera, then log on to the platform to upload and process your images."
       },
       {
-        "title": "Can I use the Platform even though I am not a researcher?",
+        "title": "Can I use Antenna even though I am not a researcher?",
         "text": "We LOVE citizen scientists! You absolutely can use the public dataset. However we are not quite ready to receive images from phone cameras. Until we are, you can check out our partner’s app <a href=\"https://fieldguide.ai/\">Fieldguide</a> and start snapping away!"
       }
     ],
