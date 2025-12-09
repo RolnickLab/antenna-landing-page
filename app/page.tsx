@@ -92,18 +92,18 @@ export default function Home() {
 
       <section className="p-24 max-lg:p-8" id="learn-more">
         <div className="max-w-screen-lg mx-auto max-lg:max-w-screen-md">
-          <div className="grid gap-24 mb-24">
-            <h1 className="text-center text-4xl font-medium">
+          <div className="grid gap-24 mb-24 max-lg:gap-8 max-lg:mb-0">
+            <h1 className="text-center text-4xl font-medium max-lg:text-3xl">
               {content.features.title}
             </h1>
             {content.features.highlighted.map((item, index) => (
               <div
                 key={index}
-                className={cn("flex gap-12", {
+                className={cn("flex gap-12 max-lg:flex-col max-lg:gap-0", {
                   "flex-row-reverse": index % 2 !== 0,
                 })}
               >
-                <div className="flex-1 aspect-[4/3] border rounded-xl overflow-hidden">
+                <div className="flex-1 aspect-[4/3] border rounded-xl overflow-hidden max-lg:rounded-b-none">
                   <img
                     loading="lazy"
                     alt={item.image?.alt ?? ""}
@@ -111,14 +111,16 @@ export default function Home() {
                     className="w-full h-full object-cover"
                   />
                 </div>
-                <div className="flex-1 py-12">
-                  <h2 className="text-3xl font-medium mb-4">{item.title}</h2>
+                <div className="flex-1 py-12 max-lg:flex-initial max-lg:p-4 max-lg:border-x max-lg:border-b max-lg:rounded-b-xl">
+                  <h2 className="text-3xl font-medium mb-4 max-lg:text-xl">
+                    {item.title}
+                  </h2>
                   <List items={item.listItems} />
                 </div>
               </div>
             ))}
           </div>
-          <div className="grid grid-cols-3 gap-24">
+          <div className="grid grid-cols-3 gap-24 max-lg:hidden">
             {content.features.extra.map((item, index) => (
               <div key={index}>
                 <h2 className="text-xl font-medium mb-4">{item.title}</h2>
@@ -131,8 +133,8 @@ export default function Home() {
 
       <section className="p-24 bg-muted/50 max-lg:p-8">
         <div className="max-w-screen-lg mx-auto max-lg:max-w-screen-md">
-          <div className="grid grid-cols-3 gap-x-12 gap-24 mb-24">
-            <div>
+          <div className="grid grid-cols-3 gap-24 mb-24 max-lg:block max-lg:mb-12">
+            <div className="max-lg:mb-12">
               <h1 className="text-3xl font-medium mb-4">
                 {content.cta.demo.title}
               </h1>
@@ -151,7 +153,7 @@ export default function Home() {
               </a>
             </div>
             <div
-              className="rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none"
+              className="rounded-xl border overflow-hidden max-md:-mx-8 max-md:rounded-none max-md:border-none"
               style={{ aspectRatio: "1920/1200", gridColumn: "span 2" }}
             >
               <video
@@ -163,7 +165,7 @@ export default function Home() {
               />
             </div>
           </div>
-          <div className="grid grid-cols-2 gap-24">
+          <div className="grid grid-cols-2 gap-24 max-lg:block max-lg:space-y-12">
             <div>
               <h1 className="text-3xl font-medium mb-4">
                 {content.cta.try.title}
@@ -199,7 +201,7 @@ export default function Home() {
       </section>
 
       <section className="p-24 max-lg:p-8">
-        <div className="max-w-screen-md space-y-24 mx-auto text-center max-lg:space-y-8 max-lg:text-left">
+        <div className="max-w-screen-md space-y-24 mx-auto text-center max-lg:space-y-12 max-lg:text-left">
           <div>
             <h1 className="text-3xl font-medium mb-4">
               {content.aboutUs.title}

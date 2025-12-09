@@ -11,14 +11,14 @@ export const Footer = () => {
 
   return (
     <footer className="p-4 bg-muted border-t">
-      <div className="max-w-screen-lg flex items-center gap-8 mx-auto">
+      <div className="max-w-screen-lg flex items-center gap-8 mx-auto max-lg:flex-col">
         <div className="max-w-[480px]">
           <p
-            className="text-sm text-muted-foreground"
+            className="text-sm text-muted-foreground max-lg:text-center"
             dangerouslySetInnerHTML={{ __html: content.citation.text }}
           />
         </div>
-        <div className="grow" />
+        <div className="grow max-lg:hidden" />
         <div className="shrink-0 flex items-center gap-4">
           <span className="text-sm text-muted-foreground">Hosted by</span>
           <a
