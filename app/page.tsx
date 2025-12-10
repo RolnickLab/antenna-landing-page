@@ -2,8 +2,8 @@ import { Article } from "@/components/article";
 import { List } from "@/components/list";
 import { DeploymentsStats } from "@/components/stats/deployments-stats";
 import { buttonVariants } from "@/components/ui/button";
-import content from "@/lib//content.json";
 import { CONTACT_URL, DEMO_URL } from "@/lib/constants";
+import content from "@/lib/content.json";
 import { cn } from "@/lib/utils";
 import { ExternalLinkIcon } from "lucide-react";
 import dynamic from "next/dynamic";
@@ -106,8 +106,8 @@ export default function Home() {
                 <div className="flex-1 aspect-[4/3] border rounded-xl overflow-hidden max-lg:rounded-b-none">
                   <img
                     loading="lazy"
-                    alt={item.image?.alt ?? ""}
-                    src={item.image?.src}
+                    alt={item.image.alt ?? ""}
+                    src={item.image.src}
                     className="w-full h-full object-cover"
                   />
                 </div>
@@ -189,12 +189,12 @@ export default function Home() {
                 className="text-muted-foreground mb-8"
                 dangerouslySetInnerHTML={{ __html: content.cta.help.text }}
               />
-              <a
+              <Link
                 className={buttonVariants({ variant: "outline" })}
                 href={CONTACT_URL}
               >
                 Partner with us
-              </a>
+              </Link>
             </div>
           </div>
         </div>

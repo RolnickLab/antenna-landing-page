@@ -1,7 +1,7 @@
 "use client";
 
-import content from "@/lib//content.json";
 import { CONTACT_MAIL, GITHUB_URL } from "@/lib/constants";
+import content from "@/lib/content.json";
 import { useTheme } from "@/lib/theme/useTheme";
 import { GithubIcon, MailIcon } from "lucide-react";
 import { buttonVariants } from "./ui/button";
@@ -39,6 +39,7 @@ export const Footer = () => {
         </div>
         <div className="flex items-center gap-4">
           <a
+            aria-label="GitHub"
             href={GITHUB_URL}
             className={buttonVariants({ size: "icon", variant: "accent" })}
             target="_blank"
@@ -47,6 +48,7 @@ export const Footer = () => {
             <GithubIcon className="w-4 h-4" />
           </a>
           <a
+            aria-label="Email"
             href={`mailto:${CONTACT_MAIL}`}
             className={buttonVariants({ size: "icon", variant: "accent" })}
           >
