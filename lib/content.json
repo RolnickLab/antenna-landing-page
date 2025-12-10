@@ -97,7 +97,7 @@
     },
     "try": {
       "title": "Want to try out Antenna?",
-      "text": "Due to our limited team bandwidth, we currently operate on a waitlist to ensure a quality experience for every user. <b>Sign up below to join the waitlist</b> and be the first to know when we expand capacity and receive our project updates."
+      "text": "To provide a quality experience, the first step is for us to understand your goals. Please share the details of your project in the the form linked below. We will get in touch and will keep you updated on the development of Antenna."
     },
     "help": {
       "title": "Want to help Antenna?",
@@ -129,7 +129,7 @@
   "contact": {
     "title": "Get in touch",
     "text": [
-      "Do you have data to test, future research to discuss, or just want to stay updated? Please fill out the form below so we can understand your needs, keep you informed, and add you to our user waitlist.",
+      "Do you have data to test, future research to discuss, or just want to stay updated? Please fill out the form below so we can understand your needs, keep you informed, and get back to you.",
       "For media inquiries, please contact us directly at <a href=\"mailto:antenna@mila.quebec\">antenna@mila.quebec</a>."
     ],
     "outro": {

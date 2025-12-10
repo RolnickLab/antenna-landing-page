@@ -355,7 +355,7 @@ export const MAILCHIMP_SNIPPET = `
           </select>
         </div>
         <div class="mc-field-group input-group">
-          <span>I'm interested in Antenna because I want to</span>
+          <span>I'm interested in Antenna because I want to:</span>
           <ul>
             <li>
               <input
@@ -458,7 +458,7 @@ export const MAILCHIMP_SNIPPET = `
                 id="mce-group[4]-4-1"
                 value=""
               /><label for="mce-group[4]-4-1"
-                >Learn more about the platform and moths (receive our newsletter to stay updated)</label
+                >Receive the newsletter to stay updated</label
               >
             </li>
             <li>
