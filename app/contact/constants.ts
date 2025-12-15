@@ -1,7 +1,5 @@
-export const TRIGGER_1_ID = "mce-group[4]-4-0"; // Checkbox "Contribute images taken with camera traps"
-export const ELEMENT_1_ID = "mce-sub-group[4]-4-0"; // Field "Camera model"
-export const TRIGGER_2_ID = "mce-group[4]-4-3"; // Checkbox "Evaluate Antenna for my organisation’s needs"
-export const ELEMENT_2_ID = "mce-sub-group[4]-4-3"; // Fields "Domain" and "Organisation type"
+export const TRIGGER_1_ID = "mce-group[14]-14-0"; // Checkbox "Use Antenna to support my project"
+export const ELEMENT_1_ID = "mce-sub-group[14]-14-0"; // Fields "Domain" and "Organisation type"
 
 export const MAILCHIMP_SNIPPET = `
 <div id="mc_embed_shell">
@@ -12,7 +10,7 @@ export const MAILCHIMP_SNIPPET = `
   />
   <div id="mc_embed_signup">
     <form
-      action="https://insectai.us17.list-manage.com/subscribe/post?u=9fbcbee8195713a0da5a28ddf&amp;id=efa3aed510&amp;f_id=0075c2e1f0"
+      action="https://insectai.us17.list-manage.com/subscribe/post?u=9fbcbee8195713a0da5a28ddf&amp;id=efa3aed510&amp;f_id=00c0c3e1f0"
       method="post"
       id="mc-embedded-subscribe-form"
       name="mc-embedded-subscribe-form"
@@ -47,8 +45,8 @@ export const MAILCHIMP_SNIPPET = `
             name="EMAIL"
             class="required email"
             id="mce-EMAIL"
-            required=""
             value=""
+            required=""
           />
         </div>
         <div class="mc-field-group">
@@ -355,18 +353,18 @@ export const MAILCHIMP_SNIPPET = `
           </select>
         </div>
         <div class="mc-field-group input-group">
-          <span>I'm interested in Antenna because I want to:</span>
+          <span>I'm interested in Antenna because I want to: </span>
           <ul>
             <li>
               <input
                 type="checkbox"
-                name="group[4][8]"
-                id="mce-group[4]-4-3"
+                name="group[14][16384]"
+                id="mce-group[14]-14-0"
                 value=""
-              /><label for="mce-group[4]-4-3"
+              /><label for="mce-group[14]-14-0"
                 >Use Antenna to support my project</label
               >
-              <div id="mce-sub-group[4]-4-3" class="field-sub-group">
+              <div id="mce-sub-group[14]-14-0" class="field-sub-group">
                 <div class="mc-field-group input-group">
                   <span>Domain </span>
                   <ul>
@@ -444,30 +442,31 @@ export const MAILCHIMP_SNIPPET = `
             <li>
               <input
                 type="checkbox"
-                name="group[4][32]"
-                id="mce-group[4]-4-5"
+                name="group[14][32768]"
+                id="mce-group[14]-14-1"
                 value=""
-              /><label for="mce-group[4]-4-5"
-                >Partner with or help develop the platform (e.g. funding, or resources)</label
+              /><label for="mce-group[14]-14-1"
+                >Partner with or help develop the platform (e.g. funding or
+                resources)</label
               >
             </li>
             <li>
               <input
                 type="checkbox"
-                name="group[4][2]"
-                id="mce-group[4]-4-1"
+                name="group[14][131072]"
+                id="mce-group[14]-14-2"
                 value=""
-              /><label for="mce-group[4]-4-1"
+              /><label for="mce-group[14]-14-2"
                 >Receive the newsletter to stay updated</label
               >
             </li>
             <li>
               <input
                 type="checkbox"
-                name="group[4][64]"
-                id="mce-group[4]-4-6"
+                name="group[14][262144]"
+                id="mce-group[14]-14-3"
                 value=""
-              /><label for="mce-group[4]-4-6"
+              /><label for="mce-group[14]-14-3"
                 >Other (specify in comments)</label
               >
             </li>
@@ -493,12 +492,13 @@ export const MAILCHIMP_SNIPPET = `
                 id="mce-group[5]-5-0"
                 value=""
               /><label for="mce-group[5]-5-0"
-                >I agree to receive email communications from Antenna</label
+                >I agree to receive email communications from Antenna
+                (optional)</label
               >
             </li>
           </ul>
         </div>
-        <div id="mce-responses" class="clear foot">
+        <div id="mce-responses" class="clear">
           <div
             class="response"
             id="mce-error-response"
@@ -511,8 +511,6 @@ export const MAILCHIMP_SNIPPET = `
           ></div>
         </div>
         <div aria-hidden="true" style="position: absolute; left: -5000px">
-          /* real people should not fill this in and expect good things - do not
-          remove this or risk form bot signups */
           <input
             type="text"
             name="b_9fbcbee8195713a0da5a28ddf_efa3aed510"
@@ -520,7 +518,7 @@ export const MAILCHIMP_SNIPPET = `
             value=""
           />
         </div>
-        <div class="clear foot">
+        <div class="clear">
           <input
             type="submit"
             name="subscribe"
@@ -528,16 +526,6 @@ export const MAILCHIMP_SNIPPET = `
             class="button"
             value="Send"
           />
-          <a
-            href="http://eepurl.com/iXR6ow"
-            title="Mailchimp - email marketing made easy and fun"
-            ><img
-              class="refferal_badge"
-              src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-light.svg"
-              alt="Intuit Mailchimp"
-              style="width: 220px; height: 40px"
-            />
-          </a>
         </div>
       </div>
     </form>
@@ -558,12 +546,14 @@ export const MAILCHIMP_SNIPPET = `
       ftypes[0] = "email";
       fnames[4] = "COUNTRY";
       ftypes[4] = "dropdown";
-      fnames[5] = "CAMERA";
-      ftypes[5] = "text";
-      fnames[7] = "ORGT";
-      ftypes[7] = "dropdown";
       fnames[3] = "COMMENTS";
       ftypes[3] = "text";
+      fnames[7] = "ORGT";
+      ftypes[7] = "dropdown";
+      fnames[5] = "CAMERA";
+      ftypes[5] = "text";
+      fnames[6] = "MMERGE6";
+      ftypes[6] = "radio";
     })(jQuery);
     var $mcj = jQuery.noConflict(true);
   </script>

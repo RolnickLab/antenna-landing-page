@@ -73,10 +73,6 @@
   @apply flex items-center justify-between gap-8 mt-8 max-md:mt-0 max-md:flex-col max-md:items-end;
 }
 
-#mc_embed_signup #mc-embedded-subscribe-form .refferal_badge {
-  @apply bg-foreground rounded-sm;
-}
-
 /* Responses */
 #mc_embed_signup #mc-embedded-subscribe-form #mce-responses {
   @apply block m-0 p-0;
@@ -93,8 +89,4 @@
 /* Dark mode adjustments */
 .dark #mc_embed_signup #mc-embedded-subscribe-form select {
   background-image: url("/images/chevron-down-light.svg");
-}
-
-.dark #mc_embed_signup #mc-embedded-subscribe-form .refferal_badge {
-  @apply bg-transparent;
 }
