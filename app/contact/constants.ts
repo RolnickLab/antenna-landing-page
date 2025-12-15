@@ -45,8 +45,8 @@ export const MAILCHIMP_SNIPPET = `
             name="EMAIL"
             class="required email"
             id="mce-EMAIL"
-            value=""
             required=""
+            value=""
           />
         </div>
         <div class="mc-field-group">
@@ -552,8 +552,6 @@ export const MAILCHIMP_SNIPPET = `
       ftypes[7] = "dropdown";
       fnames[5] = "CAMERA";
       ftypes[5] = "text";
-      fnames[6] = "MMERGE6";
-      ftypes[6] = "radio";
     })(jQuery);
     var $mcj = jQuery.noConflict(true);
   </script>
