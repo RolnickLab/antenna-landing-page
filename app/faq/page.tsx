@@ -13,6 +13,12 @@ export default function FAQ() {
         {content.faq.questions.map((question, index) => (
           <Question key={index} title={question.title} text={question.text} />
         ))}
+        <div className="grid p-8 bg-muted rounded-xl border">
+          <Question
+            title={content.faq.contact.title}
+            text={content.faq.contact.text}
+          />
+        </div>
       </div>
     </section>
   );

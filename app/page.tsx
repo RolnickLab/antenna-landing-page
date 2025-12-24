@@ -1,12 +1,11 @@
 import { Article } from "@/components/article";
-import { Card } from "@/components/card";
 import { List } from "@/components/list";
 import { DeploymentsStats } from "@/components/stats/deployments-stats";
 import { buttonVariants } from "@/components/ui/button";
-import content from "@/lib//content.json";
-import { DATA_PLATFORM_URL, HIDE_DEMO, WAITLIST_URL } from "@/lib/constants";
+import { CONTACT_URL, DEMO_URL } from "@/lib/constants";
+import content from "@/lib/content.json";
 import { cn } from "@/lib/utils";
-import { ClockIcon, ExternalLinkIcon } from "lucide-react";
+import { ExternalLinkIcon } from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 
@@ -29,9 +28,9 @@ export default function Home() {
                 buttonVariants({ variant: "accent", size: "lg" }),
                 "max-md:w-full"
               )}
-              href={WAITLIST_URL}
+              href="#learn-more"
             >
-              Sign up
+              Learn more
             </Link>
           </div>
           <div className="w-full max-lg:mr-0">
@@ -57,7 +56,7 @@ export default function Home() {
         <div className="max-w-screen-md mx-auto">
           <h1 className="text-3xl font-medium mb-4">{content.intro.title}</h1>
           <div className="space-y-4 text-muted-foreground">
-            <p>{content.intro.text1}</p>
+            <p>{content.intro.text}</p>
             <div className="py-4">
               <List items={content.intro.listItems} />
             </div>
@@ -67,32 +66,16 @@ export default function Home() {
       </section>
 
       <section className="p-24 overflow-hidden max-lg:p-0">
-        <div className="flex flex-col items-end gap-8 max-w-screen-lg mx-auto">
-          <div
-            className="w-full bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none"
-            style={{ aspectRatio: "1920/1200" }}
-          >
-            <video
-              className="w-full h-full"
-              controls
-              poster="/videos/adp-overview-video-cover.png"
-              preload="false"
-              src="/videos/adp-overview-video.mov"
-            />
-          </div>
-          {!HIDE_DEMO && (
-            <div className="max-lg:hidden">
-              <a
-                href={DATA_PLATFORM_URL}
-                className={buttonVariants({ variant: "outline" })}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Check out the demo
-                <ExternalLinkIcon className="h-4 w-4 ml-2" />
-              </a>
+        <div className="max-w-screen-lg mx-auto">
+          <div className="w-full h-[480px] relative bg-card rounded-xl border overflow-hidden mb-12 max-lg:rounded-none max-lg:border-none max-lg:h-[320px]">
+            <div className="absolute bottom-4 left-4 px-2 bg-accent rounded-sm text-accent-foreground z-10">
+              <span className="text-base">{content.deployments.mapLabel}</span>
             </div>
-          )}
+            <DeploymentsMap height={{ desktop: 480, mobile: 320 }} />
+          </div>
+          <div className="max-lg:pb-12">
+            <DeploymentsStats />
+          </div>
         </div>
       </section>
 
@@ -107,69 +90,118 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="p-24 overflow-hidden max-lg:p-0">
-        <div className="flex flex-col items-center gap-12 max-w-screen-lg mx-auto">
-          <div className="w-full h-[480px] bg-card rounded-xl border overflow-hidden max-lg:rounded-none max-lg:border-none max-lg:h-[320px]">
-            <DeploymentsMap height={{ desktop: 480, mobile: 320 }} />
+      <section className="p-24 max-lg:p-8" id="learn-more">
+        <div className="max-w-screen-lg mx-auto max-lg:max-w-screen-md">
+          <div className="grid gap-24 mb-24 max-lg:gap-8 max-lg:mb-0">
+            <h1 className="text-center text-4xl font-medium max-lg:text-3xl">
+              {content.features.title}
+            </h1>
+            {content.features.highlighted.map((item, index) => (
+              <div
+                key={index}
+                className={cn("flex gap-12 max-lg:flex-col max-lg:gap-0", {
+                  "flex-row-reverse": index % 2 !== 0,
+                })}
+              >
+                <div className="flex-1 aspect-[4/3] border rounded-xl overflow-hidden max-lg:rounded-b-none">
+                  <img
+                    loading="lazy"
+                    alt={item.image.alt ?? ""}
+                    src={item.image.src}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="flex-1 py-12 max-lg:flex-initial max-lg:p-4 max-lg:border-x max-lg:border-b max-lg:rounded-b-xl">
+                  <h2 className="text-3xl font-medium mb-4 max-lg:text-xl">
+                    {item.title}
+                  </h2>
+                  <List items={item.listItems} />
+                </div>
+              </div>
+            ))}
           </div>
-          <div className="max-lg:pb-12">
-            <DeploymentsStats />
+          <div className="grid grid-cols-3 gap-24 max-lg:hidden">
+            {content.features.extra.map((item, index) => (
+              <div key={index}>
+                <h2 className="text-xl font-medium mb-4">{item.title}</h2>
+                <List items={item.listItems} />
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       <section className="p-24 bg-muted/50 max-lg:p-8">
         <div className="max-w-screen-lg mx-auto max-lg:max-w-screen-md">
-          <h1 className="text-3xl font-medium mb-12 max-lg:mb-8">
-            {content.cards.title}
-          </h1>
-          <div className="grid grid-cols-3 gap-12 max-lg:grid-cols-1 max-lg:gap-8">
-            {content.cards.items.map((item, index) => {
-              const className = buttonVariants({ variant: "accent" });
-
-              if (HIDE_DEMO && item.button.href === DATA_PLATFORM_URL) {
-                return (
-                  <Card
-                    key={index}
-                    image={item.image}
-                    title={item.title}
-                    listItems={item.listItems}
-                  />
-                );
-              }
-
-              return (
-                <Card
-                  key={index}
-                  image={item.image}
-                  title={item.title}
-                  listItems={item.listItems}
-                >
-                  {item.button.external ? (
-                    <a
-                      href={item.button.href}
-                      className={className}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      {item.button.label}
-                      <ExternalLinkIcon className="h-4 w-4 ml-2" />
-                    </a>
-                  ) : (
-                    <Link href={item.button.href} className={className}>
-                      <ClockIcon className="h-4 w-4 mr-2" />
-                      {item.button.label}
-                    </Link>
-                  )}
-                </Card>
-              );
-            })}
+          <div className="grid grid-cols-3 gap-24 mb-24 max-lg:block max-lg:mb-12">
+            <div className="max-lg:mb-12">
+              <h1 className="text-3xl font-medium mb-4">
+                {content.cta.demo.title}
+              </h1>
+              <p
+                className="text-muted-foreground mb-8"
+                dangerouslySetInnerHTML={{ __html: content.cta.demo.text }}
+              />
+              <a
+                href={DEMO_URL}
+                className={buttonVariants({ variant: "outline" })}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Demo
+                <ExternalLinkIcon className="h-4 w-4 ml-2" />
+              </a>
+            </div>
+            <div
+              className="rounded-xl border overflow-hidden max-md:-mx-8 max-md:rounded-none max-md:border-none"
+              style={{ aspectRatio: "1920/1200", gridColumn: "span 2" }}
+            >
+              <video
+                className="w-full h-full"
+                controls
+                poster="/videos/adp-overview-video-cover.png"
+                preload="false"
+                src="/videos/adp-overview-video.mov"
+              />
+            </div>
+          </div>
+          <div className="grid grid-cols-2 gap-24 max-lg:block max-lg:space-y-12">
+            <div>
+              <h1 className="text-3xl font-medium mb-4">
+                {content.cta.try.title}
+              </h1>
+              <p
+                className="text-muted-foreground mb-8"
+                dangerouslySetInnerHTML={{ __html: content.cta.try.text }}
+              />
+              <Link
+                className={buttonVariants({ variant: "accent" })}
+                href={CONTACT_URL}
+              >
+                Get in touch
+              </Link>
+            </div>
+            <div>
+              <h1 className="text-3xl font-medium mb-4">
+                {content.cta.help.title}
+              </h1>
+              <p
+                className="text-muted-foreground mb-8"
+                dangerouslySetInnerHTML={{ __html: content.cta.help.text }}
+              />
+              <Link
+                className={buttonVariants({ variant: "outline" })}
+                href={CONTACT_URL}
+              >
+                Partner with us
+              </Link>
+            </div>
           </div>
         </div>
       </section>
 
       <section className="p-24 max-lg:p-8">
-        <div className="max-w-screen-md space-y-24 mx-auto text-center max-lg:space-y-8 max-lg:text-left">
+        <div className="max-w-screen-md space-y-24 mx-auto text-center max-lg:space-y-12 max-lg:text-left">
           <div>
             <h1 className="text-3xl font-medium mb-4">
               {content.aboutUs.title}
@@ -186,15 +218,6 @@ export default function Home() {
                 <Article key={index} {...article} />
               ))}
             </div>
-          </div>
-          <div>
-            <h1 className="text-3xl font-medium mb-4">
-              {content.citation.title}
-            </h1>
-            <p
-              className="text-muted-foreground mb-4"
-              dangerouslySetInnerHTML={{ __html: content.citation.text }}
-            />
           </div>
         </div>
       </section>

@@ -1,11 +1,11 @@
 {
   "appName": "Antenna Platform",
-  "title": "Antenna - The Insect Data Platform",
+  "title": "Antenna",
   "subTitle": "AI-Enabled Detection And Classification Of Insects At Scale",
   "description": "An interdisciplinary platform to upload, classify, and analyse in-the-wild images of invertebrates for research and conservation efforts.",
   "intro": {
     "title": "Introducing Antenna",
-    "text1": "Antenna fills the data gap to help understand insects and protect biodiversity by enabling the scale-up of data collection with greater spatial, temporal, and taxonomic coverage than has ever been possible. It is an online platform where entomologists, ecologists, and machine learning (ML) and computer scientists collaborate to build trustworthy datasets by implementing and improving upon ML research designed specifically for real-world applications. Antenna cost-effectively and rapidly classifies a wide range of species in a large number of images, building a rich dataset that grows and updates over time.",
+    "text": "Antenna fills the data gap to help understand insects and protect biodiversity by enabling the scale-up of data collection with greater spatial, temporal, and taxonomic coverage than has ever been possible. It is an online platform where entomologists, ecologists, and machine learning (ML) and computer scientists collaborate to build trustworthy datasets by implementing and improving upon ML research designed specifically for real-world applications. Antenna cost-effectively and rapidly classifies a wide range of species in a large number of images, building a rich dataset that grows and updates over time.",
     "listItems": [
       "Out-of-the-box machine learning models, or bring your own",
       "Compatible with all high-resolution cameras",
@@ -16,6 +16,9 @@
     ],
     "text2": "Antenna currently focuses on moths but expansions to other insects are planned."
   },
+  "deployments": {
+    "mapLabel": "Registered monitoring stations"
+  },
   "about": {
     "title": "How Antenna helps",
     "text": [
@@ -24,89 +27,82 @@
       "Antenna uses artificial intelligence to automate, accelerate, standardise, and scale up the identification of invertebrates in the wild. It performs fine-grained classification in large batches for species richness studies, new species discovery, monitoring of invasive species, and related applications. The resulting research-grade datasets comprise continuously updating information about the location, time, frequency, and quantity of species as observed around the world and are published to the Global Biodiversity Information Facility (GBIF) using the Darwin Core Standard (DwC). Our technology is the most convenient and cost-effective way to enable monitoring at scale."
     ]
   },
-  "cards": {
-    "title": "What do you want to do?",
-    "items": [
+  "features": {
+    "title": "How you can use Antenna",
+    "highlighted": [
       {
-        "title": "Label the species in my images",
+        "title": "Manage data from any camera",
         "image": {
           "alt": "",
-          "src": "/images/feature-tiles/label-species-in-my-image-wide.png"
+          "src": "/images/feature-tiles/manage.jpg"
+        },
+        "listItems": [
+          "Organize your devices and research sites",
+          "Assign roles and actions to your team",
+          "Keep related metadata intact"
+        ]
+      },
+      {
+        "title": "Label the species in your images",
+        "image": {
+          "alt": "",
+          "src": "/images/feature-tiles/label.png"
         },
         "listItems": [
           "Programmatically upload camera images",
-          "Use my or a Platform model to generate classification labels",
-          "Compare model performance on my dataset"
-        ],
-        "button": {
-          "label": "Sign up",
-          "href": "/waitlist"
-        }
+          "Use generic or custom models to detect and classify insects in bulk",
+          "Compare model performance on your dataset"
+        ]
       },
       {
         "title": "Track where and when a species was observed",
         "image": {
           "alt": "",
-          "src": "/images/feature-tiles/track-where-and-when-wide.png"
+          "src": "/images/feature-tiles/track.png"
         },
         "listItems": [
           "Explore images for a given species, location, or time window",
           "Download timestamped, geolocated datasets for analysis"
-        ],
-        "button": {
-          "label": "Check out the demo",
-          "href": "https://demo.antenna.insectai.org/",
-          "external": true
-        }
-      },
+        ]
+      }
+    ],
+    "extra": [
       {
-        "title": "Help validate the data with my moth expertise",
-        "image": {
-          "alt": "",
-          "src": "/images/feature-tiles/help-validate-square.png"
-        },
+        "title": "Help validate the data with your moth expertise",
         "listItems": [
           "Confirm or adjust AI-generated taxons",
           "Suggest IDs for unidentified images"
-        ],
-        "button": {
-          "label": "Sign up",
-          "href": "/waitlist"
-        }
+        ]
       },
       {
-        "title": "Contribute my ML skills",
-        "image": {
-          "alt": "",
-          "src": "/images/feature-tiles/contribute-ml-skills-wide.png"
-        },
+        "title": "Contribute your ML skills",
         "listItems": [
           "Train or share new object detectors, species classifiers or behavioral analysis models",
           "Benchmark evaluation metrics to compare model performance"
-        ],
-        "button": {
-          "label": "Visit the repo",
-          "href": "https://github.com/RolnickLab/ami-ml/",
-          "external": true
-        }
+        ]
       },
       {
         "title": "Grow the open-source software",
-        "image": {
-          "alt": "",
-          "src": "/images/feature-tiles/grow-open-source-square-2.png"
-        },
         "listItems": [
           "Create new integrations for data interchange",
           "Add new features to an existing codebase"
-        ],
-        "button": {
-          "label": "Visit the repo",
-          "href": "https://github.com/RolnickLab/ami-platform/",
-          "external": true
-        }
+        ]
       }
     ]
+  },
+  "cta": {
+    "demo": {
+      "title": "Want to see Antenna in action?",
+      "text": "Explore this interactive, read-only demo featuring a project by the <a href=\"https://vtecostudies.org/\">Vermont Center for Ecostudies</a>. The images are processed using a pipeline specialized for Vermont and Quebec moths."
+    },
+    "try": {
+      "title": "Want to try out Antenna?",
+      "text": "To provide a quality experience, the first step is for us to understand your goals. Please share the details of your project in the form linked below. We will get in touch and will keep you updated on the development of Antenna."
+    },
+    "help": {
+      "title": "Want to help Antenna?",
+      "text": "To scale our AI, reduce wait times, and expand support for new insect orders, <b>we are actively seeking funding and development partners</b>. Your investment directly accelerates the future of global biodiversity monitoring."
+    }
   },
   "aboutUs": {
     "title": "Who we are",
@@ -130,30 +126,32 @@
     "title": "Citation information",
     "text": "When using Antenna or the AMI dataset, please remember to give appropriate credit by including this statement: <i>\"Data processed using the Antenna Data Platform service available at insectai.org\"</i> and/or citing this publication: <a href=\"https://arxiv.org/abs/2406.12452\">DOI 10.5281/zenodo.11358688</a>."
   },
-  "waitlist": {
-    "title": "Waitlist",
-    "subTitle": "Interested in joining the Antenna community?",
-    "text": "There is currently a waitlist to access Antenna. We are working hard to open up the platform to more people! Please tell us more so we can better serve you."
+  "contact": {
+    "title": "Get in touch",
+    "text": [
+      "Do you have data to test, future research to discuss, or just want to stay updated? Please fill out the form below so we can understand your needs, keep you informed, and get back to you.",
+      "For media inquiries, please contact us directly at <a href=\"mailto:antenna@mila.quebec\">antenna@mila.quebec</a>."
+    ],
+    "outro": {
+      "title": "Want to know more?",
+      "text": "View our detailed <a href=\"/faq\">FAQ</a> or take a look at our <a href=\"https://demo.antenna.insectai.org/\" target=\"_blank\" rel=\"noopener noreferrer\">demo</a>."
+    }
   },
   "faq": {
-    "title": "Frequently Asked Questions",
+    "title": "Frequently asked questions",
     "questions": [
-      {
-        "title": "Do I have to contribute data to access the public dataset?",
-        "text": "No! The public dataset is available to everyone so we can collectively deepen our understanding of biodiversity and accelerate conservation efforts."
-      },
       {
         "title": "What kind of invertebrates can you identify?",
         "text": "Antenna currently offers machine learning models to recognise nocturnal lepidoptera (moths). However the platform is flexible and can support most detection or classification algorithms. Note that the default processing pipeline is best suited for sequential (time series) images that contain multiple insects. The organisms must be visually identifiable from the “above” perspective. See our <a href=\"https://github.com/RolnickLab/ami-ml/\">Github repository</a> for more information."
       },
       {
         "title": "How can I get and set up a monitoring station?",
-        "text": "The Platform is device-agnostic. You can buy and set up any type of camera, then log on to the Platform to upload and process your images."
-      },
-      {
-        "title": "Can I use the Platform even though I am not a researcher?",
-        "text": "We LOVE citizen scientists! You absolutely can use the public dataset. However we are not quite ready to receive images from phone cameras. Until we are, you can check out our partner’s app <a href=\"https://fieldguide.ai/\">Fieldguide</a> and start snapping away!"
+        "text": "Antenna is device-agnostic. You can buy and set up any type of camera, then log on to the platform to upload and process your images."
       }
-    ]
+    ],
+    "contact": {
+      "title": "Can't find the answer you are looking for?",
+      "text": "Please contact us at <a href=\"mailto:antenna@mila.quebec\">antenna@mila.quebec</a>."
+    }
   }
 }

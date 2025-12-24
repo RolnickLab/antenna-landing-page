@@ -1,21 +1,12 @@
-import {
-  DATA_PLATFORM_URL,
-  FAQ_URL,
-  HIDE_DEMO,
-  WAITLIST_URL,
-} from "@/lib/constants";
+import { CONTACT_URL, DEMO_URL, FAQ_URL } from "@/lib/constants";
 
 export const MENU_ITEMS = [
   { label: "Home", href: "/" },
-  { label: "Sign up", href: WAITLIST_URL },
+  {
+    label: "Demo",
+    href: DEMO_URL,
+    external: true,
+  },
+  { label: "Get in touch", href: CONTACT_URL },
   { label: "FAQ", href: FAQ_URL },
-  ...(HIDE_DEMO
-    ? []
-    : [
-        {
-          label: "Antenna Demo",
-          href: DATA_PLATFORM_URL,
-          external: true,
-        },
-      ]),
 ];

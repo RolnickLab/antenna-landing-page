@@ -84,6 +84,9 @@
   * {
     @apply border-border;
   }
+  html {
+    scroll-behavior: smooth;
+  }
   body {
     @apply bg-background text-foreground text-lg;
     font-family: "Mazzard", system-ui, sans-serif;
