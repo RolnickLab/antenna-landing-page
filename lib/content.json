@@ -50,7 +50,7 @@
         },
         "listItems": [
           "Programmatically upload camera images",
-          "Use your or a platform model to generate classification labels",
+          "Use generic or custom models to detect and classify insects in bulk",
           "Compare model performance on your dataset"
         ]
       },
