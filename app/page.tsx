@@ -11,7 +11,7 @@ import Link from "next/link";
 
 const DeploymentsMap = dynamic(
   () => import("@/components/map/deployments-map"),
-  { ssr: false }
+  { ssr: false },
 );
 
 export default function Home() {
@@ -21,12 +21,12 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-12 max-w-screen-lg mx-auto max-lg:grid-cols-1 max-lg:gap-0">
           <div className="max-lg:px-8 max-lg:py-12 max-lg:order-2">
             <h1 className="text-4xl font-medium mb-4">{content.title}</h1>
-            <h2 className="text-2xl mb-4">{content.subTitle}</h2>
+            <h2 className="text-2xl whitespace-pre mb-4">{content.subTitle}</h2>
             <p className="mb-12 text-muted-foreground">{content.description}</p>
             <Link
               className={cn(
                 buttonVariants({ variant: "accent", size: "lg" }),
-                "max-md:w-full"
+                "max-md:w-full",
               )}
               href="#learn-more"
             >
