@@ -20,8 +20,12 @@ export default function Home() {
       <section className="p-24 overflow-hidden max-lg:p-0 max-lg:text-center">
         <div className="grid grid-cols-2 gap-12 max-w-screen-lg mx-auto max-lg:grid-cols-1 max-lg:gap-0">
           <div className="max-lg:px-8 max-lg:py-12 max-lg:order-2">
-            <h1 className="text-4xl font-medium mb-4">{content.title}</h1>
-            <h2 className="text-2xl whitespace-pre mb-4">{content.subTitle}</h2>
+            <img
+              alt={content.title}
+              className="h-8 mb-6 max-lg:mx-auto"
+              src="/images/logo.png"
+            />
+            <h2 className="text-2xl whitespace-pre mb-6">{content.subTitle}</h2>
             <p className="mb-12 text-muted-foreground">{content.description}</p>
             <Link
               className={cn(
