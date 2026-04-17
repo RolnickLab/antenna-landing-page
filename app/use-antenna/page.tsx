@@ -1,6 +1,6 @@
 import { List } from "@/components/list";
 import { buttonVariants } from "@/components/ui/button";
-import { CONTACT_URL } from "@/lib/constants";
+import { CONTACT_URL, GITHUB_URL } from "@/lib/constants";
 import content from "@/lib/content.json";
 import { Metadata } from "next";
 import Link from "next/link";
@@ -41,8 +41,12 @@ export default function UseAntenna() {
               👩🏼‍💻 Self-install
             </h2>
             <p className="text-muted-foreground">
-              Clone the repository and run Antenna yourself! Open for anyone,
-              but requires a bit of technical knowledge.
+              Clone{" "}
+              <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
+                the repository
+              </a>{" "}
+              and run Antenna yourself! Open for anyone, but requires a bit of
+              technical knowledge.
             </p>
           </div>
           <div>
