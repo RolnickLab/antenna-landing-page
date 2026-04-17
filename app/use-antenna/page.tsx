@@ -25,9 +25,9 @@ export default function UseAntenna() {
             </p>
             <p>
               From the form you can also join our <strong>newsletter</strong>.
-              In May 2026, we plan to have our first user{" "}
-              <strong>community</strong> group meeting. More details will be
-              shared in the newsletter.
+              In May 2026, we plan to have our first{" "}
+              <strong>user community</strong> group meeting. More details will
+              be shared in the newsletter.
             </p>
           </div>
         </div>
