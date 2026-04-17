@@ -2,7 +2,7 @@ import { Article } from "@/components/article";
 import { List } from "@/components/list";
 import { DeploymentsStats } from "@/components/stats/deployments-stats";
 import { buttonVariants } from "@/components/ui/button";
-import { CONTACT_URL, DEMO_URL } from "@/lib/constants";
+import { CONTACT_URL, DEMO_URL, USE_ANTENNA_URL } from "@/lib/constants";
 import content from "@/lib/content.json";
 import { cn } from "@/lib/utils";
 import { ExternalLinkIcon } from "lucide-react";
@@ -172,18 +172,26 @@ export default function Home() {
           <div className="grid grid-cols-2 gap-24 max-lg:block max-lg:space-y-12">
             <div>
               <h1 className="text-3xl font-medium mb-4">
-                {content.cta.try.title}
+                {content.cta.use.title}
               </h1>
               <p
                 className="text-muted-foreground mb-8"
-                dangerouslySetInnerHTML={{ __html: content.cta.try.text }}
+                dangerouslySetInnerHTML={{ __html: content.cta.use.text }}
               />
-              <Link
-                className={buttonVariants({ variant: "accent" })}
-                href={CONTACT_URL}
-              >
-                Get in touch
-              </Link>
+              <div className="flex items-center gap-4">
+                <Link
+                  className={buttonVariants({ variant: "accent" })}
+                  href={CONTACT_URL}
+                >
+                  Get in touch
+                </Link>
+                <Link
+                  className={buttonVariants({ variant: "ghost" })}
+                  href={USE_ANTENNA_URL}
+                >
+                  Learn more
+                </Link>
+              </div>
             </div>
             <div>
               <h1 className="text-3xl font-medium mb-4">
