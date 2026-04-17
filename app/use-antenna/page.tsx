@@ -101,7 +101,7 @@ export default function UseAntenna() {
                 "Model calibration",
                 "Extended pre- and post-processing features",
                 "Support for more import and export formats",
-                "Research and testing of applied machine learning methods specific to arthropods ",
+                "Research and testing of applied machine learning methods specific to arthropods",
               ]}
             />
             <p>Please reach out and we can coordinate!</p>
