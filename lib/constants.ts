@@ -1,3 +1,5 @@
+export const USE_ANTENNA_URL = "/use-antenna";
+
 export const CONTACT_URL = "/contact";
 
 export const FAQ_URL = "/faq";
