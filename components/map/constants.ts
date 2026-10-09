@@ -1,7 +1,4 @@
 import * as L from "leaflet";
-import markerIcon2x from "leaflet/dist/images/marker-icon-2x.png";
-import markerIcon from "leaflet/dist/images/marker-icon.png";
-import markerShadow from "leaflet/dist/images/marker-shadow.png";
 import "leaflet/dist/leaflet.css";
 
 export const ATTRIBUTION =
@@ -21,8 +18,12 @@ export const MIN_ZOOM = 1;
 export const TILE_LAYER_URL =
   "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
 
-L.Icon.Default.mergeOptions({
-  iconUrl: markerIcon.src,
-  iconRetinaUrl: markerIcon2x.src,
-  shadowUrl: markerShadow.src,
+const DefaultIcon = L.icon({
+  iconAnchor: [27 / 2, 0],
+  iconSize: [27, 32],
+  iconUrl: "/images/pin.svg",
 });
+
+export const setup = () => {
+  L.Marker.prototype.options.icon = DefaultIcon;
+};
