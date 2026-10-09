@@ -40,10 +40,6 @@ npx serve@latest out
 
 All text content is specified in [content.json](https://github.com/RolnickLab/antenna-landing-page/blob/e5aa108cd8e2511389b2ac24f828895ea94dc36b/lib/content.json). To edit any content, simply update this file.
 
-## Update stats
+## Projects map and counts
 
-To update stats (station map and counts), simply run this script. This will fetch data from the API and save it to `stats.json`. This makes it possible for the web app to access stats without loading times.
-
-```bash
-npm run update-stats
-```
+Project data is fetched from the Antenna API in the browser, using the hook `useProjects`. Since the API does not allow cross-origin requests, the app requests the relative path `/api/*` and a proxy passes the requests on to `https://api.antenna.insectai.org/api/*`.

@@ -11,7 +11,10 @@ import {
   MAX_ZOOM,
   MIN_ZOOM,
   TILE_LAYER_URL,
+  setup,
 } from "./constants";
+
+setup();
 
 interface MapProps {
   height: {
