@@ -2,7 +2,6 @@ import { Antenna } from "@/components/antenna";
 import { Article } from "@/components/article";
 import { List } from "@/components/list";
 import { Projects } from "@/components/projects/projects";
-import { DeploymentsStats } from "@/components/stats/deployments-stats";
 import { buttonVariants } from "@/components/ui/button";
 import { CONTACT_URL, DEMO_URL, USE_ANTENNA_URL } from "@/lib/constants";
 import content from "@/lib/content.json";
