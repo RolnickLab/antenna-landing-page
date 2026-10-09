@@ -1,19 +1,14 @@
 import { Antenna } from "@/components/antenna";
 import { Article } from "@/components/article";
 import { List } from "@/components/list";
+import { Projects } from "@/components/projects/projects";
 import { DeploymentsStats } from "@/components/stats/deployments-stats";
 import { buttonVariants } from "@/components/ui/button";
 import { CONTACT_URL, DEMO_URL, USE_ANTENNA_URL } from "@/lib/constants";
 import content from "@/lib/content.json";
 import { cn } from "@/lib/utils";
 import { ExternalLinkIcon } from "lucide-react";
-import dynamic from "next/dynamic";
 import Link from "next/link";
-
-const DeploymentsMap = dynamic(
-  () => import("@/components/map/deployments-map"),
-  { ssr: false },
-);
 
 export default function Home() {
   return (
@@ -68,15 +63,7 @@ export default function Home() {
 
       <section className="p-24 overflow-hidden max-lg:p-0">
         <div className="max-w-screen-lg mx-auto">
-          <div className="w-full h-[480px] relative bg-card rounded-xl border overflow-hidden mb-12 max-lg:rounded-none max-lg:border-none max-lg:h-[320px]">
-            <div className="absolute bottom-4 left-4 px-2 bg-accent rounded-sm text-accent-foreground z-10">
-              <span className="text-base">{content.deployments.mapLabel}</span>
-            </div>
-            <DeploymentsMap height={{ desktop: 480, mobile: 320 }} />
-          </div>
-          <div className="max-lg:pb-12">
-            <DeploymentsStats />
-          </div>
+          <Projects />
         </div>
       </section>
 
