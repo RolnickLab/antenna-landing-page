@@ -6,7 +6,15 @@ import { buttonVariants } from "@/components/ui/button";
 import { CONTACT_URL, DEMO_URL, USE_ANTENNA_URL } from "@/lib/constants";
 import content from "@/lib/content.json";
 import { cn } from "@/lib/utils";
-import { ExternalLinkIcon } from "lucide-react";
+import {
+  BoxIcon,
+  CameraIcon,
+  CodeIcon,
+  DatabaseIcon,
+  ExternalLinkIcon,
+  GlobeIcon,
+  UserIcon,
+} from "lucide-react";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 
@@ -14,15 +22,25 @@ const DeploymentsMap = dynamic(
   () => import("@/components/map/deployments-map"),
   { ssr: false },
 );
+const Icons: { [key: string]: any } = {
+  user: UserIcon,
+  globe: GlobeIcon,
+  code: CodeIcon,
+  camera: CameraIcon,
+  database: DatabaseIcon,
+  box: BoxIcon,
+};
 
 export default function Home() {
   return (
     <>
-      <section className="p-24 overflow-hidden max-lg:p-0 max-lg:text-center">
+      <section className="p-24 overflow-hidden bg-[url('/images/20231110170410-snapshot.jpg')] bg-cover bg-[position:20%_center] max-md:p-0 max-lg:text-center">
         <div className="grid grid-cols-2 gap-12 max-w-screen-lg mx-auto max-lg:grid-cols-1 max-lg:gap-0">
-          <div className="max-lg:px-8 max-lg:py-12 max-lg:order-2">
+          <div className="light p-8 rounded-xl bg-card/90 max-lg:mx-6 max-lg:my-12 max-lg:p-6">
             <Antenna />
-            <h2 className="text-2xl whitespace-pre mb-6">{content.subTitle}</h2>
+            <h2 className="text-2xl text-foreground mb-6 lg:whitespace-pre max-lg:text-xl">
+              {content.subTitle}
+            </h2>
             <p className="mb-12 text-muted-foreground">{content.description}</p>
             <Link
               className={cn(
@@ -34,47 +52,39 @@ export default function Home() {
               Learn more
             </Link>
           </div>
-          <div className="w-full max-lg:mr-0">
-            <div className="rounded-xl bg-card border overflow-hidden max-lg:w-full max-lg:h-[320px] max-lg:rounded-none max-lg:border-none max-md:h-[240px]">
-              <picture>
-                <source
-                  srcSet="/images/intro.webp"
-                  media="(min-width: 1024px)"
-                />
-                <source srcSet="/images/intro-small.webp" />
-                <img
-                  alt="Trap image with bounding boxes and labels"
-                  src="/images/intro.webp"
-                  className="w-full h-full object-cover"
-                />
-              </picture>
-            </div>
-          </div>
         </div>
       </section>
 
-      <section className="p-24 bg-muted max-lg:p-8">
-        <div className="max-w-screen-md mx-auto">
-          <h1 className="text-3xl font-medium mb-4">{content.intro.title}</h1>
-          <div className="space-y-4 text-muted-foreground">
-            <p>{content.intro.text}</p>
-            <div className="py-4">
-              <List items={content.intro.listItems} />
+      <section className="p-24 max-lg:p-8">
+        <div className="grid grid-cols-2 gap-12 max-w-screen-lg mx-auto mb-24 max-lg:grid-cols-1 max-lg:gap-8 max-lg:mb-12">
+          <div>
+            <h1 className="text-3xl font-medium mb-4">{content.intro.title}</h1>
+            <div className="space-y-4 text-muted-foreground">
+              <p>{content.intro.text}</p>
+              <p>{content.intro.text2}</p>
             </div>
-            <p>{content.intro.text2}</p>
+          </div>
+          <div className="grid grid-cols-2 gap-4 max-md:grid-cols-1">
+            {content.intro.listItems.map((listItem, index) => {
+              const Icon = Icons[listItem.icon];
+
+              return (
+                <div key={index} className="p-4 bg-muted rounded-md">
+                  <Icon className="w-6 h-6 text-primary mb-4" />
+                  <span className="font-medium text-base">{listItem.text}</span>
+                </div>
+              );
+            })}
           </div>
         </div>
-      </section>
-
-      <section className="p-24 overflow-hidden max-lg:p-0">
-        <div className="max-w-screen-lg mx-auto">
+        <div className="max-w-screen-lg mx-auto max-lg:-mx-8">
           <div className="w-full h-[480px] relative bg-card rounded-xl border overflow-hidden mb-12 max-lg:rounded-none max-lg:border-none max-lg:h-[320px]">
             <div className="absolute bottom-4 left-4 px-2 bg-accent rounded-sm text-accent-foreground z-10">
               <span className="text-base">{content.deployments.mapLabel}</span>
             </div>
             <DeploymentsMap height={{ desktop: 480, mobile: 320 }} />
           </div>
-          <div className="max-lg:pb-12">
+          <div className="max-lg:pb-4">
             <DeploymentsStats />
           </div>
         </div>
