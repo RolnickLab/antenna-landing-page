@@ -24,7 +24,8 @@
 }
 
 @layer base {
-  :root {
+  :root,
+  .light {
     --background: 0 0% 100%; /* Fg Nova White */
     --foreground: 231 7% 20%; /* Fg Nova Neutral 700 */
     --card: 0 0% 100%; /* Fg Nova White */
